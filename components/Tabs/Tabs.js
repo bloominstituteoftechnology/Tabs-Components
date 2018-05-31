@@ -2,11 +2,19 @@ class Tabs {
   constructor(element) {
     this.element = element;
     // create a reference to the ".tabs-link" class nested in your tab object
-    this.links;
+    // this.links;
+    this.links = document.querySelector('.tabs-links') ;
+    // console.log(this.links);
+
     // This step will map over the array creating new TabsLink class instances of each link.  No need to update anything here, just study what is going on.  Notice that we are creating another new object using the TabsLink class.
     this.links = Array.from(this.links).map( link => {
       return new TabsLink(link, this);
     });
+
+
+    ////////CONTINUE HERE, WHEN DONE WITH TabsLink
+
+
     // Set the active link to the first item in the array
     this.activeLink;
     // Nothing to update here, just notice we are invoking the init() method
@@ -27,27 +35,49 @@ class Tabs {
 
   getTab(data) {
     // return a reference to the element's data attribute
-    return this.element;
-  }
+    // return this.element;
 
+
+    ////////////UNCLEAR!! 1of2
+    return this.element.document.querySelector(`.tabs-link[data-tab='${data}']`) ;
+  }
 }
 
 class TabsLink {
   // notice that we passesd in the element reference as well as a reference to the parent class.
   constructor(element, parent) {
-    this.element;
+    // this.element;    
+    this.element = element ;
+
     // assign this.tabs to parent
-    this.tabs;
+    // this.tabs;
+    this.tabs = parent ;
+
     // Using the method from the parent class above, pass in a reference to the custom data attribute.  
-    this.tabsItem = parent.getTab();
+    // this.tabsItem = parent.getTab();
+
+    
+    ////////////UNCLEAR!! 2of2
+    this.tabsItem = parent.getTab(this.element.dataset.tab) ;
+    
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
-    this.tabsItem;
+    // this.tabsItem;
+    
+    
+    
+        ////////////UNCLEAR
+    this.tabsItem = new TabsItem(this.tabsItem) ;
+
     this.element.addEventListener('click', () => {
       this.tabs.updateActive(this);
       // invoke the select() method on this
-      this;
+      // this;
+      //////////////////////CORRECT?
+      this.select();
     });
   };
+
+  ////////CONTINUE AFTER DAILY STANDUP HERE...
 
   select() {
     // Add a class named "tabs-link-selected" to the element
@@ -83,7 +113,7 @@ class TabsItem {
 
 
 // START HERE: create a reference to the ".tabs" classes
-let tabs = document.querySelectorAll();
+let tabs = document.querySelectorAll('.tabs');
 // map through each tabs element and create a new Tabs object.  Be sure to pass in a reference to the tab when creating the Tabs object.
-tabs = Array.from(tabs).map();
+tabs = Array.from(tabs).map(tabs => new Tabs (tabs));
 
