@@ -1,6 +1,6 @@
 class Dropdown {
   constructor(element) {
-    this.element = dropdowns;
+    this.element = element;
     this.button = dropdownbtn;
     this.content = dropdownContent;
     this.button.addEventListener("click", () => {
