@@ -3,15 +3,16 @@
 	<head>
 		<title>Advanced Components</title>
 		<link rel="stylesheet" href="./CSS/index.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	</head>
 	<body>
 		<script defer="defer" src="./components/Dropdown/Dropdown.js"></script>
 		<script defer="defer" src="./components/Tabs/Tabs.js"></script>
-		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
 		<div class="header-container">
 			<div class="dropdown">
 				<div class="dropdown-button">Dropdown</div>
-				<div class="dropdown-content dropdown-hidden">
+				<div class="dropdown-content dropdown-hidden w3-animate-zoom">
 					<a class="dropdown-link" href="https://lambdaschool.com/" target="_blank">Lambda</a>
 					<a class="dropdown-link" href="https://www.google.com/" target="_blank">Google</a>
 					<a class="dropdown-link" href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a>
@@ -19,7 +20,7 @@
 			</div>
 			<img src="./lambda_logo_light_small.png" class="header" />
 		</div>
-
+		
 		<div class="section">
 			<div class="box">
 				<div class="box-title">Box Title 1</div>
@@ -40,13 +41,13 @@
 						<div class="tabs-link" data-tab="4">Tab 4</div>
 					</div>
 					<div class="tabs-items">
-						<div class="tabs-item" data-tab="1">
+						<div class="tabs-item w3-animate-fading" data-tab="1">
 							<div class="tabs-item-title">Quote 1</div>
 							<div class="tabs-item-description">
 								Don’t Panic.
 							</div>
 						</div>
-						<div class="tabs-item" data-tab="2">
+						<div class="tabs-item w3-animate-fading" data-tab="2">
 							<div class="tabs-item-title">Quote 2</div>
 							<div class="tabs-item-description">
 								Curiously enough, the only thing that went through the mind of the bowl of petunias as it fell was Oh no, not again. Many
@@ -54,7 +55,7 @@
 								nature of the Universe than we do now.
 							</div>
 						</div>
-						<div class="tabs-item" data-tab="3">
+						<div class="tabs-item w3-animate-fading" data-tab="3">
 							<div class="tabs-item-title">Quote 3</div>
 							<div class="tabs-item-description">
 								It is known that there are an infinite number of worlds, simply because there is an infinite amount of space for them to
@@ -64,7 +65,7 @@
 								you may meet from time to time are merely the products of a deranged imagination.
 							</div>
 						</div>
-						<div class="tabs-item" data-tab="4">
+						<div class="tabs-item w3-animate-fading" data-tab="4">
 							<div class="tabs-item-title">Quote 4</div>
 							<div class="tabs-item-description">
 								There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will
