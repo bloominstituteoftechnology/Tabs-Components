@@ -8,26 +8,26 @@ class Tabs {
       return new TabsLink(link, this);
     });
     // Set the active link to the first item in the array
-    this.activeLink;
+    this.activeLink = this.links[0];
     // Nothing to update here, just notice we are invoking the init() method
     this.init();
   }
 
   init() { 
     // invoke the method select() on activeLink
-    this.activeLink;
+    this.activeLink.select();
   }
 
   updateActive(newActive) {
     // invoke the method deselect() on activeLink
-    this.activeLink;
+    this.activeLink.deselect();
     // assign this.activeLink to the new active link (newActive)
-    this.activeLink;
+    this.activeLink = newActive; //Possibly needs attention
   }
 
   getTab(data) {
     // return a reference to the element's data attribute
-    return this.element;
+    return this.element.querySelector(`.tabs-item[data-tab='${data}']`);
   }
 
 }
@@ -39,27 +39,27 @@ class TabsLink {
     // assign this.tabs to parent
     this.tabs = parent;
     // Using the method from the parent class above, pass in a reference to the custom data attribute.  
-    this.tabsItem = parent.getTab(`this.tabs[data-tab = "${this.tabs}"]`);
-    console.log(this.tabsItem);
+    this.tabsItem = parent.getTab(this.element.dataset.tab);
+    // console.log(this.tabsItem);
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
     this.tabsItem = new TabsItem(this.tabsItem);
     this.element.addEventListener('click', () => {
       this.tabs.updateActive(this);
       // invoke the select() method on this
-      this;
+      this.select();
     });
   };
 
   select() {
     // Add a class named "tabs-link-selected" to the element
-    this.element;
+    this.element.classList.add("tabs-link-selected");
     // Notice that we are using the select method on tabsItem
     this.tabsItem.select();
   }
 
   deselect() {
     // Remove a class named "tabs-link-selected" from the element
-    this.element; 
+    this.element.classList.remove("tabs-link-selected");
     // Notice that we are using the deselect method on tabsItem
     this.tabsItem.deselect();
   }
@@ -72,12 +72,12 @@ class TabsItem {
 
   select() {
     // Add a class named "tabs-item-selected" to the element 
-    this.element.classList.add(".tabs-item-selected");
+    this.element.classList.add("tabs-item-selected");
   }
 
   deselect() {
     // Remove a class named "tabs-item-selected" from the element 
-    this.element.classList.remove(".tabs-item-selected");
+    this.element.classList.remove("tabs-item-selected");
     // Congrats, you finished all the instruction, check out your tab navigator!
   }
 }
