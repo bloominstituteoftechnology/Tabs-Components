@@ -83,7 +83,7 @@ class TabsItem {
 
 
 // START HERE: create a reference to the ".tabs" classes
-let tabs = document.querySelectorAll();
+let tabs = document.querySelectorAll(".tabs");
 // map through each tabs element and create a new Tabs object.  Be sure to pass in a reference to the tab when creating the Tabs object.
-tabs = Array.from(tabs).map();
+tabs = Array.from(tabs).map(tab => new Tabs(tab));
 
