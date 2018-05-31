@@ -63,7 +63,7 @@
   font-weight: bold;
   padding-bottom: 10px;
 }
-.tabs .tabs-item-selected {
+.tabs .tabs-item.tabs-link-selected {
   display: block;
 }
 .tabs .tabs-links {
