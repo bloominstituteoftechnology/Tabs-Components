@@ -21,7 +21,7 @@ In this project, our design team has already built an HTML/CSS web page for us, 
   * The `TabsLink` component will be on each of what we may consider the `tabs` on top of the box. These links will control the associated item, as well as selcting and deselecting themselves.
   * The `TabsItem` component will be the text displayed when a tab is selcted. It will share a data attribute with it's corresponding tab, and should only show when it's tab has been selected.
 
-* The `Tabs.js`  file should NOT be done in a linear top-to-bottom fashion. Study the corresponding HTML and LESS. Then look through the entire JS file and try to peice together what is happening. Once you have an idea of the flow of the component, start. You can start anywhere, but since the `Tabs` component will ultimately be controlling the other two (and there is more pre-done for you) that would be a good place to start. 
+* The `Tabs.js` file starts at the bottom of the page and then jumps around. Pay attention to what is being called and when. Study the corresponding HTML and LESS to get a better idea of how the tabs were built.
 
 * Once you have completed the above, add a couple Tabs to the HTML in order to see first hand how great building webpages with components is!
 
