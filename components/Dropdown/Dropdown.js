@@ -14,6 +14,8 @@ class Dropdown {
     // Toggle the ".dropdown-hidden" class off and on
   console.log('hello');
   this.content.classList.toggle('dropdown-hidden');
+  TweenMax.to(this.content, 2, { y: 25 });
+  Tween.reverse();
   }
 }
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
