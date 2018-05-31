@@ -27,7 +27,7 @@ class Tabs {
 
   getTab(data) {
     // return a reference to the element's data attribute
-    return this.element; // HOW?!?!?
+    return this.element.querySelector(`.tabs-item[data-tab="${data}"]`); // HOW?!?!?
   }
 
 }
@@ -35,11 +35,11 @@ class Tabs {
 class TabsLink {
   // notice that we passesd in the element reference as well as a reference to the parent class.
   constructor(element, parent) {
-    this.element;
+    this.element = element;
     // assign this.tabs to parent
     this.tabs = parent;
     // Using the method from the parent class above, pass in a reference to the custom data attribute.  
-    this.tabsItem = parent.getTab(); // HOW?!?!?
+    this.tabsItem = parent.getTab(this.element.dataset.tab);
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
     this.tabsItem = new TabsItem (this.tabsItem);
     this.element.addEventListener('click', () => {
@@ -85,5 +85,5 @@ class TabsItem {
 // START HERE: create a reference to the ".tabs" classes
 let tabs = document.querySelectorAll(".tabs");
 // map through each tabs element and create a new Tabs object.  Be sure to pass in a reference to the tab when creating the Tabs object.
-tabs = Array.from(tabs).map(tab = new Tabs(tab));
+tabs = Array.from(tabs).map(tab => new Tabs(tab));
 
