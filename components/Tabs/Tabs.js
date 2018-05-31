@@ -1,6 +1,6 @@
 class Tabs {
   constructor(element) {
-    //console.log(this);
+    console.log(this);
     this.element = element;
     console.log(this.element);
     // create a reference to the ".tabs-link" class nested in your tab object
@@ -10,10 +10,10 @@ class Tabs {
     this.links = Array.from(this.links).map( link => {
       return new TabsLink(link, this);
     });
-    //console.log(this.links);
+    console.log(this.links);
     // Set the active link to the first item in the array
     this.activeLink = this.links[0];
-    //console.log(this.activeLink)
+    console.log(this.activeLink)
     // Nothing to update here, just notice we are invoking the init() method
     this.init();
   }
@@ -32,7 +32,7 @@ class Tabs {
 
   getTab(data) {
     // return a reference to the element's data attribute
-    return this.element.querySelector(`.tabs-item[data-tab="${data}]`);
+    return this.element.querySelector(`.tabs-item[data-tab="${data}"]`);
   }
 
 }
@@ -41,15 +41,16 @@ class TabsLink {
   // notice that we passesd in the element reference as well as a reference to the parent class.
   constructor(element, parent) {
     this.element = element;
-    //console.log(this.element);
+    console.log(this.element);
     // assign this.tabs to parent
     this.tabs = parent;
-    //console.log(this.tabs);
+    console.log(this.tabs);
     // Using the method from the parent class above, pass in a reference to the custom data attribute.  
     this.tabsItem = parent.getTab(this.element.dataset.tab);
-    //console.log(this.tabsItem);
+    console.log(this.tabsItem);
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
-    this.tabsItem = new tabsItem(this.tabsItem);
+    this.tabsItem = new TabsItem(this.tabsItem);
+    console.log(this.tabsItem);
     this.element.addEventListener("click", () => {
       this.tabs.updateActive(this);
       // invoke the select() method on this
@@ -93,4 +94,3 @@ class TabsItem {
 let tabs = document.querySelectorAll(".tabs");
 // map through each tabs element and create a new Tabs object.  Be sure to pass in a reference to the tab when creating the Tabs object.
 tabs = Array.from(tabs).map(tab => new Tabs(tab));
-
