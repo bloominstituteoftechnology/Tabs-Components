@@ -13,7 +13,19 @@ class Dropdown {
 
   toggleContent() {
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('dropdown-hidden');
+    // this.content.classList.toggle('dropdown-hidden');
+    let content = this.content;
+    if (!(Array.from(content.classList).includes('dropdown-hidden'))) {
+      //to close
+      TweenMax.to(content, .5, {height: 0, overflow: "hidden"});
+      content.classList.add('dropdown-hidden');
+    }
+     else {
+       //to open
+       content.classList.remove('dropdown-hidden');
+       TweenMax.set(content, {height: "auto", overflow: "auto"});
+       TweenMax.from(content, .5, {height: 0, overflow: "hidden"});
+     }
   }
 }
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
