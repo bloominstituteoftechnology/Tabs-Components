@@ -64,8 +64,8 @@
   padding-top: 60px;
 }
 .tabs .tabs-item {
-  display: none;
   width: 75%;
+  display: none;
 }
 .tabs .tabs-item .tabs-item-title {
   font-size: 24px;
@@ -74,6 +74,9 @@
 }
 .tabs .tabs-item-selected {
   display: block;
+  animation-delay: .1s;
+  animation: slideLeft 0.4s forwards;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tabs .tabs-links {
   display: flex;
@@ -86,6 +89,7 @@
   border-right: 1px solid white;
   color: #ffffff;
   cursor: pointer;
+  transition: all .4s linear;
 }
 .tabs .tabs-link:hover {
   background-color: #be2530;
@@ -98,6 +102,16 @@
 }
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
+}
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 body {
   box-sizing: border-box;
