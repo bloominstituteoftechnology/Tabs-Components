@@ -22,14 +22,13 @@ class Tabs {
     // invoke the method deselect() on activeLink
     this.activeLink.deselect();
     // assign this.activeLink to the new active link (newActive)
-    this.activeLink.select(newActive);
+    this.activeLink = newActive;
   }
 
   getTab(data) {
     // return a reference to the element's data attribute
-    return this.element;
+    return this.element.querySelector(`.tabs-item[data-tab='${data}']`);
   }
-
 }
 
 class TabsLink {
@@ -39,7 +38,7 @@ class TabsLink {
     // assign this.tabs to parent
     this.tabs = parent;
     // Using the method from the parent class above, pass in a reference to the custom data attribute.  
-    this.tabsItem = parent.getTab(`this.tabs[data-tab = '${this.tabs}']`);
+    this.tabsItem = parent.getTab(this.element.dataset.tab);
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
     this.tabsItem = new TabsItem(this.tabsItem);
     this.element.addEventListener('click', () => {
@@ -51,14 +50,14 @@ class TabsLink {
 
   select() {
     // Add a class named "tabs-link-selected" to the element
-    this.element;
+    this.element.add('tabs-link-selected');
     // Notice that we are using the select method on tabsItem
     this.tabsItem.select();
   }
 
   deselect() {
     // Remove a class named "tabs-link-selected" from the element
-    this.element; 
+    this.element.add('tabs-link-selected'); 
     // Notice that we are using the deselect method on tabsItem
     this.tabsItem.deselect();
   }
@@ -71,12 +70,12 @@ class TabsItem {
 
   select() {
     // Add a class named "tabs-item-selected" to the element 
-    this.element;
+    this.element.add('tabs-item-selected');
   }
 
   deselect() {
     // Remove a class named "tabs-item-selected" from the element 
-    this.element;
+    this.element.remove('tabs-item-selected');
     // Congrats, you finished all the instruction, check out your tab navigator!
   }
 }
