@@ -1,4 +1,4 @@
-class Tabs {
+class Tabs { 
   constructor(element) {
     this.element = element;
     // create a reference to the ".tabs-link" class nested in your tab object
