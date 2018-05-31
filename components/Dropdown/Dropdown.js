@@ -8,7 +8,7 @@ class Dropdown {
     this.content;
     // Add a click handler to the button reference and call the toggleContent method.
     
-  }
+  } 
 
   toggleContent() {
     // Toggle the ".dropdown-hidden" class off and on
