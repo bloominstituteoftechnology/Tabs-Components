@@ -46,7 +46,7 @@ class TabsLink {
     this.element.addEventListener('click', () => {
       this.tabs.updateActive(this);
       // invoke the select() method on this
-      this.select(this);
+      this.select();
     });
   };
 
