@@ -1,21 +1,17 @@
 class Tabs {
   constructor(element) {
     this.element = element;
-    // create a reference to the ".tabs-link" class nested in your tab object
-    this.links;
+    this.links = this.element.querySelector(".tabs-link");// create a reference to the ".tabs-link" class nested in your tab object
     // This step will map over the array creating new TabsLink class instances of each link.  No need to update anything here, just study what is going on.  Notice that we are creating another new object using the TabsLink class.
     this.links = Array.from(this.links).map( link => {
       return new TabsLink(link, this);
     });
-    // Set the active link to the first item in the array
-    this.activeLink;
-    // Nothing to update here, just notice we are invoking the init() method
-    this.init();
+    this.activeLink = this.links[0];// Set the active link to the first item in the array
+    this.init();// Nothing to update here, just notice we are invoking the init() method
   }
 
   init() { 
-    // invoke the method select() on activeLink
-    this.activeLink;
+    this.activeLink.select();// invoke the method select() on activeLink
   }
 
   updateActive(newActive) {
@@ -35,9 +31,8 @@ class Tabs {
 class TabsLink {
   // notice that we passesd in the element reference as well as a reference to the parent class.
   constructor(element, parent) {
-    this.element;
-    // assign this.tabs to parent
-    this.tabs;
+    this.element = element;
+    this.tabs = parent;// assign this.tabs to parent
     // Using the method from the parent class above, pass in a reference to the custom data attribute.  
     this.tabsItem = parent.getTab();
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
@@ -83,7 +78,7 @@ class TabsItem {
 
 
 // START HERE: create a reference to the ".tabs" classes
-let tabs = document.querySelectorAll();
+let tabs = document.querySelectorAll(".tabs");
 // map through each tabs element and create a new Tabs object.  Be sure to pass in a reference to the tab when creating the Tabs object.
-tabs = Array.from(tabs).map();
+tabs = Array.from(tabs).map(tab = new Tabs(tab));
 
