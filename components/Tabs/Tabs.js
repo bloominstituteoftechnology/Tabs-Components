@@ -22,7 +22,7 @@ class Tabs {
   }
 
   updateActive(newActive) {
-    // invoke the method deselect() on activeLink
+    //  invoke the method deselect() on activeLink
     this.activeLink.deselect();
     // assign this.activeLink to the new active link (newActive)
     this.activeLink = newActive;
