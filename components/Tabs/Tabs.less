@@ -8,7 +8,9 @@
     padding-top: 60px;
   }
   .tabs-item {
-    display: none; 
+    display: none;
+    // animation: .5s ease normal 1 forwards fadeout;
+
 
     width: 75%;
     .tabs-item-title {
@@ -16,10 +18,25 @@
       font-weight: bold;
       padding-bottom: 10px;
     }
+
+    &.tabs-link-selected {
+      display: block;
+      animation: .5s ease normal 1 forwards fadein;
   }
-  .tabs-item-selected {
-    display: block;
+
   }
+
+  @keyframes fadein {
+    from { opacity: 0}
+    to {opacity: 1}
+  };
+
+  @keyframes fadeout {
+    from {opacity: 1}
+    to {opacity: 0}
+  }
+
+  
 
   .tabs-links {
     display: flex;
