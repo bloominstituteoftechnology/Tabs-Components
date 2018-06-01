@@ -3,7 +3,7 @@ class Tabs {
     this.element = element;
     // create a reference to the ".tabs-link" class nested in your tab object
     // this.links;
-    this.links = document.querySelector('.tabs-links') ;
+    this.links = this.element.querySelectorAll('.tabs-link') ;
     // console.log(this.links);
 
     // This step will map over the array creating new TabsLink class instances of each link.  No need to update anything here, just study what is going on.  Notice that we are creating another new object using the TabsLink class.
@@ -19,7 +19,7 @@ class Tabs {
 
     // Set the active link to the first item in the array
     // this.activeLink;    
-    this.activeLink = this.links[1] ;
+    this.activeLink = this.links[0] ;
 
     // Nothing to update here, just notice we are invoking the init() method
     this.init();
@@ -47,7 +47,7 @@ class Tabs {
 
 
     ////////////UNCLEAR!! 1of2
-    return this.element.document.querySelector(`.tabs-link[data-tab='${data}']`) ;
+    return this.element.querySelector(`.tabs-item[data-tab='${data}']`) ;
   }
 }
 
