@@ -16,7 +16,6 @@ class Tabs {
 
     // Set the active link to the first item in the array
     this.activeLink = this.links[0];
-    console.log(this.activeLink);
     // Nothing to update here, just notice we are invoking the init() method
     this.init();
   }
@@ -49,26 +48,27 @@ class TabsLink {
     // assign this.tabs to parent
     this.tabs = parent;
     // Using the method from the parent class above, pass in a reference to the custom data attribute.  
-    this.tabsItem = parent.getTab();
+    this.tabsItem = parent.getTab(this.element.dataset.tab);
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
-    this.tabsItem;
-    // this.element.addEventListener('click', () => {
-      // this.tabs.updateActive(this);
+    this.tabsItem = new TabsItem(this.tabsItem);
+    this.element.addEventListener('click', () => {
+      this.tabs.updateActive(this);
       // invoke the select() method on this
       this.select();
-    // });
+    });
   };
+
 
   select() {
     // Add a class named "tabs-link-selected" to the element
-    this.element;
+    this.element.classList.add('tabs-link-selected');
     // Notice that we are using the select method on tabsItem
-    // this.tabsItem.select();
+    this.tabsItem.select();
   }
 
   deselect() {
     // Remove a class named "tabs-link-selected" from the element
-    this.element; 
+    this.element.classList.remove('tabs-links-selected'); 
     // Notice that we are using the deselect method on tabsItem
     this.tabsItem.deselect();
   }
@@ -81,12 +81,12 @@ class TabsItem {
 
   select() {
     // Add a class named "tabs-item-selected" to the element 
-    this.element;
+    this.element.classList.add('tabs-item-selected');
   }
 
   deselect() {
     // Remove a class named "tabs-item-selected" from the element 
-    this.element;
+    this.element.classList.remove('tabs-item-selected');
     // Congrats, you finished all the instruction, check out your tab navigator!
   }
 }
@@ -97,4 +97,6 @@ let tabs = document.querySelectorAll('.tabs');
 // map through each tabs element and create a new Tabs object.
 // Be sure to pass in a reference to the tab when creating the Tabs object.
 tabs = Array.from(tabs).map( tab => new Tabs(tab));
+
+
 
