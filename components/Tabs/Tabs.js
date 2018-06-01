@@ -4,18 +4,12 @@ class Tabs {
     // create a reference to the ".tabs-link" class nested in your tab object
     // this.links;
     this.links = this.element.querySelectorAll('.tabs-link') ;
-    // console.log(this.links);
 
     // This step will map over the array creating new TabsLink class instances of each link.  No need to update anything here, just study what is going on.  Notice that we are creating another new object using the TabsLink class.
     this.links = Array.from(this.links).map( link => {
 
       return new TabsLink(link, this);
     });
-
-    // console.log(this.links);
-
-    ////////CONTINUE HERE, WHEN DONE WITH TabsLink
-
 
     // Set the active link to the first item in the array
     // this.activeLink;    
@@ -45,7 +39,6 @@ class Tabs {
     // return a reference to the element's data attribute
     // return this.element;
 
-
     ////////////UNCLEAR!! 1of2
     return this.element.querySelector(`.tabs-item[data-tab='${data}']`) ;
   }
@@ -69,9 +62,7 @@ class TabsLink {
     this.tabsItem = parent.getTab(this.element.dataset.tab) ;
     
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
-    // this.tabsItem;
-    
-    
+    // this.tabsItem;     
     
         ////////////UNCLEAR
     this.tabsItem = new TabsItem(this.tabsItem) ;
@@ -80,12 +71,9 @@ class TabsLink {
       this.tabs.updateActive(this);
       // invoke the select() method on this
       // this;
-      //////////////////////CORRECT?
       this.select();
     });
   };
-
-  ////////CONTINUE AFTER DAILY STANDUP HERE...
 
   select() {
     // Add a class named "tabs-link-selected" to the element
