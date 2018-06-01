@@ -9,6 +9,7 @@
   }
   .tabs-item {
     display: none; 
+    opacity: 0;
 
     width: 75%;
     .tabs-item-title {
@@ -18,7 +19,14 @@
     }
   }
   .tabs-item-selected {
+    animation: load  1s forwards;
     display: block;
+  }
+
+  @keyframes load{
+    100%{
+      opacity: 1;
+    }
   }
 
   .tabs-links {
