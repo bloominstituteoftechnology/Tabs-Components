@@ -2,7 +2,7 @@ class Tabs {
   constructor(element) {
     this.element = element;
     // create a reference to the ".tabs-link" class nested in your tab object
-    this.links = this.element.querySelector(".tabs-link");
+    this.links = this.element.querySelectorAll(".tabs-link");
     // This step will map over the array creating new TabsLink class instances of each link.  No need to update anything here, just study what is going on.  Notice that we are creating another new object using the TabsLink class.
     this.links = Array.from(this.links).map( link => {
       return new TabsLink(link, this);
@@ -22,12 +22,12 @@ class Tabs {
     // invoke the method deselect() on activeLink
     this.activeLink.deselect();
     // assign this.activeLink to the new active link (newActive)
-    this.activeLink;
+    this.activeLink = newActive;/////maybe wrong
   }
 
   getTab(data) {
     // return a reference to the element's data attribute
-    return this.element;
+    return this.element.querySelector(`.tabs-item[data-tab='${data}']`);
   }
 
 }
@@ -39,10 +39,11 @@ class TabsLink {
     // assign this.tabs to parent
     this.tabs = parent;
     // Using the method from the parent class above, pass in a reference to the custom data attribute.  
-    this.tabsItem = parent.getTab('this.tabs-item[data-tab ="${this.element}"]');
+    this.tabsItem = parent.getTab(this.element.dataset.tab);
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
-    //this.box = document.querySelector(`.box[data-btn="${this.buttonData}"]`);
-    this.tabsItem;
+
+    this.tabsItem = new TabsItem;
+
     this.element.addEventListener('click', () => {
       this.tabs.updateActive(this);
       // invoke the select() method on this
@@ -52,14 +53,14 @@ class TabsLink {
 
   select() {
     // Add a class named "tabs-link-selected" to the element
-    this.element;
+    this.element.Add("tabs-link-selected");
     // Notice that we are using the select method on tabsItem
     this.tabsItem.select();
   }
 
   deselect() {
     // Remove a class named "tabs-link-selected" from the element
-    this.element; 
+    this.element.Remove("tabs-link-selected");
     // Notice that we are using the deselect method on tabsItem
     this.tabsItem.deselect();
   }
@@ -72,7 +73,7 @@ class TabsItem {
 
   select() {
     // Add a class named "tabs-item-selected" to the element 
-    this.element;
+    this.element.classList.add()
   }
 
   deselect() {
