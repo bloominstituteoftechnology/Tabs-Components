@@ -42,12 +42,12 @@ class TabsLink {
     this.tabsItem = parent.getTab(this.element.dataset.tab);
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
 
-    this.tabsItem = new TabsItem;
+    this.tabsItem = new TabsItem(this.tabsItem);
 
     this.element.addEventListener('click', () => {
       this.tabs.updateActive(this);
       // invoke the select() method on this
-      this;
+      this.select();
     });
   };
 
