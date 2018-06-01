@@ -6,7 +6,7 @@ class Tabs {
 
     //// create a reference to the ".tabs-link" class nested in your tab object
     // this.links = document.querySelectorAll(".tabs-link");
-    // solution code used the below
+    // ************solution code used the below*********************
     this.links = this.element.querySelectorAll(".tabs-link");
     //// This step will map over the array creating new TabsLink class instances of each link.  No need to update anything here, just study what is going on.  Notice that we are creating another new object using the TabsLink class.
     // similar to below, this.links is set equal to an array of objects of the TabsLink class. The tabs-link reference that was turned into an array item is passed into the TabsLink constructor. 
@@ -32,7 +32,7 @@ class Tabs {
     this.activeLink.deselect();
     //// assign this.activeLink to the new active link (newActive)
     // this.activeLink = this.newActive;
-    // solution code used the below
+    // ************solution code used the below*********************
     this.activeLink = newActive;
   }
 
@@ -44,7 +44,7 @@ class Tabs {
 
    
     // return this.element;
-    // solution code used below
+    // ************solution code used the below*********************
     return this.element.querySelector(`.tabs-item[data-tab="${data}"]`)
   }
 
@@ -64,7 +64,7 @@ class TabsLink {
 
     //// Using the method from the parent class above, pass in a reference to the custom data attribute.  
     // this.tabsItem = this.parent.getTab();
-    // solution code used below
+    // ************solution code used the below*********************
     this.tabsItem = parent.getTab(this.element.dataset.tab);
     //// Create a new TabsItem object that passes in a tabsItem value that you just created above
     this.tabsItem = new TabsItem(this.tabsItem);
