@@ -9,7 +9,6 @@ class Tabs {
     });
     // Set the active link to the first item in the array
     this.activeLink = this.links[0];
-    console.log('active', this.activeLink);
     // Nothing to update here, just notice we are invoking the init() method
     this.init();
   }
@@ -28,8 +27,9 @@ class Tabs {
 
   getTab(data) {
     // return a reference to the element's data attribute
-    this.element = document.querySelector(`.tabs-item[data-tab="${data}"]`);
-    return this.element;
+    // ? docucment. works, but not ideal?
+    // return document.querySelector(`.tabs-item[data-tab="${data}"]`);
+    return this.element.querySelector(`.tabs-item[data-tab="${data}"]`);
   }
 }
 
@@ -37,7 +37,7 @@ class TabsLink {
   // notice that we passesd in the element reference as well as a reference to the parent class.
   constructor(element, parent) {
     this.element = element;
-    // assign this.tabs to parent
+    // assign this.tabs to parent <- assign parent to this.tabs
     this.tabs = parent;
     // Using the method from the parent class above, pass in a reference to the custom data attribute.
     this.tabsItem = parent.getTab(this.element.dataset.tab);
@@ -46,7 +46,7 @@ class TabsLink {
     this.element.addEventListener('click', () => {
       this.tabs.updateActive(this);
       // invoke the select() method on this
-      this.select(this);
+      this.select();
     });
   }
 
@@ -68,7 +68,6 @@ class TabsLink {
 class TabsItem {
   constructor(element) {
     this.element = element;
-    console.log('element in TabsITem', this.element);
   }
 
   select() {
