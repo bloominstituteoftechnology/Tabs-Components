@@ -68,8 +68,11 @@
   display: flex;
   background-color: #931d25;
 }
+.tabs .tabs-links :last-child {
+  border-right: none;
+}
 .tabs .tabs-link {
-  padding: 20px 25px;
+  padding: 20px 15px;
   font-size: 24px;
   background-color: #931d25;
   border-right: 1px solid white;

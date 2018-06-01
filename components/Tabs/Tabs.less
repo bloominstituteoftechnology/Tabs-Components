@@ -24,10 +24,14 @@
   .tabs-links {
     display: flex;
     background-color: @lambda-red;
+
+    :last-child {
+      border-right: none;
+    }
   }
 
   .tabs-link {
-    padding: 20px 25px;
+    padding: 20px 15px;
     font-size: 24px;
     background-color: @lambda-red;
     border-right: 1px solid white;
