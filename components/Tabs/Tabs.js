@@ -8,29 +8,37 @@ class Tabs {
 
     // This step will map over the array creating new TabsLink class instances of each link.  No need to update anything here, just study what is going on.  Notice that we are creating another new object using the TabsLink class.
     this.links = Array.from(this.links).map( link => {
+
       return new TabsLink(link, this);
     });
 
+    // console.log(this.links);
 
     ////////CONTINUE HERE, WHEN DONE WITH TabsLink
 
 
     // Set the active link to the first item in the array
-    this.activeLink;
+    // this.activeLink;    
+    this.activeLink = this.links[1] ;
+
     // Nothing to update here, just notice we are invoking the init() method
     this.init();
   }
 
   init() { 
     // invoke the method select() on activeLink
-    this.activeLink;
+    // this.activeLink;
+    this.activeLink.select() ;
   }
 
   updateActive(newActive) {
     // invoke the method deselect() on activeLink
-    this.activeLink;
+    // this.activeLink;
+    this.activeLink.deselect() ;
+
     // assign this.activeLink to the new active link (newActive)
-    this.activeLink;
+    // this.activeLink;
+    this.activeLink = newActive ;
   }
 
   getTab(data) {
@@ -81,14 +89,17 @@ class TabsLink {
 
   select() {
     // Add a class named "tabs-link-selected" to the element
-    this.element;
+    // this.element;
+    this.element.classList.add('tabs-link-selected') ;
+
     // Notice that we are using the select method on tabsItem
     this.tabsItem.select();
   }
 
   deselect() {
     // Remove a class named "tabs-link-selected" from the element
-    this.element; 
+    // this.element; 
+    this.element.classList.remove('tabs-link-selected') ;
     // Notice that we are using the deselect method on tabsItem
     this.tabsItem.deselect();
   }
@@ -101,12 +112,16 @@ class TabsItem {
 
   select() {
     // Add a class named "tabs-item-selected" to the element 
-    this.element;
+    // this.element;
+    this.element.classList.add('tabs-item-selected') ;
+
   }
 
   deselect() {
     // Remove a class named "tabs-item-selected" from the element 
-    this.element;
+    // this.element;
+    this.element.classList.remove('tabs-item-selected') ;
+
     // Congrats, you finished all the instruction, check out your tab navigator!
   }
 }
@@ -115,5 +130,5 @@ class TabsItem {
 // START HERE: create a reference to the ".tabs" classes
 let tabs = document.querySelectorAll('.tabs');
 // map through each tabs element and create a new Tabs object.  Be sure to pass in a reference to the tab when creating the Tabs object.
-tabs = Array.from(tabs).map(tabs => new Tabs (tabs));
+tabs = Array.from(tabs).map(tab => new Tabs (tab));
 
