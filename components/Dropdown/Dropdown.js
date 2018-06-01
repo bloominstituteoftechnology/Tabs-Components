@@ -21,7 +21,7 @@ class Dropdown {
   }
 
   else if(this.isOpen == true){
-    TweenMax.to(this.content, 1, { y: 0, opacity: 0, display:"none"});
+    TweenMax.to(this.content, 1, { y: -10, opacity: 0, display:"none"});
     //setTimeout(() => {this.content.classList.remove('dropdown-hidden')},50);
     console.log(this.isOpen);
   }
