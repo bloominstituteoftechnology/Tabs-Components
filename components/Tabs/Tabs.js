@@ -1,7 +1,7 @@
 class Tabs {
   constructor(element) {
     this.element = element;
-    this.links = this.element.querySelector('.tabs-link');
+    this.links = this.element.querySelectorAll('.tabs-link');
     this.links = Array.from(this.links).map( link => {
       return new TabsLink(link, this);
     });
@@ -49,7 +49,7 @@ class TabsLink {
 
   select() {
     // Add a class named "tabs-link-selected" to the element
-    this.element;
+    this.element.classList.add('tabs-link-selected');
     // Notice that we are using the select method on tabsItem
     this.tabsItem.select();
   }
@@ -69,12 +69,12 @@ class TabsItem {
 
   select() {
     // Add a class named "tabs-item-selected" to the element
-    this.element;
+    this.element.classList.add('tabs-item-selected');
   }
 
   deselect() {
     // Remove a class named "tabs-item-selected" from the element
-    this.element;
+    this.element.classList.remove('tabs-item-selected');
     // Congrats, you finished all the instruction, check out your tab navigator!
   }
 }
