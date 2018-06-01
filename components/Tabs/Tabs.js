@@ -26,7 +26,7 @@ class Tabs {
 
   getTab(data) {
     // return a reference to the element's data attribute
-    return this.element.querySelector(`.tabs-items[data-tab="${data}"]`);
+    return this.element.querySelector(`.tabs-item[data-tab="${data}"]`);
   }
 
 }
@@ -50,8 +50,8 @@ class TabsLink {
 
   select() {
     // Add a class named "tabs-link-selected" to the element
-    this.element.classList.add('tabs-link-selected');
     // Notice that we are using the select method on tabsItem
+    this.element.classList.add('tabs-link-selected');
     this.tabsItem.select();
   }
 
