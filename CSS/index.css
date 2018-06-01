@@ -28,6 +28,7 @@
   align-items: center;
   margin-top: 10px;
   border: 2.5px solid #931d25;
+  right: 155px;
 }
 .dropdown .dropdown-link {
   width: 100%;
@@ -40,9 +41,6 @@
 .dropdown .dropdown-link:hover {
   color: #ffffff;
   background-color: #931d25;
-}
-.dropdown .dropdown-hidden {
-  display: none;
 }
 .tabs {
   width: 100%;

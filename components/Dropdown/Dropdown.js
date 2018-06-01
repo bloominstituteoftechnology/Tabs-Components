@@ -22,13 +22,21 @@ class Dropdown {
   }
 
   toggleContent(e) {
-    // Toggle the ".dropdown-hidden" class off and on
+    
+    // Using Method 1
+    // console.log(e.target)
+    // e.target.classList.toggle()
 
-    // Using Method1
-    // console.log(e.target.classList.toggle())
+    // Method 2 and 3 from above, use this type of toggling
+    // this.content.classList.toggle('dropdown-hidden')
 
-    // Method 1 and 2 from above, use this type of toggling
+    // Now with adding animation this is new
+    if (this.content.classList.contains('dropdown-hidden')){
+      TweenMax.to(this.content,.25,{right:0})
+    } else TweenMax.to(this.content,.25,{right:155})
+
     this.content.classList.toggle('dropdown-hidden')
+    
   }
 }
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
