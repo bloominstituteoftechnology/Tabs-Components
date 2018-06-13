@@ -2,7 +2,10 @@
 <html>
 	<head>
 		<title>Advanced Components</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="./CSS/index.css">
+
 	</head>
 	<body>
 		<script defer="defer" src="./components/Dropdown/Dropdown.js"></script>
@@ -19,6 +22,15 @@
 			</div>
 			<img src="./lambda_logo_light_small.png" class="header" />
 		</div>
+
+		
+	    	<div id="mySlider"></div>
+			<div id="sliderNav">
+				<div id="sliderPrev" onclick="prevSlide();"><i class="fa fa-arrow-circle-left"  style="font-size:48px;color:#931D25" aria-hidden="true"></i></div>
+				<div id="sliderNext" onclick="nextSlide();"><i class="fa fa-arrow-circle-right" style="font-size:48px;color:#931D25" aria-hidden="true"></i></div>
+			</div>
+		
+
 
 		<div class="section">
 			<div class="box">
@@ -76,5 +88,10 @@
 				</div>
 			</div>
 		</div>
+		<!-- carousel stuff begin-->
+		    <link rel="stylesheet" href="carousel/style.css">
+		    <script src="carousel/index.js"></script>
+<!-- carousel stuff end-->		
+    
 	</body>
 </html>
