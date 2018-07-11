@@ -5,7 +5,7 @@ Topics:
 * Constructors with ES6 class syntax
 * `data` attributes
 
-In this project, our design team has already built an HTML/CSS web page for us, our job is to add javascript functionality. 
+In this project, our design team has already built an HTML/CSS web page for us; our job is to add javascript functionality. 
 
 ## Description
 
