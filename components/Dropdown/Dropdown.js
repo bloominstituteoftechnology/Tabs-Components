@@ -12,7 +12,18 @@ class Dropdown {
 
   toggleContent() {
     // Toggle the ".dropdown-hidden" class off and on
+    TweenMax.from(this.content, 1, {height:0});
+    TweenMax.to(this.content, 1, {height:160});
+
     this.content.classList.toggle('dropdown-hidden');
+
+    let children = this.content.children;
+    children = Array.from(children).forEach( child => this.childAppear(child));
+  }
+
+  childAppear(cb) {
+    TweenMax.from(cb, 0.1, {opacity:0});
+    TweenMax.to(cb, 2, {opacity:1});
   }
 }
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class

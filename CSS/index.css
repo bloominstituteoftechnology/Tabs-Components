@@ -68,9 +68,14 @@
 }
 .tabs .tabs-links {
   display: flex;
+  justify-content: space-around;
   background-color: #931d25;
 }
 .tabs .tabs-link {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px 25px;
   font-size: 24px;
   background-color: #931d25;
