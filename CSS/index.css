@@ -3,6 +3,53 @@
   margin: 0;
   padding: 0;
 }
+.pictures {
+  height: 400px;
+  display: block;
+  position: relative;
+}
+.pictures img {
+  width: 100%;
+  height: 400px;
+}
+.pictures .picture {
+  display: none;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+.pictures .active-picture {
+  display: block;
+}
+.pictures .left-pointer,
+.pictures .right-pointer {
+  cursor: pointer;
+  position: absolute;
+  margin-top: -22px;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.pictures .right-pointer {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.pictures .left-pointer:hover,
+.pictures .right-pointer:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .dropdown {
   z-index: 2;
   position: absolute;
@@ -28,6 +75,9 @@
   align-items: center;
   margin-top: 10px;
   border: 2.5px solid #931d25;
+  transform: translateY(0);
+  visibility: visible;
+  transition: transform 0.2s linear, visibility 0.1s linear 0s;
 }
 .dropdown .dropdown-link {
   width: 100%;
@@ -42,7 +92,8 @@
   background-color: #931d25;
 }
 .dropdown .dropdown-hidden {
-  display: none;
+  transform: translateY(-1em);
+  visibility: hidden;
 }
 .tabs {
   width: 100%;
@@ -62,9 +113,11 @@
   font-size: 24px;
   font-weight: bold;
   padding-bottom: 10px;
+  color: #931d25;
 }
 .tabs .tabs-item-selected {
   display: block;
+  animation: fadeIn 1s;
 }
 .tabs .tabs-links {
   display: flex;
@@ -85,10 +138,19 @@
   z-index: 2;
   border-right: 1px solid #931d25;
   background-color: #ffffff;
-  color: black;
+  color: #931d25;
+  transition: background-color 0.1s ease-in-out, color 0.1s linear;
 }
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 body {
   box-sizing: border-box;
@@ -115,12 +177,4 @@ body {
   box-shadow: 1px 1px 5px #931d25;
   border-radius: 10px;
   overflow: hidden;
-}
-.section .box {
-  padding: 40px;
-}
-.section .box .box-title {
-  font-size: 24px;
-  padding-bottom: 10px;
-  font-weight: bold;
 }

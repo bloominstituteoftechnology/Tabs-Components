@@ -23,7 +23,7 @@ In this project, our design team has already built an HTML/CSS web page for us, 
 
 * The `Tabs.js` file starts at the bottom of the page and then jumps around. Pay attention to what is being called and when. Study the corresponding HTML and LESS to get a better idea of how the tabs were built.
 
-* Once you have completed the above, add a couple Tabs to the HTML in order to see first hand how great building webpages with components is!
+* Once you have completed the above, add a couple Tabs to the HTML in order to see first hand how great building webpages with components is! 
 
 #### Stretch Goals:
 * Animations. (Use the animation library of your choice)
