@@ -2,7 +2,7 @@ class Tabs {
   constructor(element) {
     this.element = element;
     // create a reference to the ".tabs-link" class nested in your tab object
-    this.links;
+    this.links = this.element.querySelectorAll('.tabs-link');
     // This step will map over the array creating new TabsLink class instances of each link.  No need to update anything here, just study what is going on.  Notice that we are creating another new object using the TabsLink class.
     this.links = Array.from(this.links).map( link => {
       return new TabsLink(link, this);
