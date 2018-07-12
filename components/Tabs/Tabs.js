@@ -68,10 +68,15 @@ class TabsItem {
 
   select() {
     this.element.classList.add('tabs-item-selected');
+    this.fade();
   }
 
   deselect() {
     this.element.classList.remove('tabs-item-selected');
+  }
+
+  fade() {
+    TweenMax.from(this.element, 0.1, { x: -200, opacity:0.1 })
   }
 }
 
