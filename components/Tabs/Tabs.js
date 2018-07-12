@@ -74,11 +74,26 @@ class TabsItem {
   select() {
     // Add a class named "tabs-item-selected" to the element
     this.element.classList.add('tabs-item-selected');
+    console.log(this.element);
+
+    TweenMax.fromTo('.tabs-item', 1, {
+      // x: 3000
+      opacity: 0
+    }, {
+      // x: 0
+      opacity: 1
+    });
   }
 
   deselect() {
     // Remove a class named "tabs-item-selected" from the element
+
     this.element.classList.remove('tabs-item-selected');
+
+
+
+
+
     // Congrats, you finished all the instruction, check out your tab navigator!
   }
 }
