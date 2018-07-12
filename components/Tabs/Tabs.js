@@ -40,10 +40,10 @@ class TabsLink {
     // assign this.tabs to parent
     this.tabs = parent;
     // Using the method from the parent class above, pass in a reference to the custom data attribute.  
-    this.tabsItem = parent.getTab();
+    this.tabsItem = parent.getTab(this.data);
     console.log(this.tabsItem);
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
-    this.tabsItem;
+    this.tabsItem = new TabsItem(this.TabsItem);
     this.link.addEventListener('click', () => {
       this.tabs.updateActive(this);
       // invoke the select() method on this
