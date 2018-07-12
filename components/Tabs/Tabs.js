@@ -35,18 +35,18 @@ class Tabs {
 class TabsLink {
   // notice that we passed in the link reference as well as a reference to the parent class.
   constructor(link, parent) {
-    this.link=link;
+    this.link=link
     // assign this.tabs to parent
     this.tabs=parent;
     // Using the method from the parent class above, pass in a reference to the custom data attribute.  
     this.tabsItem = parent.getTab(this.link.dataset.tab);
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
     this.tabsItem=new TabsItem(this.tabsItem);
-    
+
     this.link.addEventListener('click', () => {
       this.tabs.updateActive(this);
       // invoke the select() method on this
-      this.select();
+      this.select(this);
     });
   };
 
@@ -77,7 +77,7 @@ class TabsItem {
 
   deselect() {
     // Remove a class named "tabs-item-selected" from the element 
-    this.element.remove("tabs-item-selected");
+    this.element.classList.remove("tabs-item-selected");
     // Congrats, you finished all the instruction, check out your tab navigator!
   }
 }
