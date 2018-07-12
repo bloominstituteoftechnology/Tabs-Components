@@ -91,6 +91,7 @@
   border-right: 1px solid #931d25;
   background-color: #ffffff;
   color: black;
+  transition: background-color 0.1s ease-in-out, color 0.1s linear;
 }
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
