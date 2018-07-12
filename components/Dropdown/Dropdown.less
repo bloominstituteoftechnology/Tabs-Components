@@ -22,6 +22,10 @@
     align-items: center;  
     margin-top: 10px;
     border: 2.5px solid @lambda-red;
+    transform: translateY(0);
+    visibility: visible;
+    transition: transform 0.2s linear;
+    
   }
   .dropdown-link {
     width: 100%;
@@ -36,7 +40,7 @@
     }
   }
   .dropdown-hidden {
-    display: none;
+    transform: translateY(-250px);
   }
 }
 
