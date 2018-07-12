@@ -26,8 +26,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
   border: 2.5px solid #931d25;
+  top: -175px;
 }
 .dropdown .dropdown-link {
   width: 100%;
@@ -42,7 +42,7 @@
   background-color: #931d25;
 }
 .dropdown .dropdown-hidden {
-  display: none;
+  text-align: center;
 }
 .tabs {
   width: 100%;

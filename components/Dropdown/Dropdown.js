@@ -12,7 +12,9 @@ class Dropdown {
 
   toggleContent() {
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('dropdown-hidden');
+    this.content.classList.toggle('dropdown-hidden') ? 
+      TweenMax.to(this.content, 1.25, {y: -240, ease: Power3.easeIn}) :
+      TweenMax.to(this.content, 1.25, {y: 240, ease: Power3.easeIn});
   }
 }
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
