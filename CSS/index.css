@@ -91,6 +91,12 @@
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
 }
+.carousel-item {
+  display: none;
+}
+.carousel-item-show {
+  display: block;
+}
 body {
   box-sizing: border-box;
   min-width: 300px;
