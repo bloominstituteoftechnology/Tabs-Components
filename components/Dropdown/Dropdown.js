@@ -1,3 +1,5 @@
+let open = false;
+
 class Dropdown {
   constructor(element) {
     // assign this.element to the dropdown element
@@ -10,10 +12,27 @@ class Dropdown {
     this.button.addEventListener("click", () => {this.toggleContent()});
   }
 
+  
   toggleContent() {
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle("dropdown-hidden");
+    this.content.classList.remove("dropdown-hidden");
+    if (open === false) {
+      
+      TweenMax.from(this.content, 1, {y:-300});
+      TweenMax.to(this.content, 1, {y:0});
+      open = true;
+    } else {
+      TweenMax.from(this.content, 1, {y:0});
+      TweenMax.to(this.content, 1, {y:-300});
+      open = false;
+      // setTimeout(turnClassOff, 2000);
+    }
+    
   }
+
+  // turnClassOff() {
+  //   this.content.classList.remove("dropdown-hidden");
+  // }
 }
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
 let dropdowns = document.querySelectorAll('.dropdown');
