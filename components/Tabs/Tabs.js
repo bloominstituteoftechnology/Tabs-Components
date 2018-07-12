@@ -30,9 +30,9 @@ class Tabs {
 
   getTab(data) {
     // return a reference to the element's data attribute
-    return this.element.querySelector(`.tabs-item[data-tab="${this.data}]"`);
+    return this.element.querySelector(`.tabs-item[data-tab="${data}"]`);
   }
-
+ 
 }
 
 class TabsLink {
@@ -54,14 +54,14 @@ class TabsLink {
 
   select() {
     // Add a class named "tabs-link-selected" to the link
-    this.element.classList.add('tabs-link-selected');
+    this.link.classList.add('tabs-link-selected');
     // Notice that we are using the select method on tabsItem
     this.tabsItem.select();
   }
 
   deselect() {
     // Remove a class named "tabs-link-selected" from the link
-    this.element.classList.remove('tabs-link-selected'); 
+    this.link.classList.remove('tabs-link-selected'); 
     // Notice that we are using the deselect method on tabsItem
     this.tabsItem.deselect();
   }
@@ -88,6 +88,7 @@ class TabsItem {
 // START HERE: create a reference to the ".tabs" classes
 let tabs = document.querySelectorAll('.tabs');
 // map through each tabs element and create a new Tabs object.  Be sure to pass in a reference to the tab when creating the Tabs object.
-tabs = Array.from(tabs).map(tab => new Tabs(tab));
-console.log(tabs);
+tabs = Array.from(tabs).map( tab => new Tabs(tab));
+
+
 
