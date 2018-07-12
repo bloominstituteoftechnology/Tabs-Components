@@ -14,14 +14,18 @@ function moveRight() {
   const previousSlide = carousel.items[previous];
   const currentSlide = carousel.items[current];
   previousSlide.style.display = 'block';
+  previousSlide.style.position = 'absolute';
+  previousSlide.style.top = 0;
+  previousSlide.style.bottom = 0;
   previousSlide.style.visibility = 'hidden';
   previousSlide.style.transform = 'translateX(-100%)';
   previousSlide.style.visibility = 'visible';
   currentSlide.style.transform = 'translateX(100%)';
-  previousSlide.style.transform = 'translateX(0)';
+  setTimeout(() => (previousSlide.style.transform = 'translateX(0)'), 1);
 
   setTimeout(() => {
     currentSlide.style.display = 'none';
+    previousSlide.style.position = 'relative';
   }, 275);
 
   current = previous;
@@ -33,14 +37,18 @@ function moveLeft() {
   const nextSlide = carousel.items[next];
   const currentSlide = carousel.items[current];
   nextSlide.style.display = 'block';
+  nextSlide.style.position = 'absolute';
+  nextSlide.style.top = 0;
+  nextSlide.style.bottom = 0;
   nextSlide.style.visibility = 'hidden';
   nextSlide.style.transform = 'translateX(100%)';
   nextSlide.style.visibility = 'visible';
   currentSlide.style.transform = 'translateX(-100%)';
-  nextSlide.style.transform = 'translateX(0)';
+  setTimeout(() => (nextSlide.style.transform = 'translateX(0)'), 1);
 
   setTimeout(() => {
     currentSlide.style.display = 'none';
+    nextSlide.style.position = 'relative';
   }, 275);
 
   current = next;
