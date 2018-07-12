@@ -5,6 +5,7 @@ class Tabs {
     this.links = this.element.querySelectorAll(".tabs-link");
     // This step will map over the array creating new TabsLink class instances of each link.  No need to update anything here, just study what is going on.  Notice that we are creating another new object using the TabsLink class.
     this.links = Array.from(this.links).map( link => {
+      console.log(link);
       return new TabsLink(link, this);//this is the parent. 
     });
     // Set the active link to the first item in the array
@@ -15,19 +16,20 @@ class Tabs {
 
   init() { 
     // invoke the method select() on activeLink
-    this.activeLink;
+    this.activeLink.select();
   }
 
   updateActive(newActive) {
-    // invoke the method deselect() on activeLink
-    this.activeLink;
+    // invoke the method deselect() on activeLink 
+    this.activeLink.deselect();
+    
     // assign this.activeLink to the new active link (newActive)
-    this.activeLink;
+    this.activeLink = newActive; 
   }
 
   getTab(data) {
     // return a reference to the element's data attribute
-    return this.element.querySelector(`.tabs-item[data-tab="${this.data}]"`); // this bridges the gap. 
+    return this.element.querySelector(`.tabs-item[data-tab="${data}"]`); // this bridges the gap. 
   }
 
 }
@@ -39,26 +41,27 @@ class TabsLink {
     // assign this.tabs to parent
     this.tabs = parent;
     // Using the method from the parent class above, pass in a reference to the custom data attribute.  
-    this.tabsItem = parent.getTab(this.link.dataset.tab);// Parent is the big tab class. this saves the 1 2 3 4 
+    this.tabsItem = parent.getTab(this.link.dataset.tab);// Parent is the big tab class. this saves the 1 2 3 4  
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
-    this.tabsItem;
+    this.tabsItem = new TabsItem(this.tabsItem);
     this.link.addEventListener('click', () => {
       this.tabs.updateActive(this);
       // invoke the select() method on this
-      this;
+       this.select();
+       
     });
   };
 
   select() {
     // Add a class named "tabs-link-selected" to the link
-    this.element;
+    this.link.classList.add('tabs-link-selected');
     // Notice that we are using the select method on tabsItem
     this.tabsItem.select();
   }
 
   deselect() {
     // Remove a class named "tabs-link-selected" from the link
-    this.element; 
+    this.link.classList.remove('tabs-link-selected'); 
     // Notice that we are using the deselect method on tabsItem
     this.tabsItem.deselect();
   }
@@ -71,12 +74,12 @@ class TabsItem {
 
   select() {
     // Add a class named "tabs-item-selected" to the element 
-    this.element;
+    this.element.classList.add('tabs-item-selected');
   }
 
   deselect() {
     // Remove a class named "tabs-item-selected" from the element 
-    this.element;
+    this.element.classList.remove('tabs-item-selected');
     // Congrats, you finished all the instruction, check out your tab navigator!
   }
 }
