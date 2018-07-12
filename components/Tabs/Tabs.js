@@ -38,10 +38,11 @@ class TabsLink {
 
     this.link.addEventListener('click', (e) => {
       // match the current link and parent's link
-      let currentTabsLink = this.tabs.links.filter((linkOject) => {
-        return e.target.dataset.tab === linkOject.link.dataset.tab;
-      })[0];
+      // let currentTabsLink = this.tabs.links.filter((linkOject) => {
+      //   return e.target.dataset.tab === linkOject.link.dataset.tab;
+      // })[0];
       // console.log(currentTabsLink);
+      let currentTabsLink = this;
       // pass the current link to parent
       this.tabs.updateActive(currentTabsLink);
       // invoke the select() method on this
