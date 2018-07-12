@@ -14,6 +14,8 @@
 }
 .pictures .picture {
   display: none;
+  animation-name: fade;
+  animation-duration: 1s;
 }
 .pictures .active-picture {
   display: block;
@@ -39,6 +41,14 @@
 .pictures .left-pointer:hover,
 .pictures .right-pointer:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .dropdown {
   z-index: 2;

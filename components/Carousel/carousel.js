@@ -3,7 +3,7 @@ class Pictures {
 		this.element = element;
 		this.pictures = this.element.querySelectorAll('.picture');
 		this.pictures = Array.from(this.pictures).map( picture => {
-		  return new Picture(picture, this);
+		  return new Picture(picture);
 		});
 		this.state = 0;
 		this.leftPointer = this.element.querySelector('.left-pointer');
@@ -37,17 +37,11 @@ class Pictures {
 	 	this.activePicture = newActive;
 	 	this.activePicture.makeVisible();
 	}
-
-	getTab(data) {
-	 	return this.element.querySelector(`.picture[data-tab="${data}"]`);
-	}
 }
 
 class Picture {
-	constructor(picture, parent){
+	constructor(picture){
 		this.picture = picture;
-		this.carousel = parent;
-		console.log(this.picture.classList);
 	}
 
 	makeVisible(){

@@ -8,6 +8,8 @@
   }
   .picture{
     display: none;
+    animation-name: fade;
+    animation-duration: 1s;
   }
   .active-picture {
     display: block;
@@ -32,4 +34,9 @@
   .left-pointer:hover, .right-pointer:hover {
     background-color: rgba(0,0,0,0.8);
   }
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
