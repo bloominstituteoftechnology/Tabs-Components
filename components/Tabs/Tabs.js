@@ -27,40 +27,40 @@ class Tabs {
 
   getTab(data) {
     // return a reference to the element's data attribute
-    return this.tab;
+    return this.tab.querySelector(`.tabs-item[data-tab="${data}"]`);
   }
 
 }
 
 class TabsLink {
-  // notice that we passesd in the element reference as well as a reference to the parent class.
-  constructor(link, tab) {
+  // notice that we passed in the link reference as well as a reference to the parent class.
+  constructor(link, parent) {
     this.link = link;
     // assign this.tabs to parent
-    this.tab = tab;
+    this.tabs = parent;
     // Using the method from the parent class above, pass in a reference to the custom data attribute.  
-    this.tabItem = tab.getTab(tab);
+    this.tabsItem = parent.getTab(this.link.dataset.tab);
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
-    this.tabItem = new TabsItem(this.tabItem);
+    this.tabsItem = new TabsItem(this.tabsItem);
     this.link.addEventListener('click', () => {
-      this.tab.updateActive(this);
+      this.tabs.updateActive(this);
       // invoke the select() method on this
       this.select();
     });
   };
 
   select() {
-    // Add a class named "tabs-link-selected" to the element
+    // Add a class named "tabs-link-selected" to the link
     this.link.classList.add('tabs-link-selected');
     // Notice that we are using the select method on tabsItem
-    this.tabItem.select();
+    this.tabsItem.select();
   }
 
   deselect() {
-    // Remove a class named "tabs-link-selected" from the element
-    this.link.classList.remove('tabs-link-selected'); 
+    // Remove a class named "tabs-link-selected" from the link
+    this.link.classList.remove('tabs-link-selected');
     // Notice that we are using the deselect method on tabsItem
-    this.tabItem.deselect();
+    this.tabsItem.deselect();
   }
 }
 
@@ -70,12 +70,12 @@ class TabsItem {
   }
 
   select() {
-    // Add a class named "tabs-item-selected" to the element 
+    // Add a class named "tabs-item-selected" to the item 
     this.item.classList.add('tabs-item-selected');
   }
 
   deselect() {
-    // Remove a class named "tabs-item-selected" from the element 
+    // Remove a class named "tabs-item-selected" from the item 
     this.item.classList.remove('tabs-item-selected');
     // Congrats, you finished all the instruction, check out your tab navigator!
   }
@@ -86,4 +86,3 @@ class TabsItem {
 let tabs = document.querySelectorAll('.tabs');
 // map through each tabs element and create a new Tabs object.  Be sure to pass in a reference to the tab when creating the Tabs object.
 tabs = Array.from(tabs).map(tab => new Tabs(tab));
-
