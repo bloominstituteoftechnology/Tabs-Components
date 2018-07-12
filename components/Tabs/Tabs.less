@@ -6,11 +6,13 @@
     display: flex;
     justify-content: center;
     padding-top: 60px;
+    position: relative;
   }
   .tabs-item {
-    display: none; 
-
     width: 75%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity .3s ease;
     .tabs-item-title {
       font-size: 24px;
       font-weight: bold;
@@ -18,7 +20,7 @@
     }
   }
   .tabs-item-selected {
-    display: block;
+    opacity: 1;
   }
 
   .tabs-links {
