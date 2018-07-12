@@ -45,20 +45,21 @@ class TabsLink {
     this.link.addEventListener('click', () => {
       this.tabs.updateActive(this);
       // invoke the select() method on this
-      this;
+      this.select();
     });
   };
 
   select() {
     // Add a class named "tabs-link-selected" to the link
-    this.element;
+    this.element.classList.toggle("tabs-link-selected"); 
     // Notice that we are using the select method on tabsItem
     this.tabsItem.select();
   }
 
+
   deselect() {
     // Remove a class named "tabs-link-selected" from the link
-    this.element; 
+    this.element.classList.toggle(); 
     // Notice that we are using the deselect method on tabsItem
     this.tabsItem.deselect();
   }
@@ -71,7 +72,7 @@ class TabsItem {
 
   select() {
     // Add a class named "tabs-item-selected" to the element 
-    this.element;
+    this.element.classList.toggle("tabs-item-selected");
   }
 
   deselect() {
