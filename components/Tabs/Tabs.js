@@ -8,7 +8,7 @@ class Tabs {
       return new TabsLink(link, this);
     });
     // Set the active link to the first item in the array
-    this.activeLink = link[0];
+    this.activeLink = this.links[0];
     // Nothing to update here, just notice we are invoking the init() method
     this.init();
   }
@@ -27,7 +27,8 @@ class Tabs {
 
   getTab(data) {
     // return a reference to the element's data attribute
-    return this.element.querySelector(`.tabs-item[data-tab="${data}"]`);    
+    return this.element.querySelector(`.tabs-item[data-tab="${data}"]`);
+  }    
 
 }
 
@@ -47,7 +48,7 @@ class TabsLink {
       // invoke the select() method on this
       this.select();
     });
-  };
+  }
 
   select() {
     // Add a class named "tabs-link-selected" to the link
