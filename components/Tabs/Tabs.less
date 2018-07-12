@@ -8,8 +8,7 @@
     padding-top: 60px;
   }
   .tabs-item {
-    display: none; 
-
+    display: none;
     width: 75%;
     .tabs-item-title {
       font-size: 24px;
@@ -19,6 +18,7 @@
   }
   .tabs-item-selected {
     display: block;
+    animation: fadeIn 1s;
   }
 
   .tabs-links {
@@ -49,3 +49,7 @@
 }
 
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
