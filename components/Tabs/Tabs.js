@@ -2,8 +2,10 @@ class Tabs {
   constructor(element) {
     this.element = element;
     // create a reference to the ".tabs-link" class nested in your tab object
-    this.links;
+    this.links = element.querySelectorAll(".tabs-link");
     // This step will map over the array creating new TabsLink class instances of each link.  No need to update anything here, just study what is going on.  Notice that we are creating another new object using the TabsLink class.
+    //we're using "return" here because we are using curly braces with our map methods. 
+    //link is getting passed in like normal and represents the "Tab 1", Tab 2, etc, and then we're passing in "this" representing the parent aka the whole container.
     this.links = Array.from(this.links).map( link => {
       return new TabsLink(link, this);
     });
@@ -27,7 +29,7 @@ class Tabs {
 
   getTab(data) {
     // return a reference to the element's data attribute
-    return this.element;
+    return this.element.querySelector(`.tabs-item[data-tab="${this.data}"]`); 
   }
 
 }
@@ -35,11 +37,12 @@ class Tabs {
 class TabsLink {
   // notice that we passed in the link reference as well as a reference to the parent class.
   constructor(link, parent) {
-    this.link;
+    //assign this.link to link
+    this.link = link;
     // assign this.tabs to parent
-    this.tabs;
+    this.tabs = parent;
     // Using the method from the parent class above, pass in a reference to the custom data attribute.  
-    this.tabsItem = parent.getTab();
+    this.tabsItem = parent.getTab(this.link.dataset.tab);
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
     this.tabsItem;
     this.link.addEventListener('click', () => {
