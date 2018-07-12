@@ -22,7 +22,7 @@ class Tabs {
 
   updateActive(newActive) {
     // invoke the method deselect() on activeLink
-    this.activeLink;
+    this.activeLink.deselect();
     // assign this.activeLink to the new active link (newActive)
     this.activeLink;
   }
@@ -48,7 +48,7 @@ class TabsLink {
     this.link.addEventListener('click', () => {
       this.tabs.updateActive(this);
       // invoke the select() method on this
-      this;
+      this.select();
     });
   };
 
@@ -89,4 +89,5 @@ class TabsItem {
 let tabs = document.querySelectorAll(".tabs");
 // map through each tabs element and create a new Tabs object.  Be sure to pass in a reference to the tab when creating the Tabs object.
 tabs = Array.from(tabs).map(tab => new Tabs(tab));
+
 
