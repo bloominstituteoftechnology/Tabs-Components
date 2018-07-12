@@ -13,6 +13,7 @@ class Tabs {
     this.init();
   }
 
+
   init() { 
     // invoke the method select() on activeLink
     this.activeLink.select();
@@ -29,7 +30,6 @@ class Tabs {
     // return a reference to the element's data attribute
     return this.element.querySelector(`.tabs-item[data-tab="${this.data}"]`); 
   }
-
 }
 
 class TabsLink {
@@ -59,7 +59,7 @@ class TabsLink {
 
   deselect() {
     // Remove a class named "tabs-link-selected" from the link
-    this.element.classList.toggle(); 
+    this.element.classList.remove("tabs-link-selected"); 
     // Notice that we are using the deselect method on tabsItem
     this.tabsItem.deselect();
   }
@@ -77,7 +77,7 @@ class TabsItem {
 
   deselect() {
     // Remove a class named "tabs-item-selected" from the element 
-    this.element;
+    this.element.classList.remove("tabs-item-selected");
     // Congrats, you finished all the instruction, check out your tab navigator!
   }
 }
@@ -88,3 +88,4 @@ let tabs = document.querySelectorAll('.tabs');
 // map through each tabs element and create a new Tabs object.  Be sure to pass in a reference to the tab when creating the Tabs object.
 tabs = Array.from(tabs).map(tab => new Tabs(tab));
 
+console.log(links);
