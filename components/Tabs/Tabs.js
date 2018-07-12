@@ -6,7 +6,7 @@ class Tabs {
     // This step will map over the array creating new TabsLink class instances of each link.  No need to update anything here, just study what is going on.  Notice that we are creating another new object using the TabsLink class.
     //we're using "return" here because we are using curly braces with our map methods. 
     //link is getting passed in like normal and represents the "Tab 1", Tab 2, etc, and then we're passing in "this" representing the parent aka the whole container.
-    this.links = Array.from(this.links).map( link => {
+    this.links = Array.from(this.links).map(link => {
       return new TabsLink(link, this);
     });
     // Set the active link to the first item in the array
@@ -15,21 +15,22 @@ class Tabs {
     this.init();
   }
 
-  init() { 
+  init() {
     // invoke the method select() on activeLink
-    this.activeLink.select(); 
+    this.activeLink.select();
   }
 
   updateActive(newActive) {
     // invoke the method deselect() on activeLink
     this.activeLink.deselect();
     // assign this.activeLink to the new active link (newActive)
-    this.activeLink;
+    this.activeLink = newActive;
+    //MAY NEED TO REMOVE "this" in line above, not sure
   }
 
   getTab(data) {
     // return a reference to the element's data attribute
-    return this.element.querySelector(`.tabs-item[data-tab="${this.data}"]`); 
+    return this.element.querySelector(`.tabs-item[data-tab="${data}"]`);
   }
 
 }
@@ -44,7 +45,8 @@ class TabsLink {
     // Using the method from the parent class above, pass in a reference to the custom data attribute.  
     this.tabsItem = parent.getTab(this.link.dataset.tab);
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
-    this.tabsItem;
+    this.tabsItem = new TabsItem(this.tabsItem);
+    //NOT SURE ABOUT LINE ABOVE
     this.link.addEventListener('click', () => {
       this.tabs.updateActive(this);
       // invoke the select() method on this
@@ -54,14 +56,14 @@ class TabsLink {
 
   select() {
     // Add a class named "tabs-link-selected" to the link
-    this.element;
+    this.link.classList.add("tabs-link-selected");
     // Notice that we are using the select method on tabsItem
     this.tabsItem.select();
   }
 
   deselect() {
     // Remove a class named "tabs-link-selected" from the link
-    this.element; 
+    this.link.classList.remove("tabs-link-selected");
     // Notice that we are using the deselect method on tabsItem
     this.tabsItem.deselect();
   }
@@ -74,12 +76,12 @@ class TabsItem {
 
   select() {
     // Add a class named "tabs-item-selected" to the element 
-    this.element;
+    this.element.classList.add("tabs-item-selected");
   }
 
   deselect() {
     // Remove a class named "tabs-item-selected" from the element 
-    this.element;
+    this.element.classList.remove("tabs-item-selected");
     // Congrats, you finished all the instruction, check out your tab navigator!
   }
 }
