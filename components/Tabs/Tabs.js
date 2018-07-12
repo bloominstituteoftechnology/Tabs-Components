@@ -23,15 +23,16 @@ class Tabs {
   }
 
   updateActive(newActive) {
+    console.log(newActive);
+    
     // invoke the method deselect() on activeLink
-    this.activeLink;
-    // assign this.activeLink to the new active link (newActive)
-    this.activeLink;
+    this.activeLink.deselect();
+    // // assign this.activeLink to the new active link (newActive)
+    this.activeLink = newActive;
   }
 
   getTab(data) {
-    // return a reference to the element's data attribute
-    return this.element;
+    return this.element = document.querySelector(`.tabs-link[data-tab="${data}"]`);
   }
 
 }
@@ -44,19 +45,11 @@ class TabsLink {
     
     this.tabsData = this.element.dataset.tab;
     this.tabsItem = parent.getTab(this.tabsData);
-    console.log(this.tabsItem);
-    
-    // Create a new TabsItem object that passes in a tabsItem value that you just created above
-    this.tabsItem = Array.from(this.tabsItem).map((tab)=>{
-      console.log(tab);
-      return new TabsItem(tab);
-    });
+    this.tabsItem = new TabsItem(this.tabsItem);
 
     this.element.addEventListener('click', (e) => {
       this.tabs.updateActive(this);
       // invoke the select() method on this
-      // console.log(e.target.classList.select());
-      
       this.select();
     });
   };
@@ -66,7 +59,7 @@ class TabsLink {
 
     this.element.classList.add('tabs-link-selected');
     // Notice that we are using the select method on tabsItem
-    // this.tabsItem.select();
+    this.tabsItem.select();
   }
 
   deselect() {
@@ -80,13 +73,11 @@ class TabsLink {
 class TabsItem {
   constructor(element) {
     this.element = element;
-    console.log(this.element);
-    
   }
 
   select() {
     // Add a class named "tabs-item-selected" to the element 
-    this.element;
+    this.element.classList.add('tabs-item-selected');
   }
 
   deselect() {
