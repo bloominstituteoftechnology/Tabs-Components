@@ -39,7 +39,6 @@ class TabsLink {
     // assign this.tabs to parent
     this.tabs=parent;
     // Using the method from the parent class above, pass in a reference to the custom data attribute.  
-    
     this.tabsItem = parent.getTab(this.link.dataset.tab);
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
     this.tabsItem=new TabsItem(this.tabsItem);
