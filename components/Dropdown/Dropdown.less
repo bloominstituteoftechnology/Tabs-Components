@@ -24,8 +24,7 @@
     border: 2.5px solid @lambda-red;
     transform: translateY(0);
     visibility: visible;
-    transition: transform 0.2s linear;
-    
+    transition: transform 0.2s linear, visibility 0.1s linear 0s;
   }
   .dropdown-link {
     width: 100%;
@@ -40,7 +39,8 @@
     }
   }
   .dropdown-hidden {
-    transform: translateY(-250px);
+    transform: translateY(-1em);
+    visibility: hidden;
   }
 }
 

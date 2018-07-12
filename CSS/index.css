@@ -30,7 +30,7 @@
   border: 2.5px solid #931d25;
   transform: translateY(0);
   visibility: visible;
-  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, visibility 0.1s linear 0s;
 }
 .dropdown .dropdown-link {
   width: 100%;
@@ -45,7 +45,8 @@
   background-color: #931d25;
 }
 .dropdown .dropdown-hidden {
-  transform: translateY(-250px);
+  transform: translateY(-1em);
+  visibility: hidden;
 }
 .tabs {
   width: 100%;
