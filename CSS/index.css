@@ -20,6 +20,9 @@
   background-color: #be2530;
 }
 .dropdown .dropdown-content {
+  transform: translateY(0);
+  transition: all 0.275s ease-in-out;
+  opacity: 1;
   width: 100%;
   position: absolute;
   background-color: #ffffff;
@@ -42,7 +45,8 @@
   background-color: #931d25;
 }
 .dropdown .dropdown-hidden {
-  display: none;
+  transform: translateY(-300px);
+  opacity: 0;
 }
 .tabs {
   width: 100%;
