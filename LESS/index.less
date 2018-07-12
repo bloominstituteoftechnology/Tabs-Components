@@ -8,12 +8,10 @@
 @import '../components/Dropdown/Dropdown.less';
 @import '../components/Tabs/Tabs.less';
 
-
-
 body {
-	box-sizing: border-box;
-	min-width: 300px;
-	margin: 0;
+  box-sizing: border-box;
+  min-width: 300px;
+  margin: 0;
 }
 
 .header-container {
@@ -22,17 +20,16 @@ body {
   border-bottom: 1px solid @white;
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   background-color: @lambda-red;
   .header {
     height: 50px;
   }
 }
 
-
-
 .section {
   width: 70%;
+  max-width: 600px;
   margin: 45px auto;
   display: flex;
   border: 1px solid @lambda-red;
@@ -49,5 +46,32 @@ body {
   }
 }
 
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  .carousel-item {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transition: transform 0.275s ease-in-out;
+    overflow: hidden;
+    display: none;
+  }
+  .carousel-image {
+    display: block;
+    width: 100%;
+  }
+}
 
+.move-left {
+  transform: translateX(-100%);
+}
+.move-right {
+  transform: translateX(100%);
+}
+
+button {
+  z-index: 3;
+}
 
