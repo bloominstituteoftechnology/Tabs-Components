@@ -12,7 +12,21 @@ class Dropdown {
 
   toggleContent() {
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('dropdown-hidden');
+    if (this.content.classList.contains('dropdown-hidden')) {
+      this.content.classList.toggle('dropdown-hidden');
+      TweenMax.fromTo('.dropdown-content', 2, {
+        y: -250
+      }, {
+        y: 0
+      });
+    } else {
+      TweenMax.fromTo('.dropdown-content', 2, {
+        y: 0
+      }, {
+        y: -250,
+        onComplete: () => this.content.classList.toggle('dropdown-hidden')
+      });
+    }
   }
 }
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
