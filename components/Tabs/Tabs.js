@@ -1,13 +1,9 @@
 class Tabs {
   constructor(element) {
     this.element = element;
-
     this.links = this.element.querySelectorAll(".tabs-link");
-
     this.links = Array.from(this.links).map(link => {return new TabsLink(link, this);});
-
     this.activeLink = this.links[0];
-
     this.init();
   }
 
@@ -42,12 +38,12 @@ class TabsLink {
   }
 
   select() {
-    this.link = this.link.classList.addClass('tabs-link-selected') ;
+    this.link.classList.add('tabs-link-selected') ;
    
     this.tabsItem.select();
   }
   deselect() {
-    this.link = this.link.classList.toggle('tabs-link-selected'); 
+    this.link.classList.remove('tabs-link-selected'); 
    
     this.tabsItem.deselect();
   }
@@ -58,10 +54,10 @@ class TabsItem {
     this.element = element;
   }
   select() {
-    this.element = this.element.classList.addClass("tabs-item-selected");
+    this.element.classList.add("tabs-item-selected");
   }
   deselect() {
-    this.element = this.element.classList.toggle("tabs-item-selected");
+    this.element.classList.remove("tabs-item-selected");
   }
 }
 
