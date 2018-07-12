@@ -51,7 +51,7 @@ class TabsLink {
     this.tabsItem = parent.getTab(this.link.dataset.tab);
     
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
-    this.tabsItem;
+    this.tabsItem = Array.from(this.tabsItem).map( tabmenu => {new TabsItem(tabmenu)}) ;
 
     this.element.addEventListener('click', () => {this.tabs.updateActive();
     
