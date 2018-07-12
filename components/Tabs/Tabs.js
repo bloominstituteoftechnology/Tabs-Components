@@ -27,7 +27,7 @@ class Tabs {
 
   getTab(data) {
     // return a reference to the element's data attribute
-    return this.element.querySelector(`.tabs-link[data-tab="${data}"]`);
+    return this.element.querySelector(`.tabs-item[data-tab="${data}"]`);
   }
 
 }
@@ -40,8 +40,10 @@ class TabsLink {
     this.tabs = parent;
     // Using the method from the parent class above, pass in a reference to the custom data attribute.  
     this.tabsItem = parent.getTab(this.link.dataset.tab);
+    //console.log(this.tabsItem);
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
     this.tabsItem = new TabsItem(this.tabsItem);
+    console.log(this.tabsItem);
     this.link.addEventListener('click', () => {
       this.tabs.updateActive(this);
       // invoke the select() method on this
@@ -67,7 +69,7 @@ class TabsLink {
 class TabsItem {
   constructor(element) {
     this.element = element;
-    console.log(this.element)
+    //console.log(this.element)
   }
 
   select() {
