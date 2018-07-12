@@ -27,11 +27,10 @@ class Tabs {
 
   getTab(data) {
     // return a reference to the element's data attribute
-    console.log(data, this.element.querySelector(`.tabs-item[data-tab="${data}"]`));
     return this.element.querySelector(`.tabs-item[data-tab="${data}"]`)
   }
 
-}
+} 
 
 class TabsLink {
   // notice that we passesd in the element reference as well as a reference to the parent class.
