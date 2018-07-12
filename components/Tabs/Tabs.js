@@ -30,7 +30,7 @@ class Tabs {
 
   getTab(data) {
     // return a reference to the element's data attribute
-    return this.element.querySelector(`.tabs-item[data-tab="${this.data}"]`); 
+    return this.element.querySelector(`.tabs-item[data-tab="${data}"]`); 
   }
 }
 
@@ -67,6 +67,7 @@ class TabsLink {
   }
 }
 
+console.log(this.element)
 class TabsItem {
   constructor(element) {
     this.element = element;
