@@ -2,7 +2,7 @@ class Tabs {
   constructor(element) {
     this.element = element;
     // create a reference to the ".tabs-link" class nested in your tab object
-    this.links;
+    this.links = document.querySelectorAll('.tabs-link');
     // This step will map over the array creating new TabsLink class instances of each link.  No need to update anything here, just study what is going on.  Notice that we are creating another new object using the TabsLink class.
     this.links = Array.from(this.links).map( link => {
       return new TabsLink(link, this);
@@ -15,14 +15,14 @@ class Tabs {
 
   init() { 
     // invoke the method select() on activeLink
-    this.activeLink.select();
+    this.activeLink.selects();
   }
 
   updateActive(newActive) {
     // invoke the method deselect() on activeLink
-    this.activeLink;
+    this.activeLink.deselect();
     // assign this.activeLink to the new active link (newActive)
-    this.activeLink;
+    this.activeLink =
   }
 
   getTab(data) {
@@ -83,7 +83,7 @@ class TabsItem {
 
 
 // START HERE: create a reference to the ".tabs" classes
-let tabs = document.querySelectorAll();
+let tabs = document.querySelectorAll('.tabs');
 // map through each tabs element and create a new Tabs object.  Be sure to pass in a reference to the tab when creating the Tabs object.
 tabs = Array.from(tabs).map(tab => new Tabs (tab));
 
