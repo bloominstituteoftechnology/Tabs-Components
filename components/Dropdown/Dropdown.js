@@ -12,9 +12,17 @@ class Dropdown {
 
   toggleContent() {
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('dropdown-hidden');
+    
+    if (this.content.classList.contains('dropdown-hidden')) {
+      TweenLite.to(this.content, .3, { display:"flex", height: "165px", ease: Elastic.easeOut} );
+      this.content.classList.remove('dropdown-hidden');
+    } else {
+      TweenLite.to(this.content, .3, {display:"none", height: "0px", ease: Elastic.easeIn} );
+      this.content.classList.add('dropdown-hidden');
+    }
   }
 }
+
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
 let dropdowns = document.querySelectorAll('.dropdown');
 dropdowns = Array.from(dropdowns).map( dropdown => new Dropdown(dropdown));
