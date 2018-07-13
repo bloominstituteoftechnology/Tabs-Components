@@ -90,6 +90,36 @@
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
 }
+.carousel {
+  height: 250px;
+  display: flex;
+  z-index: 1;
+}
+.carousel .box {
+  padding: 40px;
+  display: none;
+  position: absolute;
+  background: white;
+  z-index: -5;
+  width: 65%;
+  height: 85%;
+}
+.carousel .box .box-title {
+  font-size: 24px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.carousel .slide-active {
+  display: block;
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 body {
   box-sizing: border-box;
   min-width: 300px;
@@ -115,12 +145,4 @@ body {
   box-shadow: 1px 1px 5px #931d25;
   border-radius: 10px;
   overflow: hidden;
-}
-.section .box {
-  padding: 40px;
-}
-.section .box .box-title {
-  font-size: 24px;
-  padding-bottom: 10px;
-  font-weight: bold;
 }

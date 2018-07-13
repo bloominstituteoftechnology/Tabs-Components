@@ -1,0 +1,35 @@
+.carousel{
+  height: 250px;
+  display:flex;
+  // overflow: hidden;
+  z-index: 1;
+
+  .box {
+    padding: 40px;
+    display: none;
+    position: absolute;
+    background: white;
+    z-index: -5;
+    width: 65%;
+    height: 85%;
+
+    .box-title {
+      font-size: 24px;
+      padding-bottom: 10px;
+      font-weight: bold;
+    }
+  }
+
+  .slide-active{
+    display: block;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
