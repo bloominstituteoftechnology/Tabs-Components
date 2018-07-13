@@ -24,7 +24,6 @@ class Tabs {
     // assign this.activeLink to the new active link (newActive)
     this.activeLink = newActive;
   }
-
   getTab(data) {
     // return a reference to the element's data attribute
     return this.element.querySelector(`.tabs-item[data-tab="${data}"]`)
