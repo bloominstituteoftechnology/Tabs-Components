@@ -29,9 +29,9 @@ class Carousel{
       this.slide(this.current); 
   
       if(typeof interval === 'number' && (interval % 1) === 0){
-        let context = this; 
+        let context = this; //allows us to access current this inside of another function. 
         this.run = setTimeout(function(){
-          context.previous(interval);
+          context.previous(interval); 
         }, interval); 
       }
     }
