@@ -59,12 +59,13 @@
   width: 75%;
 }
 .tabs .tabs-item .tabs-item-title {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   padding-bottom: 10px;
 }
 .tabs .tabs-item-selected {
   display: block;
+  line-height: 24px;
 }
 .tabs .tabs-links {
   display: flex;
@@ -94,6 +95,7 @@ body {
   box-sizing: border-box;
   min-width: 300px;
   margin: 0;
+  background-color: #d3d3d3;
 }
 .header-container {
   width: 100%;
