@@ -72,12 +72,15 @@ class TabsItem {
 
   select() {
     // Add a class named "tabs-item-selected" to the element 
-    this.element.classList.add("tabs-item-selected");
+    TweenLite.to(this.element, 0.5, {css:{className:'+=tabs-item-selected'}, autoAlpha:1})
+    
   }
 
   deselect() {
     // Remove a class named "tabs-item-selected" from the element 
-    this.element.classList.remove("tabs-item-selected");
+   
+    TweenLite.to(this.element, 0, {css:{className:'-=tabs-item-selected'}, autoAlpha:0});
+    
     // Congrats, you finished all the instruction, check out your tab navigator!
   }
 }

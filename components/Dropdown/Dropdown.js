@@ -14,10 +14,10 @@ class Dropdown {
     // Toggle the ".dropdown-hidden" class off and on
     
     if (this.content.classList.contains('dropdown-hidden')) {
-      TweenLite.to(this.content, .3, { display:"flex", height: "165px", ease: Elastic.easeOut} );
+      TweenLite.to(this.content, .3, {display: "flex", height: "170px", ease: Elastic.easeOut} );
       this.content.classList.remove('dropdown-hidden');
     } else {
-      TweenLite.to(this.content, .3, {display:"none", height: "0px", ease: Elastic.easeIn} );
+      TweenLite.to(this.content, .3, {display: "none", height: "0px", ease: Elastic.easeIn} );
       this.content.classList.add('dropdown-hidden');
     }
   }
