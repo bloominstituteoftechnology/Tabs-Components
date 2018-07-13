@@ -1,0 +1,44 @@
+.carousel {
+    .width-100();
+    .flex(center, center);
+    background: linear-gradient(to right, rgba(255,0,0,0), @lambda-times-color-primary);
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    @media(min-width: 1200px){
+      width: 1200px;
+    }
+    .left-button, .right-button {
+      .flex(center);
+      color: @lambda-times-color-white;
+      background-color: @lambda-times-color-primary;
+      font-size: 40px;
+      border-radius: 50%;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      z-index: 10;
+      cursor: pointer;
+      &:hover {
+        color: @lambda-times-color-primary;
+        background-color: @lambda-times-color-white;
+        border: 2px solid @lambda-times-color-primary;
+      }
+    }
+    .left-button {
+      top: 50%; 
+      left: 25px;
+      transform: translate(0, -50%);
+    }
+    .right-button {
+      top: 50%; 
+      right: 25px;
+      transform: translate(0, -50%);
+    }
+    img { 
+      .width-100();
+      display: none;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+    }
+  }

@@ -61,6 +61,7 @@ class TabsLink {
     this.link.classList.remove('tabs-link-selected');
     // Notice that we are using the deselect method on tabsItem
     this.tabsItem.deselect();
+    
   }
 }
 
@@ -70,12 +71,13 @@ class TabsItem {
   }
 
   select() {
-    // Add a class named "tabs-item-selected" to the item 
+    // Add a class named "tabs-item-selected" to the item
+    TweenMax.fromTo(this.item, 1.5, {autoAlpha: .2}, {autoAlpha: 1, ease: Power2.easeOut});
     this.item.classList.add('tabs-item-selected');
   }
 
   deselect() {
-    // Remove a class named "tabs-item-selected" from the item 
+    // Remove a class named "tabs-item-selected" from the item
     this.item.classList.remove('tabs-item-selected');
     // Congrats, you finished all the instruction, check out your tab navigator!
   }
