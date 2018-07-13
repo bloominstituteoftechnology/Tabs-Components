@@ -124,3 +124,15 @@ body {
   padding-bottom: 10px;
   font-weight: bold;
 }
+.carousel {
+  padding: 20px;
+  max-width: 100%;
+  display: flex;
+}
+.button-class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  border: 2px solid red;
+}
