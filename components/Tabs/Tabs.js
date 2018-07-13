@@ -12,19 +12,16 @@ class Tabs {
     // Nothing to update here, just notice we are invoking the init() method
     this.init();
   }
-
   init() { 
     // invoke the method select() on activeLink
     this.activeLink.select();
   }
-
   updateActive(newActive) {
     // invoke the method deselect() on activeLink
     this.activeLink.deselect();
     // assign this.activeLink to the new active link (newActive)
     this.activeLink = newActive;
   }
-
   getTab(data) {
     // return a reference to the element's data attribute
     return this.element.querySelector(`.tabs-item[data-tab="${data}"]`);
@@ -42,21 +39,18 @@ class TabsLink {
     this.tabsItem = parent.getTab(this.link.dataset.tab);
     // Create a new TabsItem object that passes in a tabsItem value that you just created above
     this.tabsItem = new TabsItem(this.tabsItem);
-
     this.link.addEventListener('click', () => {
       this.tabs.updateActive(this);
       // invoke the select() method on this
       this.select();
     });
   };
-
   select() {
     // Add a class named "tabs-link-selected" to the link
     this.link.classList.add('tabs-link-selected');
     // Notice that we are using the select method on tabsItem
     this.tabsItem.select();
   }
-
   deselect() {
     // Remove a class named "tabs-link-selected" from the link
     this.link.classList.remove('tabs-link-selected'); 
@@ -70,12 +64,10 @@ class TabsItem {
   constructor(element) {
     this.element = element;
   }
-
   select() {
     // Add a class named "tabs-item-selected" to the element 
     this.element.classList.add('tabs-item-selected');
   }
-
   deselect() {
     // Remove a class named "tabs-item-selected" from the element 
     this.element.classList.remove('tabs-item-selected');
