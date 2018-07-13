@@ -40,7 +40,14 @@ class Carousel {
     if(newPos == this.slides.length){
       newPos = 0;
     }
-    this.updateActive(newPos);
+    let prevActive = this.slides[this.activeSlide].slide;
+    prevActive.style.zIndex = -1;
+    prevActive.style.animation = "slideLeft 2s linear";
+    setTimeout(()=>{
+      this.updateActive(newPos);
+      prevActive.style.animation = "";
+      prevActive.style.zIndex = -5;
+    }, 2000);
     this.slides[newPos].select();
   }
 }

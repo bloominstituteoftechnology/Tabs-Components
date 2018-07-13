@@ -92,10 +92,17 @@
 }
 .carousel {
   height: 250px;
+  display: flex;
+  z-index: 1;
 }
 .carousel .box {
   padding: 40px;
   display: none;
+  position: absolute;
+  background: white;
+  z-index: -5;
+  width: 65%;
+  height: 85%;
 }
 .carousel .box .box-title {
   font-size: 24px;
@@ -104,6 +111,14 @@
 }
 .carousel .slide-active {
   display: block;
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 body {
   box-sizing: border-box;
