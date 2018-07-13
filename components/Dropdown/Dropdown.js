@@ -14,7 +14,9 @@ class Dropdown {
 
   toggleContent() {
     // Toggle the ".dropdown-hidden" class off and on
+    TweenMax.from(".dropdown-content", 3, {height:140, opacity:0});
     this.content.classList.toggle("dropdown-hidden");
+    // TweenMax.to(".dropdown-content", 3, {height: 160, opacity:1});
   }
 }
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class

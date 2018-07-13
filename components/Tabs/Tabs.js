@@ -73,6 +73,7 @@ class TabsItem {
   select() {
     // Add a class named "tabs-item-selected" to the element 
     this.element.classList.add("tabs-item-selected");
+    TweenMax.from(this.element, 3, {x:300, opacity:0, scale:0.5});
   }
 
   deselect() {
