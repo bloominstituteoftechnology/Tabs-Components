@@ -1,33 +1,24 @@
 class Tabs {
   constructor(element) {
     this.element = element;
-
-    
-    // create a reference to the ".tabs-link" class nested in your tab object
     this.links = document.querySelectorAll('.tabs-link');
     
-    // This step will map over the array creating new TabsLink class instances of each link.  No need to update anything here, just study what is going on.  Notice that we are creating another new object using the TabsLink class.
     this.links = Array.from(this.links).map((link)=>{
       return new TabsLink(link, this);
     })
-    // console.log(this.links);
     
     this.activeLink = this.links[0];
-    // Nothing to update here, just notice we are invoking the init() method
     this.init();
   }
 
   init() { 
-    // invoke the method select() on activeLink
     this.activeLink.select();
   }
 
   updateActive(newActive) {
     console.log(newActive);
     
-    // invoke the method deselect() on activeLink
     this.activeLink.deselect();
-    // // assign this.activeLink to the new active link (newActive)
     this.activeLink = newActive;
   }
 
@@ -64,7 +55,7 @@ class TabsLink {
 
   deselect() {
     // Remove a class named "tabs-link-selected" from the element
-    this.element; 
+    this.element.classList.remove('tabs-link-selected');
     // Notice that we are using the deselect method on tabsItem
     this.tabsItem.deselect();
   }
@@ -82,7 +73,7 @@ class TabsItem {
 
   deselect() {
     // Remove a class named "tabs-item-selected" from the element 
-    this.element;
+    this.element.classList.remove('tabs-item-selected');
     // Congrats, you finished all the instruction, check out your tab navigator!
   }
 }
