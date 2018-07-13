@@ -72,7 +72,7 @@ class TabsItem {
 
   select() {
     // Add a class named "tabs-item-selected" to the element 
-    TweenLite.to(this.element, 0.5, {css:{className:'+=tabs-item-selected'}, autoAlpha:1})
+    TweenLite.to(this.element, .4, {css:{className:'+=tabs-item-selected'}, autoAlpha:1})
     
   }
 
