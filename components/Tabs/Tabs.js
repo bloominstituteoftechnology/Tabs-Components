@@ -72,13 +72,13 @@ class TabsItem {
 
   select() {
     // Add a class named "tabs-item-selected" to the item
-    TweenMax.fromTo(this.item, 2, {x: 300, autoAlpha: 0}, {x: 0, autoAlpha: 1, ease: Power2.easeOut});
+    TweenMax.fromTo(this.item, 3, {x: 300, autoAlpha: 0}, {x: 0, autoAlpha: 1, ease: Power2.easeOut, delay: 1});
     this.item.classList.add('tabs-item-selected');
   }
 
   deselect() {
     // Remove a class named "tabs-item-selected" from the item
-    this.item.classList.remove('tabs-item-selected');
+    TweenMax.fromTo(this.item, 1, {x:0, autoAlpha: 1}, {x: -300, autoAlpha: 0, ease: Power4.ease, className: '-=tabs-item-selected'});
     // Congrats, you finished all the instruction, check out your tab navigator!
   }
 }
