@@ -72,7 +72,7 @@ class TabsItem {
 
   select() {
     // Add a class named "tabs-item-selected" to the item
-    TweenMax.fromTo(this.item, 1.5, {autoAlpha: .2}, {autoAlpha: 1, ease: Power2.easeOut});
+    TweenMax.fromTo(this.item, 2, {x: 300, autoAlpha: 0}, {x: 0, autoAlpha: 1, ease: Power2.easeOut});
     this.item.classList.add('tabs-item-selected');
   }
 
