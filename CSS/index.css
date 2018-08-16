@@ -86,7 +86,10 @@
   background-color: #ffffff;
 }
 #carousel-section {
-  width: 25%;
+  border: none;
+  box-shadow: none;
+  width: 50%;
+  overflow: auto;
   justify-content: center;
 }
 #carousel-section .carousel-images {
