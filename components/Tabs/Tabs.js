@@ -57,12 +57,7 @@ class TabLink {
     this.tabsItem.select();
   }
 
-  deselect() {
-    // Remove a class named "tabs-link-selected" from the link
-    this.link.classList.remove("tabs-link-selected"); 
-    // Notice that we are using the deselect method on tabsItem
-    this.tabsItem.deselect();
-  }
+  
 }
 
 class TabItem {
@@ -76,13 +71,7 @@ class TabItem {
     
   }
 
-  deselect() {
-    // Remove a class named "tabs-item-selected" from the element 
-   
-    TweenLite.to(this.element, 0, {css:{className:'-=tabs-item-selected'}, autoAlpha:0});
-    
-    // Congrats, you finished all the instruction, check out your tab navigator!
-  }
+
 }
 
 
