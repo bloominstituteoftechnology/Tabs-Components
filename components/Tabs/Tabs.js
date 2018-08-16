@@ -9,7 +9,7 @@ class TabLink {
     
     // Using the custom data attribute get the associated Item element
     //this.itemElement;
-    // this.itemElement;
+    this.itemElement = document.querySelector(`.tabs-item[data-tab="${this.data}"]`);
     
     // Using the Item element, create a new instance of the TabItem class
     // this.tabItem;
@@ -54,15 +54,3 @@ let links = document.querySelectorAll('.tabs-link');
 links = Array.from(links).map(tabsLinks => new TabLink(tabsLinks));
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
-
-
-
-
-// class TabLink {
-//   constructor(tabsLinks) {
-//     this.item = tabsLinks;
-//   };
-
-//   let links = document.querySelectorAll('.tabs-link');
-
-//   links = Array.from(links).map(tabsLinks => new TabLink(tabsLinks));
