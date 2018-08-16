@@ -4,9 +4,9 @@ class TabLink {
     // Get the custom data attribute on the Link
     this.data = this.element.dataset.tab;
         // Using the custom data attribute get the associated Item element
-    this.itemElement = document.querySelector(`.tabs-item[data-tab="${this.data}"]`);
+    this.item = document.querySelector(`.tabs-item[data-tab="${this.data}"]`);
     // Using the Item element, create a new instance of the TabItem class
-    this.tabItem = new TabItem(this.itemElement);
+    this.tabItem = new TabItem(this.item);
     // Add a click event listener on this element, calling the select method on click
     this.element.addEventListener("click", () => {
       this.select();
@@ -15,9 +15,9 @@ class TabLink {
 
   select() {
     // Get all of the elements with the tabs-link class
-    let links = document.querySelectorAll(".tabs-link");
+    const links = document.querySelectorAll(".tabs-link");
     // // Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links
-    Array.from(links).forEach(element => element.classList.remove("tabs-link-selected"));
+    links.forEach(link => link.classList.remove("tabs-link-selected"));
     // // Add a class named "tabs-link-selected" to this link
     this.element.classList.add("tabs-link-selected");
     // // Call the select method on the item associated with this link
@@ -32,9 +32,9 @@ class TabItem {
 
   select() {
     // Select all items elements from the DOM
-    const itemElements = document.querySelectorAll(".tabs-item");
+    const items = document.querySelectorAll(".tabs-item");
     // Remove the class "tabs-item-selected" from each element
-    Array.from(itemElements).forEach(element => element.classList.remove("tabs-item-Selected"));
+    items.forEach(items => items.classList.remove("tabs-item-selected"));
     // Add a class named "tabs-item-selected" to this element
     this.element.classList.add("tabs-item-selected");
   }
@@ -47,4 +47,4 @@ let links = document.querySelectorAll(".tabs-link");
 links = Array.from(links).map(tabs => new TabLink(tabs));
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
-links[0].select(); 
+
