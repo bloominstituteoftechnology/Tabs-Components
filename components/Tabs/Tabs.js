@@ -45,9 +45,9 @@ class TabItem {
 
 
 // START HERE: create a reference to the ".tabs" classes
-let links = document.querySelectorAll();
+let links = querySelectorAll('.tabs');
 
 // Following the code in the Dropdown file, iterate through the array you created above creating a new instance of the TabLink class for each item. 
-links = Array.from(links)
+links = Array.from(links).map(tabs => new TabLink(tabs));
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
