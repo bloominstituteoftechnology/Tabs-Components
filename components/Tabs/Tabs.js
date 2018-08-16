@@ -31,7 +31,7 @@ class TabItem {
 
     TweenMax.fromTo(document.querySelector(`.tabs-item[data-tab="${this.data}"]`), 1, {x: 200, opacity: 0, display: "block"}, {x: 0, opacity: 1, display: "block"});
   }
-}
+};
 
 let links = document.querySelectorAll(".tabs-link");
 

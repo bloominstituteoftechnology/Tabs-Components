@@ -85,6 +85,28 @@
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
 }
+#carousel-section {
+  width: 25%;
+  justify-content: center;
+}
+#carousel-section .carousel-images {
+  height: 100px;
+}
+#directional-button-div {
+  justify-content: space-around;
+}
+#directional-button-div .left-button,
+#directional-button-div .right-button {
+  border: 2px solid black;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+#directional-button-div .left-button:hover,
+#directional-button-div .right-button:hover {
+  background: black;
+  color: white;
+}
 body {
   box-sizing: border-box;
   min-width: 300px;
