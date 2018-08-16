@@ -12,7 +12,6 @@ class Dropdown {
     
     // Add a click handler to the button reference and call the toggleContent method.
     this.button.addEventListener('click', () => {
-      console.log('button clicked');
       this.toggleContent();
     })
   }
