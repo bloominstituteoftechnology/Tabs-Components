@@ -44,7 +44,7 @@ class TabItem {
 }
 
 
-// START HERE: create a reference to the ".tabs" classes
+// START HERE: create a reference to the ".tabs-link" classes
 let links = document.querySelectorAll();
 
 // Following the code in the Dropdown file, iterate through the array you created above creating a new instance of the TabLink class for each item. 
