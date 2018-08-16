@@ -44,11 +44,14 @@ class TabItem {
 
   select() {
     // Select all items elements from the DOM
-    let items = document.querySelectorAll('.tabs-item');
-    console.log(items);
+    const items = document.querySelectorAll('.tabs-item');
 
     // Remove the class "tabs-item-selected" from each element
+    Array.from(items).forEach((e) => { e.classList.remove('tabs-item-selected');
+
+     });
     // Add a class named "tabs-item-selected" to this element 
+    this.element.classList.add('tabs-item-selected');
   }
 }
 
@@ -61,3 +64,4 @@ let links = document.querySelectorAll('.tabs-link');
 links = Array.from(links).map(tabsLinks => new TabLink(tabsLinks));
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
+links[0].select();
