@@ -93,6 +93,9 @@
   height: 100px;
 }
 #directional-button-div {
+  border: none;
+  box-shadow: none;
+  width: 25%;
   justify-content: space-around;
 }
 #directional-button-div .left-button,
