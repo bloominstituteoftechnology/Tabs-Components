@@ -7,24 +7,22 @@ class TabLink {
     // Get the custom data attribute on the Link
     this.data = this.element.dataset.tab;
     
-    // Using the custom data attribute get the associated Item element
-    this.itemElement = document.querySelector(`.tabs-link[data-tab="${this.data}"]`);
+    // Using the custom data attribute get the associated tab-Item element
+    this.tabsItemElement = document.querySelector(`.tabs-item[data-tab="${this.data}"]`);
     
-    // Using the Item element, create a new instance of the TabItem class
-    this.tabItem = new this.tabItem();
-    console.log(this.tabItem);
+    // Using the TabsItem element, create a new instance of the TabItem class
+    this.tabsItem = new TabItem(this.tabsItem);
     
     // Add a click event listener on this instance, calling the select method on click
-    this.tabItem.addEventListener('click', (e) => {
-      console.log("Calling the select method.");
+    this.tabsItem.addEventListener('click', (e) => { 
+      console.log("heard an event");
       this.select();
-    })
+    });
   };
 
   select() {
     // Get all of the elements with the tabs-link class
-    const links = document.querySelectorAll('tabs-link');
-    console.log(links);
+    const links = document.querySelectorAll('.tabs-link');
 
     // Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links
     Array.from(links).forEach(function(link) {
@@ -34,8 +32,8 @@ class TabLink {
     // Add a class named "tabs-link-selected" to this link
     this.element.classList.add('tabs-link-selected');
     
-    // Call the select method on the tabs-item associated with this link
-    this.element.element.select();
+    // Call the select method on the tab-item associated with this link
+    this.tabItem.select();
   }
 }
 
@@ -65,3 +63,4 @@ let links = document.querySelectorAll('.tabs-link');
 links = Array.from(links).map( links => new TabLink(links));
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
+tabLinkArr[0].select();
