@@ -1,21 +1,14 @@
 
 class TabLink {
   constructor(linkItem) {
-    this.element = linkItem;
-    console.log("element");
-    console.log(this.element); // working as expected
-    
+    this.element = linkItem; // CORRECT    
     // Get the custom data attribute on the Link
-    this.data = this.element.dataset.tab; // working as expected
-    console.log("dataset");
-    console.log(this.data);
+    this.data = this.element.dataset.tab; // CORRECT
     // Using the custom data attribute get the associated Item element
-    console.log("SELECTOR" + `.tabs-item[data-tab="${this.data}"]`); // selector looks correct
-    console.log("doc selector: " + document.querySelector(`.tabs-item[data-tab="${this.data}"]`)); // fixed typo .tabs-items to .tab-item
-    this.itemElement = document.querySelector(`.tabs-item[data-tab="${this.data}"]`);
-    console.log("ELEMS: " + this.itemElement);
+    this.itemElement = document.querySelector(`.tabs-item[data-tab="${this.data}"]`); // CORRECT
     // Using the Item element, create a new instance of the TabItem class
-    this.tabItem = new TabItem(this.tabItem);
+    // basing this line on th line  this.tabContent = new Content(this.tabContent);
+    this.tabItem = new TabItem(this.itemElement); // CORRECT
     
     // Add a click event listener on this instance, calling the select method on click
     this.element.addEventListener('click', () => {
@@ -28,8 +21,8 @@ class TabLink {
     const links = this.element.querySelectorAll(".tabs-link");
 
     // Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links
-    Array.from(links).forEach((link) => {
-      link.classList.remove("tabs-link-selected");
+    Array.from(links).forEach(link => {
+      link.classList.remove("tabs-link-selected"); // it seems to be not working :/
     });
 
     // Add a class named "tabs-link-selected" to this link
@@ -43,6 +36,7 @@ class TabLink {
 class TabItem {
   constructor(element) {
     this.element = element;
+    console.log("ref1: " + this.element);
     console.log("TabItem created");
   }
 
@@ -51,10 +45,12 @@ class TabItem {
     let items = document.querySelectorAll(".tabs-item");
     // Remove the class "tabs-item-selected" from each element
     items.forEach((item) => {
+      console.log("ITEM: " + item)
       item.classList.remove("tabs-item-selected");
     });
     // Add a class named "tabs-item-selected" to this element 
-    items.classList.add("tabs-item-selected");
+    console.log("reference " +this.element);
+    this.element.classList.add("tabs-item-selected");
   }
 }
 
