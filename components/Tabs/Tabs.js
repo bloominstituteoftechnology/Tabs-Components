@@ -40,7 +40,6 @@ class TabItem {
   }
 
   select() {
-    console.log('selected!')
     // Select all items elements from the DOM
     const items = document.getElementsByClassName('tabs-item')
     // Remove the class "tabs-item-selected" from each element
@@ -57,6 +56,7 @@ let links = document.querySelectorAll('.tabs');
 
 // Following the code in the Dropdown file, iterate through the array you created above creating a new instance of the TabLink class for each item.
 links = Array.from(links[0].children[0].children).map( item => new TabLink(item) );
-console.log(links[1].tabItem);
-// element.children[0].children
-// DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
+
+// DO THIS LAST: Once you have created an array of TabLink instances. call
+// select() on the first item in the array
+links[0].select()
