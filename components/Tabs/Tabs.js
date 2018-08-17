@@ -10,7 +10,7 @@ class TabLink {
     this.itemElement = document.querySelector(`.tabs-item[data-tab="${this.data}"]`);
 
     // Using the Item element, create a new instance of the TabItem class
-    this.tabItem = new TabItem(this.itemElement); //FIX
+    this.tabItem = new TabItem(this.itemElement);
 
     // Add a click event listener on this instance, calling the select method on click
     this.link.addEventListener('click', () => { this.select() });
