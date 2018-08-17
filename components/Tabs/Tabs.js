@@ -28,7 +28,6 @@ class TabLink {
     this.tabItem.select();
   }
 }
-
 class TabItem {
   constructor(element) { this.element = element; }
 
