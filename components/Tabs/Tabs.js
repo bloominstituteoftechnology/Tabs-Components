@@ -7,10 +7,10 @@ class TabLink {
     this.data = this.link.dataset.tab;
 
     // Using the custom data attribute get the associated Item element
-    this.itemElement = this.link.dataset.tab; //FIX
+    this.itemElement = document.querySelector(`.tabs-item[data-tab="${this.data}"]`);
 
     // Using the Item element, create a new instance of the TabItem class
-    this.tabItem = new TabItem(tabItem); //FIX
+    this.tabItem = new TabItem(this.itemElement); //FIX
 
     // Add a click event listener on this instance, calling the select method on click
     this.link.addEventListener('click', () => { this.select() });
@@ -21,7 +21,7 @@ class TabLink {
     const links = document.querySelectorAll(".tabs-link");
 
     // Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links
-    Array.from(links).forEach(link => { this.link.classList.remove("tabs-link-selected") });
+    Array.from(links).forEach(link => { link.classList.remove("tabs-link-selected") });
 
     // Add a class named "tabs-link-selected" to this link
     this.link.classList.add("tabs-link-selected");
@@ -54,4 +54,4 @@ let links = document.querySelectorAll(".tabs-link");
 links = Array.from(links).map( link => new TabLink(link));
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
-console.log(links);
+links[0].select();
