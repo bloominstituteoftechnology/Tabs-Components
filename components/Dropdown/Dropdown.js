@@ -1,4 +1,3 @@
-// Commit
 
 class Dropdown {
   constructor(element) {
@@ -10,8 +9,6 @@ class Dropdown {
     this.button.addEventListener('click', () => {
       this.toggleContent();
     });
-
-    
     
     // // Assign this.element to the dropdown element
     // this.element = element;
