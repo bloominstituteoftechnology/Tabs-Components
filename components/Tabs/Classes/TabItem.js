@@ -1,4 +1,4 @@
-export class TabItem {
+class TabItem {
   constructor(element) {
     this.element = element;
   }
@@ -12,3 +12,5 @@ export class TabItem {
     this.element.classList.add('tabs-item-selected');
   }
 }
+
+export default class {TabItem};

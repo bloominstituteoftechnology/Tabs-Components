@@ -1,6 +1,6 @@
-import {TabItem} from './Classes/TabItem.js';
+import TabItem from './Classes/TabItem.js';
 
-export class TabLink {
+class TabLink {
     constructor(element) {
       this.element = element;
       
@@ -31,3 +31,5 @@ export class TabLink {
       this.tabItem.select();
     }
   }
+
+  export default class {TabLink};
