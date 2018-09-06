@@ -58,12 +58,13 @@
   height: auto;
   display: flex;
   justify-content: center;
-  padding-top: 10px;
+  padding: 10px 0;
 }
 .tabs .tabs-item {
   visibility: hidden;
   opacity: 0;
   width: 75%;
+  padding: 0 5px;
 }
 .tabs .tabs-item .tabs-item-title {
   font-family: 'Trirong', serif;
