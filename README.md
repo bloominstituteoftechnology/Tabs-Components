@@ -2,7 +2,7 @@
 ----------------------------------
 
 Topics:
-* Constructors with ES6 class syntax
+* Constructors with ES6 class syntax *PR
 * `data` attributes
 
 In this project, our design team has already built an HTML/CSS web page for us, our job is to add javascript functionality. 
