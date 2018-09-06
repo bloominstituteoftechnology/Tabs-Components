@@ -8,6 +8,7 @@ Topics:
 In this project, our design team has already built an HTML/CSS web page for us, our job is to add javascript functionality. 
 
 ## Description
+[x] Fork and clone
 
 #### Part One (The Dropdown):
 * Once you load the page, you will notice a dropdown menu in the upper left side of the page. Currently when you click on it nothing happens. We will build out the functionality to allow a dropdown menu to open and close when a user clicks on the dropdown button.
