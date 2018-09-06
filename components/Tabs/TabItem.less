@@ -8,9 +8,9 @@
     padding-top: 60px;
   }
   .tabs-item {
-    display: none; 
-
+    visibility: hidden; 
     width: 75%;
+
     .tabs-item-title {
       font-size: 24px;
       font-weight: bold;
@@ -18,7 +18,8 @@
     }
   }
   .tabs-item-selected {
-    display: block;
+    transition: visibility 0.75s ease;
+    visibility: visible;
   }
 }
 
