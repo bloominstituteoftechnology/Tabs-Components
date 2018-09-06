@@ -10,10 +10,10 @@ class TabLink {
     this.itemElement = document.querySelectorAll(`.tabs-item[data-tab${this.data}]`)
 
     // Using the Item element, create a new instance of the TabItem class
-    this.tabItem = new tabItem(this.itemElement)
+    this.tabItem = new TabItem(this.itemElement)
 
     // Add a click event listener on this instance, calling the select method on click
-
+    this.element.addEventListener('click', () => this.select())
   };
 
   select() {
@@ -27,7 +27,7 @@ class TabLink {
     this.element.classList.add('tabs-link-selected')
 
     // Call the select method on the item associated with this link
-
+    this.tabItem.select()
   }
 }
 
@@ -38,11 +38,13 @@ class TabItem {
 
   select() {
     // Select all items elements from the DOM
+    let items = document.querySelectorAll('.tabs-item')
     // Remove the class "tabs-item-selected" from each element
+    items.forEach(items => items.classList.remove('tabs-item-selected'))
     // Add a class named "tabs-item-selected" to this element
+    this.element.classList.add('tabs-item-selected')
   }
 }
-
 
 // START HERE: create a reference to the ".tabs" classes
 let links = document.querySelectorAll('.tabs')
@@ -51,3 +53,4 @@ let links = document.querySelectorAll('.tabs')
 links = Array.from(links).map(links => new TabLink(links))
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
+links[0].select()
