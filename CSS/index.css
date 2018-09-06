@@ -7,12 +7,13 @@
   z-index: 2;
   position: absolute;
   left: 25px;
-  font-family: 'Trirong', serif;
+  font-family: 'Rubik', sans-serif;
   cursor: pointer;
 }
 .dropdown .dropdown-button {
   padding: 15px;
-  border: 3px solid #ffffff;
+  margin: 5px 0;
+  border: 2px solid #ffffff;
   color: #ffffff;
   font-size: 20px;
   font-weight: bold;
