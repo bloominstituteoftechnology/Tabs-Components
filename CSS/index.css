@@ -54,7 +54,8 @@
 .tabs .tabs-items {
   width: 98%;
   margin: 0 auto;
-  height: 300px;
+  min-height: 300px;
+  height: auto;
   display: flex;
   justify-content: center;
   padding-top: 10px;
