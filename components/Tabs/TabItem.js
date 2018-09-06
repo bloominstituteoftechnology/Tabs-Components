@@ -1,4 +1,4 @@
-import { TabLink } from './TabLink.js'
+import TabLink from './TabLink.js'
 
 class TabItem {
   constructor(element) {
