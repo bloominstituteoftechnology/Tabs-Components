@@ -1,6 +1,6 @@
 import { TabItem } from './TabItem.js'
 
-export class TabLink {
+class TabLink {
   constructor(link) {
     this.link = link;
     
@@ -44,3 +44,5 @@ links = Array.from(links).map( tab => new TabLink(tab));
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
 links[0].select();
+
+// This article was very helpful: https://medium.com/@mattlag/es6-modules-getting-started-gotchas-2ad154f38e2e
