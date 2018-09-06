@@ -1,6 +1,6 @@
 import TabLink from './TabLink.js'
 
-class TabItem {
+export class TabItem {
   constructor(element) {
     this.itemElement = element;
   }
