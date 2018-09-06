@@ -45,4 +45,9 @@ links = Array.from(links).map( tab => new TabLink(tab));
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
 links[0].select();
 
-// This article was very helpful: https://medium.com/@mattlag/es6-modules-getting-started-gotchas-2ad154f38e2e
+/*
+- This article was very helpful: https://medium.com/@mattlag/es6-modules-getting-started-gotchas-2ad154f38e2e
+- Obvious in hindsight, but you only need to export classes that will be used in a different file.
+- In this case, only TabItem needs to be exported and then imported into TabLink.js
+- Initially had the bottom three lines of this file in the TabItem.js file which was causing an error
+since TabLink couldn't be used there. */
