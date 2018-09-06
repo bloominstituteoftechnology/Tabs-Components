@@ -45,7 +45,7 @@ Now that we have an idea of how to create a component with a single class, we wi
   
   [x] Look through the LESS code and see where you can refactor using animations to achieve similar results.
 
-[ ] Add styling using the LESS files.
+[x] Add styling using the LESS files.
 
 [ ] Remove the boxes on the top card and replace them with an image carousel. This will have to be done from scratch, and should be pretty difficult, but it uses the same techniques as the `Tabs` component. Give it a left and right button, and a number of images that scroll as the buttons are pressed.
   
