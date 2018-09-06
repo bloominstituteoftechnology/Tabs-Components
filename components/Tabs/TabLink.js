@@ -1,4 +1,4 @@
-import TabItem from './TabItem.js'
+import { TabItem } from './TabItem.js'
 
 export class TabLink {
   constructor(link) {
