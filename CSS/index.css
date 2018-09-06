@@ -58,6 +58,7 @@
 }
 .tabs .tabs-item {
   visibility: hidden;
+  opacity: 0;
   width: 75%;
 }
 .tabs .tabs-item .tabs-item-title {
@@ -66,7 +67,8 @@
   padding-bottom: 10px;
 }
 .tabs .tabs-item-selected {
-  transition: visibility 0.75s ease;
+  transition: visibility 0s, opacity 0.5s linear;
+  opacity: 1;
   visibility: visible;
 }
 .tabs {
