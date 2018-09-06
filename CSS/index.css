@@ -102,7 +102,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blue;
+  background-color: #931d25;
 }
 .header-container .header {
   height: 50px;
