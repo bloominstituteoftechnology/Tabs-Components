@@ -7,6 +7,7 @@
   z-index: 2;
   position: absolute;
   left: 25px;
+  font-family: 'Trirong', serif;
   cursor: pointer;
 }
 .dropdown .dropdown-button {
@@ -62,15 +63,23 @@
   width: 75%;
 }
 .tabs .tabs-item .tabs-item-title {
+  font-family: 'Trirong', serif;
   font-size: 24px;
   font-weight: bold;
   padding-bottom: 10px;
+}
+.tabs .tabs-item .tabs-item-description {
+  font-family: 'Rubik', sans-serif;
 }
 .tabs .tabs-item-selected {
   transition: visibility 0s, opacity 0.5s linear;
   opacity: 1;
   visibility: visible;
 }
+/* In order to fade in the text you have to use something other than display
+for the transition. In this case visibility and opacity provide the expected
+behavior. Solution from here:
+https://stackoverflow.com/questions/3331353/transitions-on-the-display-property */
 .tabs {
   width: 100%;
 }
@@ -80,6 +89,7 @@
 }
 .tabs .tabs-link {
   padding: 20px 25px;
+  font-family: 'Trirong', serif;
   font-size: 24px;
   background-color: #931d25;
   border-right: 1px solid white;
@@ -130,7 +140,10 @@ body {
   padding: 40px;
 }
 .section .box .box-title {
+  font-family: 'Trirong', serif;
   font-size: 24px;
   padding-bottom: 10px;
-  font-weight: bold;
+}
+.section .box .box-description {
+  font-family: 'Rubik', sans-serif;
 }

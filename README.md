@@ -41,9 +41,9 @@ Now that we have an idea of how to create a component with a single class, we wi
 [ ] Animations. (Use the animation library of your choice)
   [ ] Get the dropdown to slide in and out, rather than just appearing and disappearing
   
-  [ ] Get the TabsItem text to fade in and out, or slide in and out.
+  [x] Get the TabsItem text to fade in and out, or slide in and out.
   
-  [ ] Look through the LESS code and see where you can refactor using animations to achieve similar results.
+  [x] Look through the LESS code and see where you can refactor using animations to achieve similar results.
 
 [ ] Add styling using the LESS files.
 

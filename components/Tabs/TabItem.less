@@ -13,9 +13,14 @@
     width: 75%;
 
     .tabs-item-title {
+      font-family: 'Trirong', serif;
       font-size: 24px;
       font-weight: bold;
       padding-bottom: 10px;
+    }
+
+    .tabs-item-description {
+      font-family: 'Rubik', sans-serif;
     }
   }
   .tabs-item-selected {
@@ -24,5 +29,10 @@
     visibility: visible;
   }
 }
+
+/* In order to fade in the text you have to use something other than display
+for the transition. In this case visibility and opacity provide the expected
+behavior. Solution from here:
+https://stackoverflow.com/questions/3331353/transitions-on-the-display-property */
 
 
