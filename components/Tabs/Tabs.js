@@ -1,53 +1,83 @@
+class Tab {
+  constructor(element) {
+    this.element = element;
+    // create a reference to the ".tabs-link" class nested in your tab object
+    this.links=document.querySelectorAll('.tabs-link');
+    // This step will map over the array creating new TabsLink class instances of each link.  No need to update anything here, just study what is going on.  Notice that we are creating another new object using the TabsLink class.
+    this.links = Array.from(this.links).map( link => {
+      return new TabsLink(link, this);
+    });
+    // Set the active link to the first item in the array
+    this.activeLink=this.links[0];
+    // Nothing to update here, just notice we are invoking the init() method
+    this.init();
+  }
+
+  init() { 
+    // invoke the method select() on activeLink
+    this.activeLink.select();
+  }
+
+  updateActive(newActive) {
+    // invoke the method deselect() on activeLink
+    this.activeLink.deselect();
+    // assign this.activeLink to the new active link (newActive)
+    this.activeLink=newActive;
+  }
+
+  getTab(data) {
+    // return a reference to the element's data attribute
+    return this.element.querySelector(`.tabs-item[data-tab="${data}"]`);
+  }
+
+}
 
 class TabLink {
-  constructor(element) {
-    this.element;
-    
-    // Get the custom data attribute on the Link
-    this.data;
-    
-    // Using the custom data attribute get the associated Item element
-    this.itemElement;
-    
-    // Using the Item element, create a new instance of the TabItem class
-    this.tabItem;
-    
-    // Add a click event listener on this instance, calling the select method on click
+  // notice that we passed in the link reference as well as a reference to the parent class.
+  constructor(link, parent) {
+    this.link=link
+    // assign this.tabs to parent
+    this.tabs=parent;
+    // Using the method from the parent class above, pass in a reference to the custom data attribute.  
+    this.tabsItem = parent.getTab(this.link.dataset.tab);
+    // Create a new TabsItem object that passes in a tabsItem value that you just created above
+    this.tabsItem=new TabsItem(this.tabsItem);
 
+    this.link.addEventListener('click', () => {
+      this.tabs.updateActive(this);
+      // invoke the select() method on this
+      this.select(this);
+    });
   };
 
   select() {
-    // Get all of the elements with the tabs-link class
-    const links;
-
-    // Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links
-    Array.from(links).forEach();
-
-    // Add a class named "tabs-link-selected" to this link
-    this.element;
-    
-    // Call the select method on the item associated with this link
-
+    // Add a class named "tabs-link-selected" to the link
+    this.link.classList.add("tabs-link-selected");
+    // Notice that we are using the select method on tabsItem
+    this.tabsItem.select();
   }
+
+  
 }
 
 class TabItem {
   constructor(element) {
-    this.element;
+    this.element = element;
   }
 
   select() {
-    // Select all items elements from the DOM
-    // Remove the class "tabs-item-selected" from each element
-    // Add a class named "tabs-item-selected" to this element 
+    // Add a class named "tabs-item-selected" to the element 
+    TweenLite.to(this.element, .4, {css:{className:'+=tabs-item-selected'}, autoAlpha:1})
+    
   }
+
+
 }
 
 
 // START HERE: create a reference to the ".tabs" classes
-let links = document.querySelectorAll();
+let links = document.querySelectorAll('.tabs-link');
+// map through each tabs element and create a new Tabs object.  Be sure to pass in a reference to the tab when creating the Tabs object.
+links = Array.from(links).map((link)=>new Tabs(link));
 
-// Following the code in the Dropdown file, iterate through the array you created above creating a new instance of the TabLink class for each item. 
-links = Array.from(links)
-
-// DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
+links[0].select();
