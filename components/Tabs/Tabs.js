@@ -42,15 +42,23 @@ console.log('I am select!')
 }
 
 class TabItem {
-  constructor(element) {
-    this.element;
+  constructor(item) {
+    this.element = item;
   }
 
   select() {
     // Select all items elements from the DOM
-    const items = document.querySelectorAll('.tabs-item');
+    let items = document.querySelectorAll('.tabs-item');
     // Remove the class "tabs-item-selected" from each element
+      items = Array.from(items);
+    items.map(function(item){
+       item.classList.add('.tabs-item');
+    })
     // Add a class named "tabs-item-selected" to this element 
+    items.forEach(function(item){
+      item.classList.add('tabs-item-selected');
+    })
+   
   }
 }
 
