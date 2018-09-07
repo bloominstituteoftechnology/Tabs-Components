@@ -1,4 +1,4 @@
-class Tab{
+class Tabs{
     constructor(tab)    {
         this.tab = tab
         this.tabs = this.tab.querySelectorAll(".tabs-link")
@@ -64,7 +64,7 @@ class TabItem {
 let tab = document.querySelector(".tabs");
 
 // Following the code in the Dropdown file, iterate through the array you created above creating a new instance of the TabLink class for each item.
-let tabs = new Tab(tab);
+let tabs = new Tabs(tab);
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
 tabs.tabsLinks[0].select()
