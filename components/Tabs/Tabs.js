@@ -1,3 +1,10 @@
+class Tabs{
+  constructor(element) {
+    this.element = element;
+    
+  }
+}
+
 class TabLink {
   constructor(element) {
     this.element = element;

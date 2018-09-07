@@ -10,6 +10,7 @@ class Dropdown {
     // assign the reference to the ".dropdown-content" class found in the dropdown element
     this.content = this.element.querySelector('.dropdown-content');
     
+    
     // Add a click handler to the button reference and call the toggleContent method.
     this.button.addEventListener('click', () => { this.toggleContent() });
   }
@@ -17,10 +18,20 @@ class Dropdown {
   toggleContent() {
     
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('dropdown-hidden');
+    // this.content.classList.toggle('dropdown-hidden');
+    
+    
+    timeline.reversed() ? timeline.play() : timeline.reverse();
+    
   }
 }
 
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
 let dropdowns = document.querySelectorAll('.dropdown');
 dropdowns = Array.from(dropdowns).map( dropdown => new Dropdown(dropdown));
+
+let content = document.querySelector('.dropdown-content');
+
+let timeline = new TimelineLite({ paused: true, reversed: true });
+timeline.from(content, 1, {opacity:0, right:"100px"});
+
