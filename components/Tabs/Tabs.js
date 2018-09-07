@@ -46,10 +46,9 @@ class TabItem {
     this.element = element;
   }
 
-  fadeIn(item)  {
-      TweenLite.to(item, .4, {opacity: 1, display: "block"});
+  fadeIn(item, timeDelay)  {
+      TweenLite.to(item, .4, {opacity: 1, display: "block", delay: timeDelay});
   }
-
   deselect(item)    {
       TweenLite.to(item, .5, {opacity: 0, display: "none"});
   }
@@ -68,12 +67,12 @@ class TabItem {
             console.log("2: ", item[0])
         }   else {
             this.deselect(item[0])
-            this.fadeIn(this.element)
+            this.fadeIn(this.element, .5)
             console.log("3: ", item[0])
         }
 
     }   else {
-        this.fadeIn(this.element)
+        this.fadeIn(this.element, 0)
     }
   }
 }
