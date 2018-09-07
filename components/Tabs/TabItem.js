@@ -7,7 +7,7 @@ export class TabItem {
 
   select() {
     // Select all items elements from the DOM
-    const tabItems = document.querySelectorAll('.tabs-items');
+    let tabItems = document.querySelectorAll('.tabs-items');
     console.log(tabItems)
     // Remove the class "tabs-item-selected" from each element
     Array.from(tabItems).forEach( tab => {
