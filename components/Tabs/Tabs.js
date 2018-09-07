@@ -56,16 +56,24 @@
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
 
 
+// TabLink classes and properties
 class TabLink {
   constructor(element) {
     this.element = element;
+    //grab each data-tab attribute in each tabs-link, set to this.tab (TabLink instance's key property called tab)
     this.tab = this.element.dataset.tab;
+    //grab each data-tab attribute in each tabs-item, set to this.tabsItem; ties Link <--> Item; set all to tabsItem variable
     this.tabsItem = document.querySelector(`.tabs-item[data-tab="${this.tab}"]`);
+    //create new instances of TabItem, pass in each link's tabsItem, set all to variable tabsItemClass
+    //each new TabLink instance also creates instance of TabItem (simultaneously)
     this.tabsItemClass = new TabItem(this.tabsItem);
+    //add event listener to each instance of TabLink that, once clicked, calls the select() function
     this.element.addEventListener('click', () => {this.select()});
   }
 
   select(){
+    //select function of TabLink, when called, also calls the selectToggle() function 
+    // that belongs to each instance of TabItem
     this.tabsItemClass.selectToggle();
   }
 }
@@ -76,15 +84,17 @@ class TabItem {
   }
 
   selectToggle() {
+    // grabs nodeList containing all .tabs-item classes (all content in tabs-item) 
     let links = document.querySelectorAll('.tabs-item');
+    // convernt nodeList to array, put map method, remove 'tabs-item-selected' from each element in this array
+    // this removes any pre-existing content in each tab, but removing .tabs-item-selected class which is "display: block"
     Array.from(links).map((element) => element.classList.remove('tabs-item-selected'));
+    // once previous content is removed, toggle (on) 'tabs-item-selected'
     this.element.classList.toggle('tabs-item-selected');
   }
 }
 
-
+// grab all .tabs-link classes; convert nodeList into array, map over elements in array to create new instance of TabLinks
 let links = document.querySelectorAll('.tabs-link');
-
 links = Array.from(links).map((element,index) => {return new TabLink(element)});
-
 
