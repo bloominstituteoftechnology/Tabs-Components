@@ -28,6 +28,9 @@
   align-items: center;
   margin-top: 10px;
   border: 2.5px solid #931d25;
+  opacity: 0;
+  left: -160px;
+  transform: rotate(180deg);
 }
 .dropdown .dropdown-link {
   width: 100%;
