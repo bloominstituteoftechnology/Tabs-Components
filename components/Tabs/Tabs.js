@@ -2,7 +2,6 @@ class Tabs{
     constructor(tab)    {
         this.tab = tab
         this.tabs = this.tab.querySelectorAll(".tabs-link")
-        console.log(this.tabs)
         this.tabsLinks = Array.from(this.tabs).map((tab)    => new TabLink(tab))
     }
 }
@@ -47,19 +46,35 @@ class TabItem {
     this.element = element;
   }
 
-  select() {
-    // Select all items elements from the DOM
-    const item = document.querySelector(".tabs-item-selected")
-    // Remove the class "tabs-item-selected" from each element
-    // Add a class named "tabs-item-selected" to this element
-    this.element.classList.toggle("tabs-item-selected");
-    if(item !== null)   {
-        this.deselect(item);
-    }
+  fadeIn(item)  {
+      TweenLite.to(item, .4, {opacity: 1, display: "block"});
   }
 
   deselect(item)    {
-      item.classList.remove("tabs-item-selected");
+      TweenLite.to(item, .5, {opacity: 0, display: "none"});
+  }
+
+  select() {
+    // Select all items elements from the DOM
+    const items = document.querySelectorAll(".tabs-item")
+    const item = Array.from(items).filter((item)    =>  {
+        return item.style.display === "block";
+    })
+    // Remove the class "tabs-item-selected" from each element
+    // Add a class named "tabs-item-selected" to this element
+    if(item.length !== 0)   {
+        if(item[0] === this.element)    {
+            this.deselect(item[0]);
+            console.log("2: ", item[0])
+        }   else {
+            this.deselect(item[0])
+            this.fadeIn(this.element)
+            console.log("3: ", item[0])
+        }
+
+    }   else {
+        this.fadeIn(this.element)
+    }
   }
 }
 
