@@ -1,11 +1,11 @@
 import { TabItem } from './TabItem.js'
 
 class TabLink {
-  constructor(link) {
-    this.link = link;
+  constructor(element) {
+    this.element = element;
     
     // Get the custom data attribute on the Link
-    this.data = link.dataset.tab;
+    this.data = element.dataset.tab;
     
     // Using the custom data attribute get the associated Item element
     this.itemElement = document.querySelector(`.tabs-item[data-tab="${this.data}"]`);
@@ -14,7 +14,7 @@ class TabLink {
     this.tabItem = new TabItem(this.itemElement);
     
     // Add a click event listener on this instance, calling the select method on click
-    this.link.addEventListener('click', () => { this.select() });
+    this.element.addEventListener('click', () => { this.select() });
   };
 
   select() {
@@ -28,7 +28,7 @@ class TabLink {
     });
 
     // Add a class named "tabs-link-selected" to this link
-    this.link.classList.add('tabs-link-selected');
+    this.element.classList.add('tabs-link-selected');
     
     // Call the select method on the item associated with this link
     this.tabItem.select();
@@ -40,7 +40,7 @@ class TabLink {
 let links = document.querySelectorAll('.tabs-link'); // Selected .tabs class at first which breaks the whole thing 🤷🏼‍♂️
 
 // Following the code in the Dropdown file, iterate through the array you created above creating a new instance of the TabLink class for each item. 
-links = Array.from(links).map( tab => new TabLink(tab));
+links = Array.from(links).map( (tab) => new TabLink(tab));
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
 links[0].select();

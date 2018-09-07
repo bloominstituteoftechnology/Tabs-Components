@@ -2,18 +2,18 @@
 
 export class TabItem {
   constructor(element) {
-    this.itemElement = element;
+    this.element = element;
   }
 
   select() {
     // Select all items elements from the DOM
-    let tabItems = document.querySelectorAll('.tabs-items');
+    let tabItems = document.querySelectorAll('.tabs-item');
     console.log(tabItems)
     // Remove the class "tabs-item-selected" from each element
-    Array.from(tabItems).forEach( tab => {
-      tab.classList.remove('tabs-item-selected');
+    Array.from(tabItems).forEach( el => {
+      el.classList.remove('tabs-item-selected');
     });
     // Add a class named "tabs-item-selected" to this element
-    this.itemElement.classList.add('tabs-item-selected'); 
+    this.element.classList.add('tabs-item-selected'); 
   }
 }
