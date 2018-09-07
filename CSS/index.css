@@ -68,22 +68,22 @@
 }
 .tabs .tabs-links {
   display: flex;
-  background-color: #931d25;
+  background-color: blue;
 }
 .tabs .tabs-link {
   padding: 20px 25px;
   font-size: 24px;
-  background-color: #931d25;
+  background-color: blue;
   border-right: 1px solid white;
   color: #ffffff;
   cursor: pointer;
 }
 .tabs .tabs-link:hover {
-  background-color: #be2530;
+  background-color: #6666ff;
 }
 .tabs .tabs-link-selected {
   z-index: 2;
-  border-right: 1px solid #931d25;
+  border-right: 1px solid blue;
   background-color: #ffffff;
   color: black;
 }
@@ -111,8 +111,8 @@ body {
   width: 70%;
   margin: 45px auto;
   display: flex;
-  border: 1px solid #931d25;
-  box-shadow: 1px 1px 5px #931d25;
+  border: 1px solid blue;
+  box-shadow: 1px 1px 5px #6666ff;
   border-radius: 10px;
   overflow: hidden;
 }
