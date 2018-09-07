@@ -48,7 +48,7 @@
   background-color: #931d25;
 }
 .dropdown .dropdown-hidden {
-  display: none;
+  margin-top: -13em;
 }
 .tabs {
   width: 100%;
@@ -60,7 +60,7 @@
   height: auto;
   display: flex;
   justify-content: center;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 .tabs .tabs-item {
   visibility: hidden;
@@ -77,7 +77,7 @@
 .tabs .tabs-item .tabs-item-description {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
 }
 .tabs .tabs-item-selected {
   transition: visibility 0s, opacity 0.5s linear;

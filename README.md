@@ -39,7 +39,7 @@ Now that we have an idea of how to create a component with a single class, we wi
   [ ] `Tabs` should deselect the currently selected tab each time a new tab is selected. 
 
 [ ] Animations. (Use the animation library of your choice)
-  [ ] Get the dropdown to slide in and out, rather than just appearing and disappearing
+  [x] Get the dropdown to slide in and out, rather than just appearing and disappearing
   
   [x] Get the TabsItem text to fade in and out, or slide in and out.
   

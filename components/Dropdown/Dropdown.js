@@ -18,9 +18,12 @@ class Dropdown {
     // Toggle the ".dropdown-hidden" class off and on
     console.log('Toggle the dropdown menu.');
     console.log(this.content);
-    this.content.classList.toggle('dropdown-hidden');
-    // Spent a couple of minutes wondering why dropdown wasn't working...
-    // . in front of the class again 😠
+    // this.content.classList.toggle('dropdown-hidden');
+    $(".dropdown-content").toggleClass("dropdown-hidden", 800, "easeOutQuint");
+    /* This uses jquery to toggle the dropdown-hidden class which just positions
+    the dropdown out of the frame of the page (-13em in this case). 800 is the
+    length in ms of the transition and easOutQuint is the shape of the animation
+    curve, see here: https://easings.net/ */
   }
 }
 
