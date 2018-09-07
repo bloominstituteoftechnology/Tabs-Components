@@ -9,14 +9,25 @@ class Dropdown {
 
     // assign the reference to the ".dropdown-content" class found in the dropdown element
     this.content = this.element.querySelector(".dropdown-content");
-
+    this.content.zIndex = 1;
+    this.content.style.display = "flex";
+    this.dropDownVisible = false
+    this.content.style.left = "-200px";
     // Add a click handler to the button reference and call the toggleContent method.
     this.button.addEventListener('click', ()    =>  this.toggleContent())
+
   }
 
   toggleContent() {
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle("dropdown-hidden");
+    if(this.dropDownVisible === true)   {
+        TweenLite.to(this.content, .5, {left: "-200px"})
+        this.dropDownVisible = false;
+    }   else {
+        TweenLite.to(this.content, .5, {left: "0px"})
+        this.dropDownVisible = true;
+    }
+    console.log(this.content.style)
   }
 }
 

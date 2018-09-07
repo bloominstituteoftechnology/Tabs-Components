@@ -32,7 +32,9 @@ class TabLink {
     this.element.classList.toggle("tabs-link-selected");
     // Call the select method on the item associated with this link
     this.tabItem.select();
-    this.deselect(link)
+    if(link !== null)   {
+        this.deselect(link)
+    }
   }
 
   deselect(link)    {
@@ -51,7 +53,9 @@ class TabItem {
     // Remove the class "tabs-item-selected" from each element
     // Add a class named "tabs-item-selected" to this element
     this.element.classList.toggle("tabs-item-selected");
-    this.deselect(item);
+    if(item !== null)   {
+        this.deselect(item);
+    }
   }
 
   deselect(item)    {
