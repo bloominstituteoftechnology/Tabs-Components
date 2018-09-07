@@ -11,12 +11,12 @@
   cursor: pointer;
 }
 .dropdown .dropdown-button {
-  padding: 15px;
+  padding: 9px;
   margin: 5px 0;
   border: 2px solid #ffffff;
   color: #ffffff;
-  font-size: 20px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 300;
 }
 .dropdown .dropdown-button:hover {
   transition: background-color 0.75s ease;
@@ -36,7 +36,8 @@
   width: 100%;
   text-align: center;
   padding: 15px 0;
-  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
   font-weight: 300;
   text-decoration: none;
   color: #931d25;
@@ -68,14 +69,15 @@
   padding: 0 5px;
 }
 .tabs .tabs-item .tabs-item-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  font-weight: 800;
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  font-weight: 700;
   padding-bottom: 10px;
 }
 .tabs .tabs-item .tabs-item-description {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
+  font-size: 16px;
 }
 .tabs .tabs-item-selected {
   transition: visibility 0s, opacity 0.5s linear;
@@ -95,9 +97,9 @@ https://stackoverflow.com/questions/3331353/transitions-on-the-display-property 
 }
 .tabs .tabs-link {
   padding: 20px 25px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  font-weight: 800;
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  font-weight: 700;
   background-color: #931d25;
   border-right: 1px solid white;
   color: #ffffff;
@@ -147,9 +149,9 @@ body {
   padding: 40px;
 }
 .section .box .box-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Merriweather', serif;
   font-size: 24px;
-  font-weight: 800;
+  font-weight: 700;
   padding-bottom: 10px;
 }
 .section .box .box-description {
