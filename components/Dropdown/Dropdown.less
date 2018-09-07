@@ -22,8 +22,19 @@
     align-items: center;  
     margin-top: 10px;
     border: 2.5px solid @lambda-red;
+    height: 160px;
+    animation-name: slide;
+    animation-duration: 1.2s;
   }
+
+  @keyframes slide {
+    from {height: 0px};
+    to {height: 160px};
+  }
+
   .dropdown-link {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     text-align: center;
     padding: 15px 0;
@@ -34,10 +45,22 @@
       color: @white;
       background-color: @lambda-red;
     }
+    animation-name: appear;
+    animation-duration: 2s;
   }
+
+  @keyframes appear {
+    from {font-size: 0px};
+    to {font-size: i8px};
+
+    from {color: white};
+    to {color: @lambda-red};
+  }
+
   .dropdown-hidden {
     display: none;
   }
+
 }
 
 

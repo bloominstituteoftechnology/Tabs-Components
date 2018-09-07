@@ -28,18 +28,47 @@
   align-items: center;
   margin-top: 10px;
   border: 2.5px solid #931d25;
+  height: 160px;
+  animation-name: slide;
+  animation-duration: 1.2s;
+}
+@keyframes slide {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 160px;
+  }
 }
 .dropdown .dropdown-link {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   text-align: center;
   padding: 15px 0;
   font-size: 18px;
   text-decoration: none;
   color: #931d25;
+  animation-name: appear;
+  animation-duration: 2s;
 }
 .dropdown .dropdown-link:hover {
   color: #ffffff;
   background-color: #931d25;
+}
+@keyframes appear {
+  from {
+    font-size: 0px;
+  }
+  to {
+    font-size: i8px;
+  }
+  from {
+    color: white;
+  }
+  to {
+    color: #931d25;
+  }
 }
 .dropdown .dropdown-hidden {
   display: none;
