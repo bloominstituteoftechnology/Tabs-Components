@@ -54,8 +54,7 @@
   width: 100%;
 }
 .tabs .tabs-items {
-  width: 98%;
-  margin: 0 auto;
+  width: 100%;
   min-height: 300px;
   height: auto;
   display: flex;
@@ -83,6 +82,7 @@
   transition: visibility 0s, opacity 0.5s linear;
   opacity: 1;
   visibility: visible;
+  display: block;
 }
 /* In order to fade in the text you have to use something other than display
 for the transition. In this case visibility and opacity provide the expected
