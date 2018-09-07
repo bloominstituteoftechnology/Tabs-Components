@@ -19,10 +19,15 @@ class Dropdown {
   toggleContent() {
     
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle("dropdown-hidden");
+    if (content.classList.contains("dropdown-hidden")) {
+      TweenMax.to(menu, .25, {top: -250, opacity: 0, onComplete: () => {content.classList.remove("dropdown-hidden")}});
+     } else {
+      TweenMax.to(menu, .25, {top: 0, opacity: 1, onComplete: content.classList.add("dropdown-hidden")});
+     }
   }
 }
 
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
 let dropdowns = document.querySelectorAll('.dropdown');
 dropdowns = Array.from(dropdowns).map( dropdown => new Dropdown(dropdown));
+
