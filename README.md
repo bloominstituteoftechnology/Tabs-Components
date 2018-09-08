@@ -21,7 +21,7 @@ In this project, our design team has already built an HTML/CSS web page for us, 
   * [X] The `TabItem` component will be the text displayed when a tab is selected. It will share a data attribute with it's corresponding tab, and should only show when it's tab has been selected.
 * [X] The `Tabs.js` file starts at the bottom of the page and then jumps around. Pay attention to what is being called and when. Study the corresponding HTML and LESS to get a better idea of how the tabs were built.
 
-* Once you have completed the above, add a couple Tabs to the HTML in order to see first hand how great building webpages with components is!
+* [X] Once you have completed the above, add a couple Tabs to the HTML in order to see first hand how great building webpages with components is!
 
 #### Stretch Goals:
 * Create a Single `Tabs` component that creates all instances of `TabLink`. It will also hold the currently selected tab. 
