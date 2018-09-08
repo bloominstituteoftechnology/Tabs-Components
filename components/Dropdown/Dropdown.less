@@ -14,6 +14,7 @@
     }
   }
   .dropdown-content {
+    transition: all .25s;
     width: 100%;
     position: absolute;
     background-color: @white;
@@ -36,7 +37,8 @@
     }
   }
   .dropdown-hidden {
-    display: none;
+    z-index: -1;
+    opacity: 0;
   }
 }
 
