@@ -1,0 +1,43 @@
+.tabs {
+  width: 100%;
+  .tabs-items {
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .tabs-item {
+    visibility: hidden; 
+    opacity: 0;
+    width: 75%;
+    padding: 0 5px;
+
+    .tabs-item-title {
+      font-family: 'Merriweather', serif;
+      font-size: 18px;
+      font-weight: 700;
+      padding-bottom: 10px;
+    }
+
+    .tabs-item-description {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+    }
+  }
+  .tabs-item-selected {
+    transition: visibility 0s, opacity 0.5s linear;
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+}
+
+/* In order to fade in the text you have to use something other than display
+for the transition. In this case visibility and opacity provide the expected
+behavior. Solution from here:
+https://stackoverflow.com/questions/3331353/transitions-on-the-display-property */
+
+

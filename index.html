@@ -6,7 +6,13 @@
 	</head>
 	<body>
 		<script defer="defer" src="./components/Dropdown/Dropdown.js"></script>
-		<script defer="defer" src="./components/Tabs/Tabs.js"></script>
+		<script type="module" defer="defer" src="./components/Tabs/TabLink.js"></script>
+		<script type="module" defer="defer" src="./components/Tabs/TabItem.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<!-- This site shows all of the Google hosted libraries: https://developers.google.com/speed/libraries/ -->
+		
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:700|Montserrat:300,600" rel="stylesheet">
 		
 		<div class="header-container">
 			<div class="dropdown">
@@ -38,6 +44,8 @@
 						<div class="tabs-link" data-tab="2">Tab 2</div>
 						<div class="tabs-link" data-tab="3">Tab 3</div>
 						<div class="tabs-link" data-tab="4">Tab 4</div>
+						<div class="tabs-link" data-tab="5">Tab 5</div>
+						<div class="tabs-link" data-tab="6">Tab 6</div>
 					</div>
 					<div class="tabs-items">
 						<div class="tabs-item" data-tab="1">
@@ -72,6 +80,20 @@
 								that this has already happened.
 							</div>
 						</div>
+						<div class="tabs-item" data-tab="5">
+							<div class="tabs-item-title">Quote 5</div>
+							<div class="tabs-item-description">
+								Everything should be made as simple as possible, but not simpler.
+							</div>
+						</div>						
+						<div class="tabs-item" data-tab="6">
+							<div class="tabs-item-title">Quote 6</div>
+							<div class="tabs-item-description">
+								Bitcoin gives us, for the first time, a way for one Internet user to transfer a unique piece of digital property to another 
+								Internet user, such that the transfer is guaranteed to be safe and secure, everyone knows that the transfer has taken place, 
+								and nobody can challenge the legitimacy of the transfer. The consequences of this breakthrough are hard to overstate.
+							</div>
+						</div>						
 					</div>
 				</div>
 			</div>
