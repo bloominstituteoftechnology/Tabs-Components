@@ -17,7 +17,6 @@ class TabLink {
   };
 
   select() {
-    console.log("select from TabLink");
     // Get all of the elements with the tabs-link class
     const links = document.querySelectorAll('.tabs-link');
 
@@ -36,9 +35,7 @@ class TabItem {
     this.element = element;
   }
 
-  select() {
-    console.log("select from TabItem");
-    
+  select() {   
     // Select all items elements from the DOM
     let items = document.querySelectorAll('.tabs-item');
 
@@ -51,7 +48,6 @@ class TabItem {
     this.element.classList.add('tabs-item-selected');
   }
 }
-
 
 // START HERE: create a reference to the ".tabs" classes
 let links = document.querySelectorAll('.tabs-link');
