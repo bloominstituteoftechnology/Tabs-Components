@@ -33,7 +33,7 @@ class TabLink {
 
 class TabItem {
   constructor(element) {
-    this.element;
+    this.element = element;
   }
 
   select() {
