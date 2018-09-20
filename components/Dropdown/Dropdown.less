@@ -3,11 +3,14 @@
   position: absolute;
   left: 25px;
   cursor: pointer;
+  text-align: center;
+  width: 120px;
+
   .dropdown-button {
     padding: 15px;
-    border: 3px solid @white;
+    // border: 3px solid @white;
     color: @white;
-    font-size: 20px;
+    font-size: 27px;
     font-weight: bold;
     &:hover {
       background-color: @lambda-light-red;
@@ -16,12 +19,16 @@
   .dropdown-content {
     width: 100%;
     position: absolute;
-    background-color: @white;
+    background-color: @lightgrey;
     display: flex;
     flex-direction: column;
     align-items: center;  
-    margin-top: 10px;
-    border: 2.5px solid @lambda-red;
+    margin-top: 7px;
+    // border: 2.5px solid @lambda-red;
+    top: 60px;
+    opacity: 1;
+    transition: top .2s linear .1s, opacity .3s;
+    z-index: -1000;
   }
   .dropdown-link {
     width: 100%;
@@ -32,14 +39,17 @@
     color: @lambda-red;
     &:hover {
       color: @white;
-      background-color: @lambda-red;
+      background-color: @lambda-light-red;
     }
   }
   .dropdown-hidden {
-    display: none;
+    //display: none;
+    top: -200px;
+    opacity: 0;
+    transition: top .2s linear .1s, opacity .3s;
   }
 }
-
+ 
 
 
 
