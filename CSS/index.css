@@ -21,6 +21,7 @@
 }
 
 .dropdown .dropdown-hide {
+  display: none;
   top: -220px;
   opacity: 0;
   transition: top 0.4s linear 0.2s, opacity 0.5s;
