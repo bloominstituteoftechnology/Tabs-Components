@@ -107,7 +107,7 @@ body {
   margin: 0;
 }
 .box-title,
-.tabs-link {
+.tabs-item-title {
   font-family: 'Noto Serif JP', sans-serif;
 }
 div,
@@ -124,7 +124,8 @@ p {
   background-color: #931d25;
 }
 .header-container .header {
-  height: 50px;
+  height: auto;
+  width: 130px;
 }
 .section {
   width: 70%;
