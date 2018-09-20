@@ -20,6 +20,8 @@
   background-color: #be2530;
 }
 .dropdown .dropdown-content {
+  overflow: hidden;
+  height: 158px;
   width: 100%;
   position: absolute;
   background-color: #ffffff;
@@ -28,6 +30,7 @@
   align-items: center;
   margin-top: 10px;
   border: 2.5px solid #931d25;
+  transition: all 0.2s;
 }
 .dropdown .dropdown-link {
   width: 100%;
@@ -42,7 +45,8 @@
   background-color: #931d25;
 }
 .dropdown .dropdown-hidden {
-  display: none;
+  height: 0px;
+  visibility: collapse;
 }
 .tabs {
   width: 100%;
@@ -55,8 +59,10 @@
   padding-top: 60px;
 }
 .tabs .tabs-item {
-  display: none;
-  width: 75%;
+  overflow: hidden;
+  width: 0%;
+  transition: all 0.2s;
+  height: 0%;
 }
 .tabs .tabs-item .tabs-item-title {
   font-size: 24px;
@@ -64,7 +70,8 @@
   padding-bottom: 10px;
 }
 .tabs .tabs-item-selected {
-  display: block;
+  width: 75%;
+  height: 100%;
 }
 .tabs .tabs-links {
   display: flex;
