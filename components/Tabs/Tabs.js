@@ -37,14 +37,14 @@ class TabItem {
   }
 
   select() {
-    // Select all items elements from the DOM
+    // Select all ".tabs-item" elements from the DOM
     // Remove the class "tabs-item-selected" from each element
     // Add a class named "tabs-item-selected" to this element 
   }
 }
 
 
-// START HERE: create a reference to the ".tabs" classes
+// START HERE: create a reference to the ".tabs-link" class
 let links = document.querySelectorAll();
 
 // Following the code in the Dropdown file, iterate through the array you created above creating a new instance of the TabLink class for each item. 
