@@ -28,6 +28,9 @@
   align-items: center;
   margin-top: 10px;
   border: 2.5px solid #931d25;
+  top: 100%;
+  opacity: 1;
+  transition: all 1s;
 }
 .dropdown .dropdown-link {
   width: 100%;
@@ -42,7 +45,9 @@
   background-color: #931d25;
 }
 .dropdown .dropdown-hidden {
-  display: none;
+  top: -300%;
+  opacity: 0;
+  transition: all 1s;
 }
 .tabs {
   width: 100%;
@@ -118,9 +123,23 @@ body {
 }
 .section .box {
   padding: 40px;
+  display: none;
 }
 .section .box .box-title {
   font-size: 24px;
   padding-bottom: 10px;
   font-weight: bold;
+}
+.section .box-active {
+  display: block;
+}
+.section .buttons {
+  display: flex;
+  justify-content: center;
+}
+.section .buttons button {
+  border: none;
+  margin: 0 5px 10px;
+  cursor: pointer;
+  outline: none;
 }
