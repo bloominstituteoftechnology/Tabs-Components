@@ -8,7 +8,7 @@ class TabLink {
     this.itemElement =  document.querySelector(`.tabs-item[data-tab='${this.data}']`);;
     this.test = new TabItem(this.itemElement);
     // Using the Item element, create a new instance of the TabItem class
-    this.tabItem = new TabItem(this.itemElement);
+    // this.tabItem = new TabItem(this.itemElement);
     
     // Add a click event listener on this instance, calling the select method on click
     this.element.addEventListener('click', () => {this.select()});
@@ -38,9 +38,9 @@ class TabItem {
 
   select() {
     // Select all items elements from the DOM
-    
+    let itemList = document.querySelectorAll('.tabs-item')
     // Remove the class "tabs-item-selected" from each element
-    this.element.classList.remove("tabs-item-selected");
+    Array.from(itemList).forEach(link => link.classList.remove('tabs-item-selected'));
     // Add a class named "tabs-item-selected" to this element 
     this.element.classList.add("tabs-item-selected");
     console.log("Yes it is going through")
