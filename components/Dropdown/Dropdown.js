@@ -3,7 +3,7 @@ class Dropdown {
     this.element = element;
     this.button = this.element.querySelector('.dropdown-button');
     this.content = this.element.querySelector('.dropdown-content');
-    this.button.addEventListener('click', () => this.toggleContent(event));
+    this.button.addEventListener('click', () => this.toggleContent());
   }
 
   toggleContent() {
