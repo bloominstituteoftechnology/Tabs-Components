@@ -12,7 +12,7 @@ class Dropdown {
     
     // Add a click handler to the button reference and call the toggleContent method.
     this.button.addEventListener('click', () => {
-      this.toggleContent(event);
+      this.toggleContent();
     })
   }
 
@@ -20,7 +20,10 @@ class Dropdown {
     
     // Toggle the ".dropdown-hidden" class off and on
     this.content.classList.toggle('dropdown-hidden')
-  }
+    TweenMax.fromTo(this.domElement, 3, 
+      {x:100},
+      {x:0}
+      )}
 }
 
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
