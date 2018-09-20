@@ -6,12 +6,12 @@ class TabLink {
     this.data = this.element.dataset.tab;
     // Using the custom data attribute get the associated Item element
     this.itemElement =  document.querySelector(`.tabs-item[data-tab='${this.data}']`);;
-  
+    this.test = new TabItem(this.itemElement);
     // Using the Item element, create a new instance of the TabItem class
     this.tabItem = new TabItem(this.itemElement);
     
     // Add a click event listener on this instance, calling the select method on click
-    this.element.addEventListener('click', () => {this.select(event)});
+    this.element.addEventListener('click', () => {this.select()});
   };
 
   select() {
@@ -27,19 +27,23 @@ class TabLink {
     this.element.classList.add('tabs-link-selected');
     
     // Call the select method on the item associated with this link
-    
+    this.test.select();
   }
 }
 
 class TabItem {
   constructor(element) {
-    this.element;
+    this.element = element;
   }
 
   select() {
     // Select all items elements from the DOM
+    
     // Remove the class "tabs-item-selected" from each element
+    this.element.classList.remove("tabs-item-selected");
     // Add a class named "tabs-item-selected" to this element 
+    this.element.classList.add("tabs-item-selected");
+    console.log("Yes it is going through")
   }
 }
 
