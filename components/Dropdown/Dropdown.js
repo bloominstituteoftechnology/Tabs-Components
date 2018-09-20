@@ -18,10 +18,11 @@ class Dropdown {
     })
   }
 
-  toggleContent() {
+  $toggleContent() {
     
     // Toggle the ".dropdown-hidden" class off and on
     this.content.classList.toggle('dropdown-hidden');
+    
     // console.log('working or not');
   }
 }
