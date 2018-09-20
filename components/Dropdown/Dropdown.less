@@ -3,7 +3,6 @@
   position: absolute;
   left: 25px;
   cursor: pointer;
-  transition: all .5s ease-in-out;
   
   .dropdown-button {
     padding: 15px;
@@ -24,6 +23,8 @@
     align-items: center;  
     margin-top: 10px;
     border: 2.5px solid @lambda-red;
+    transition: all .5s ease-in-out;
+
   }
   .dropdown-link {
     width: 100%;
@@ -38,7 +39,7 @@
     }
   }
   .dropdown-hidden {
-    display: none;
+    transform: translateX(-200px);
   }
 }
 
