@@ -52,7 +52,7 @@ class TabItem {
     this.element.classList.add('tabs-item-selected') ;
 
     // Challenge below. Hide the unselected tabItems
-    Array.from(tabsItems).map(item => {
+    Array.from(tabsItems).forEach(item => {
       if (item.classList.contains('tabs-item-selected')) {
         item.style.display = 'block';
       } else {
