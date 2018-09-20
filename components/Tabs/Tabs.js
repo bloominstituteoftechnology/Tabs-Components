@@ -47,8 +47,6 @@ class TabItem {
             tab.classList.remove("tabs-item-selected");
         });
         this.element.classList.add("tabs-item-selected");
-
-
     }
 }
 
