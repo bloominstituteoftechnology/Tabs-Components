@@ -71,7 +71,7 @@
   background-color: #931d25;
 }
 .tabs .tabs-link {
-  padding: 20px 25px;
+  padding: 20px 15px;
   font-size: 24px;
   background-color: #931d25;
   border-right: 1px solid white;
@@ -89,6 +89,15 @@
 }
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
+}
+.carousel {
+  width: 100%;
+}
+.carousel .carousel-image {
+  display: none;
+}
+.carousel .carousel-image-selected {
+  display: block;
 }
 body {
   box-sizing: border-box;
