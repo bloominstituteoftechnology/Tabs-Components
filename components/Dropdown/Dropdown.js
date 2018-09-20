@@ -3,7 +3,6 @@ class Dropdown {
     this.element = element;
     this.button = this.element.querySelector('.dropdown-button');
     this.content = this.element.querySelector('.dropdown-content');
-    // bind this to the button
     this.button.addEventListener('click', () => this.toggleContent(event));
   }
 
@@ -13,4 +12,4 @@ class Dropdown {
 }
 
 let dropdowns = document.querySelectorAll('.dropdown');
-dropdowns = Array.from(dropdowns).map( (dropdown) => new Dropdown(dropdown));
+dropdowns = Array.from(dropdowns).map( dropdown => new Dropdown(dropdown));
