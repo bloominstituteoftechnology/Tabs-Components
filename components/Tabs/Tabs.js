@@ -33,6 +33,11 @@ class TabLink {
     // Call the select method on the item associated with this link
     this.tabItem.select();
   }
+
+  deselect() {
+    this.element.remove("tabs-link-selected");
+    this.tabItem.deselect();
+  }
 }
 
 class TabItem {
@@ -49,6 +54,10 @@ class TabItem {
       item.classList.remove("tabs-item-selected")
     );
     this.element.classList.add("tabs-item-selected");
+  }
+
+  deselect() {
+    this.element.classList.remove("tabs-item-selected");
   }
 }
 
