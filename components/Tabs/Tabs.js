@@ -1,3 +1,9 @@
+window.addEventListener('load', () => {
+  TweenMax.from(".text-box", 1, {x: -1200});
+  TweenMax.from(".quote-box", 1, {x: 1200});
+});
+
+
 
 class TabLink {
   constructor(element) {
