@@ -66,9 +66,11 @@
   padding-top: 60px;
 }
 .tabs .tabs-item {
-  width: 0%;
-  overflow-x: hidden;
-  transition: all 1s linear;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  width: 50%;
+  transition: all 0.5s ease-in-out;
 }
 .tabs .tabs-item .tabs-item-title {
   font-size: 24px;
@@ -77,7 +79,9 @@
 }
 .tabs .tabs-item-selected {
   display: block;
-  width: 75%;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
 }
 .tabs .tabs-links {
   display: flex;
