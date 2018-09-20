@@ -123,9 +123,23 @@ body {
 }
 .section .box {
   padding: 40px;
+  display: none;
 }
 .section .box .box-title {
   font-size: 24px;
   padding-bottom: 10px;
   font-weight: bold;
+}
+.section .box-active {
+  display: block;
+}
+.section .buttons {
+  display: flex;
+  justify-content: center;
+}
+.section .buttons button {
+  border: none;
+  margin: 0 5px 10px;
+  cursor: pointer;
+  outline: none;
 }

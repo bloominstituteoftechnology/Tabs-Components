@@ -41,10 +41,25 @@ body {
   overflow: hidden;
   .box {
     padding: 40px;
+    display: none;
     .box-title {
       font-size: 24px;
       padding-bottom: 10px;
       font-weight: bold;
+    }
+  }
+  .box-active {
+    display: block;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+
+    button {
+      border: none;
+      margin: 0 5px 10px;
+      cursor: pointer;
+      outline: none;
     }
   }
 }
