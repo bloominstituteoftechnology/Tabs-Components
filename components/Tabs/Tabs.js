@@ -51,6 +51,7 @@ class TabItem {
     // Add a class named "tabs-item-selected" to this element
     this.element.classList.add('tabs-item-selected') ;
 
+    // Challenge below. Hide the unselected tabItems
     Array.from(tabsItems).map(item => {
       if (item.classList.contains('tabs-item-selected')) {
         item.style.display = 'block';
