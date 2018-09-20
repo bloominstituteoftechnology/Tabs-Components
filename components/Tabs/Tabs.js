@@ -11,6 +11,7 @@ const Tabs = (() => {
       this.element = element;
       this.tabLinks = [];
       this.tabItems = [];
+      this.selectedTab = undefined;
       //
       Array.from(document.querySelectorAll('.tabs-link'))
       .forEach(linkElement => {
@@ -21,9 +22,11 @@ const Tabs = (() => {
         this.tabLinks.push(newTabLink);
         this.tabItems.push(newTabItem);
       })
-      this.tabLinks[0].select();
+      //
+      this.select(this.tabLinks[0]);
     }
     select(selectedTabLink) {
+      this.selectedTab = selectedTabLink;
       this.tabLinks.forEach((indexedTabLink, index) => {
         let indexedTabItem = this.tabItems[index];
         if(indexedTabLink === selectedTabLink){
@@ -42,7 +45,7 @@ const Tabs = (() => {
     constructor(element, tabsParent) {
       this.element = element;
       this.element.addEventListener('click', () => {
-        tabsParent.select(this);
+        tabsParent.select(this); // I don't like this circular reference
       });
     };
     select() {

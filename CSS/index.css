@@ -90,6 +90,33 @@
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
 }
+.carosel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.carosel-arrow {
+  font-size: 1;
+  height: auto;
+}
+.carosel-frame {
+  max-width: 80%;
+  height: 100%;
+}
+.carosel-slide {
+  display: none;
+  /*border: 1px red solid;
+    position: relative;
+    left: 0;
+    transition: left 1s linear;*/
+}
+.carosel-slide img {
+  max-width: 100%;
+}
+.carosel-slide--show {
+  display: block;
+}
 body {
   box-sizing: border-box;
   min-width: 300px;
