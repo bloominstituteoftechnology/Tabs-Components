@@ -22,12 +22,14 @@
 .dropdown .dropdown-content {
   width: 100%;
   position: absolute;
+  top: -155px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
   border: 2.5px solid #931d25;
+  z-index: -1;
 }
 .dropdown .dropdown-link {
   width: 100%;
@@ -42,7 +44,7 @@
   background-color: #931d25;
 }
 .dropdown .dropdown-hidden {
-  display: none;
+  display: block;
 }
 .tabs {
   width: 100%;
@@ -103,6 +105,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #931d25;
+  z-index: 5;
 }
 .header-container .header {
   height: 50px;

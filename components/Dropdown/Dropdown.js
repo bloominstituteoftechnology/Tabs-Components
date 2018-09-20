@@ -1,3 +1,7 @@
+let dropdownLink = document.querySelectorAll(".dropdown-link");
+let dropdownContent = document.querySelectorAll(".dropdown-content");
+let tweenMenu = TweenMax.to(dropdownContent, 0.4, { y: 220 }).reverse();
+
 class Dropdown {
   constructor(element) {
     // Assign this.element to the dropdown element
@@ -12,11 +16,18 @@ class Dropdown {
     // Add a click handler to the button reference and call the toggleContent method.
     this.button.addEventListener("click", () => {
       this.toggleContent(); // **what is 'this' referring to? this.button or this.element?**
+      // TweenMax.from(dropdownContent, 0.2, { y: -50 }).;
+      if (!tweenMenu.isActive()) {
+        tweenMenu.reversed(!tweenMenu.reversed());
+        TweenMax.staggerFrom(dropdownLink, 0.3, { x: -40 }, 0.09);
+      }
+      // TweenMax.staggerFrom(dropdownLink, 0.2, { x: -20 }, 0.09);
     }); // **Also, why not this.content.toggleContent(event)?**
   }
 
-  toggleContent() {
+  toggleContent(event) {
     // **still confused about passing in a param here**
+    // event.stopPropagation();
     // Toggle the ".dropdown-hidden" class off and on
     this.content.classList.toggle("dropdown-hidden");
   }
