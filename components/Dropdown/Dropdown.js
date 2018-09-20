@@ -27,3 +27,7 @@ class Dropdown {
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
 let dropdowns = document.querySelectorAll('.dropdown');
 dropdowns = Array.from(dropdowns).map( dropdown => new Dropdown(dropdown));
+
+TweenMax.to(".header", 2, {x:450, ease:Bounce.easeOut});
+TweenMax.to(".dropdown-button", 2, {x:75, ease:Bounce.easeOut});
+TweenMax.to(".dropdown-content", 2, {x:75, ease:Bounce.easeOut});
