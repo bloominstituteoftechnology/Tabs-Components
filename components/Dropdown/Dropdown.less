@@ -22,6 +22,10 @@
     align-items: center;  
     margin-top: 10px;
     border: 2.5px solid @lambda-red;
+    top: 60px;
+    opacity: 1;
+    transition: top .2s linear .1s, opacity .3s;
+    z-index: -1000;
   }
   .dropdown-link {
     width: 100%;
@@ -36,10 +40,13 @@
     }
   }
   .dropdown-hidden {
-    display: none;
+    //display: none;
+    top: -200px;
+    opacity: 0;
+    transition: top .2s linear .1s, opacity .3s;
   }
 }
-
+ 
 
 
 
