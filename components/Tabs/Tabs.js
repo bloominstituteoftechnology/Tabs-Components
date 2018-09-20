@@ -57,6 +57,7 @@ class TabItem {
     // Select all items elements from the DOM
     const items = document.querySelectorAll(".tabs-item");
     console.log(items);
+    TweenMax.fromTo(items, 1, { opacity: 0 }, { opacity: 1 });
     // Remove the class "tabs-item-selected" from each element
     Array.from(items).forEach(item =>
       item.classList.remove("tabs-item-selected")

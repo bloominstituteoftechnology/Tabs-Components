@@ -1,5 +1,5 @@
 .dropdown {
-  z-index: 2;
+  // z-index: 2; This was causing the dropdown animation bug
   position: absolute;
   left: 25px;
   cursor: pointer;
@@ -23,7 +23,7 @@
     align-items: center;
     margin-top: 10px;
     border: 2.5px solid @lambda-red;
-    z-index: -1;
+    z-index: -1000; // **bug - goes over header instead of under
   }
   .dropdown-link {
     width: 100%;

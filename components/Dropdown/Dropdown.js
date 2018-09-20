@@ -1,6 +1,6 @@
 let dropdownLink = document.querySelectorAll(".dropdown-link");
-let dropdownContent = document.querySelectorAll(".dropdown-content");
-let tweenMenu = TweenMax.to(dropdownContent, 0.4, { y: 220 }).reverse();
+// let dropdownContent = document.querySelectorAll(".dropdown-content");
+let tweenMenu = TweenMax.to(".dropdown-content", 0.4, { y: 220 }).reverse();
 
 class Dropdown {
   constructor(element) {
@@ -19,6 +19,7 @@ class Dropdown {
       // TweenMax.from(dropdownContent, 0.2, { y: -50 }).;
       if (!tweenMenu.isActive()) {
         tweenMenu.reversed(!tweenMenu.reversed());
+        // menu z-index set to -1000, header set to 5 but menu still goes over the header when animating
         TweenMax.staggerFrom(dropdownLink, 0.3, { x: -40 }, 0.09);
       }
       // TweenMax.staggerFrom(dropdownLink, 0.2, { x: -20 }, 0.09);
