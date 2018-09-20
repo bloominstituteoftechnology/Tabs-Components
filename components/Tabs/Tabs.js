@@ -78,13 +78,16 @@ class TabItem {
     // });
     // Add a class named "tabs-item-selected" to this element 
     this.element.classList.add("tabs-item-selected");
+    TweenLite.from(this.element, 2, {opacity: 0});
   }
 
   deselect() {
-    this.element.classList.remove("tabs-item-selected");
+    TweenLite.to(this.element, 2, {opacity: 0, onComplete: function() {
+      this.element.classList.remove("tabs-item-selected");
+    }});
+    // this.element.classList.remove("tabs-item-selected");
   }
 }
-
 
 // START HERE: create a reference to the ".tabs" classes
 // let links = document.querySelectorAll(".tabs-link");
