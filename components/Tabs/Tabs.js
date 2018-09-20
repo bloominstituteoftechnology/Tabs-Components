@@ -1,25 +1,21 @@
 class Tabs {
   constructor(tabsElement) {
-    // tabs div
     this.element = tabsElement;
-    // console.log(tabsElement);
-    this.links = this.element.querySelectorAll('.tabs-link');
-    this.links = Array.from(this.links).map( link => {
+    this.tabLinks = this.element.querySelectorAll('.tabs-link');
+    this.tabLinks = Array.from(this.tabLinks).map(link => {
       return new TabsLink(link, this);
     });
-    // console.log(this.links);
-    this.activeLink = this.links[0];
-    // console.log(this.activeLink);
-    this.init();
+    this.clicked = this.tabLinks[0];
+    this.starting();
   }
 
-  init() { 
-    this.activeLink.select();
+  starting() {
+    this.clicked.select();
   }
 
-  updateActive(newActive) {
-    this.activeLink.deselect();
-    this.activeLink = newActive;
+  tabbed(newActive) {
+    this.clicked.unselect();
+    this.clicked = newActive;
   }
 
   getTab(data) {
@@ -28,23 +24,17 @@ class Tabs {
 }
 
 class TabsLink {
-  constructor(link, parent) {
+  constructor(link, data) {
     this.link = link;
-    // tabs instance
-    this.tabs = parent;
-    // linking the data attr to tab content 
-    this.tabsItem = parent.getTab(this.link.dataset.tab);
+    this.tabs = data;
+    this.tabsItem = data.getTab(this.link.dataset.tab);
     this.tabsItem = new TabsItem(this.tabsItem);
 
     this.link.addEventListener('click', (e) => {
-      // match the current link and parent's link
-      let currentTabsLink = this.tabs.links.filter((linkOject) => {
+      let currentTabsLink = this.tabs.tabLinks.filter((linkOject) => {
         return e.target.dataset.tab === linkOject.link.dataset.tab;
       })[0];
-      // console.log(currentTabsLink);
-      // pass the current link to parent
-      this.tabs.updateActive(currentTabsLink);
-      // invoke the select() method on this
+      this.tabs.tabbed(currentTabsLink);
       currentTabsLink.select();
     });
   };
@@ -54,9 +44,9 @@ class TabsLink {
     this.tabsItem.select();
   }
 
-  deselect() {
+  unselect() {
     this.link.classList.remove('tabs-link-selected');
-    this.tabsItem.deselect();
+    this.tabsItem.unselect();
   }
 }
 
@@ -69,7 +59,7 @@ class TabsItem {
     this.element.classList.add('tabs-item-selected');
   }
 
-  deselect() {
+  unselect() {
     this.element.classList.remove('tabs-item-selected');
   }
 }
