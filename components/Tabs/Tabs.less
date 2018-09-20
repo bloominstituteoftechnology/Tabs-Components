@@ -8,9 +8,11 @@
     padding-top: 60px;
   }
   .tabs-item {
-    display: none; 
-
-    width: 75%;
+    overflow: hidden;
+    width: 0%;
+    transition: all .2s;
+    height: 0%;
+    
     .tabs-item-title {
       font-size: 24px;
       font-weight: bold;
@@ -18,7 +20,8 @@
     }
   }
   .tabs-item-selected {
-    display: block;
+    width: 75%;
+    height: 100%;
   }
 
   .tabs-links {
