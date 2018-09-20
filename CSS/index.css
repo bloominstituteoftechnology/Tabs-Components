@@ -8,6 +8,7 @@
   position: absolute;
   left: 25px;
   cursor: pointer;
+  
 }
 .dropdown .dropdown-button {
   padding: 15px;
@@ -20,12 +21,12 @@
   background-color: #be2530;
 }
 
-.dropdown .dropdown-hide {
+/* .dropdown .dropdown-hide {
   display: none;
   top: -220px;
   opacity: 0;
   transition: top 0.4s linear 0.2s, opacity 0.5s;
-}
+} */
 
 .dropdown .dropdown-content {
   width: 100%;
@@ -36,6 +37,7 @@
   align-items: center;
   margin-top: 10px;
   border: 2.5px solid #931d25;
+ 
 }
 .dropdown .dropdown-link {
   width: 100%;
@@ -51,6 +53,7 @@
 }
 .dropdown .dropdown-hidden {
   display: none;
+  
 }
 .tabs {
   width: 100%;
@@ -132,3 +135,7 @@ body {
   padding-bottom: 10px;
   font-weight: bold;
 }
+
+
+
+
