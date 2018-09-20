@@ -14,15 +14,17 @@ class TabLink {
     this.tabItem = new TabItem(this.itemElement);
     
     // Add a click event listener on this instance, calling the select method on click
-    this.element.addEventListener("click", (event)=> {this.select(event)});
+    this.element.addEventListener("click", ()=> {this.select()});
   }
 
-  select(event) {
+  select() {
     // Get all of the elements with the tabs-link class
     let links = document.querySelectorAll(".tabs-link");
 
     // Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links
-    Array.from(links).forEach((element) => element.classList.remove("tabs-link-selected"));
+    Array.from(links).forEach(link => {
+      link.classList.remove("tabs-link-selected");
+    });
     
 
     // Add a class named "tabs-link-selected" to this link
@@ -36,18 +38,21 @@ class TabLink {
 class TabItem {
   constructor(element) {
     this.element = element;
+  
   }
 
   select() {
     // Select all items elements from the DOM
-    let itemElement = document.querySelector(".tabs-item");
+    let items = document.querySelector(".tabs-item");
     // Remove the class "tabs-item-selected" from each element
-    Array.from(itemElement).forEach((element) => element.classList.remove("tabs-link-selected"));
-    
-     
-    
+    Array.from(items).forEach(item => {
+      item.classList.remove("tabs-item-selected");
+  });
+
+
     // Add a class named "tabs-item-selected" to this element 
    this.element.classList.add("tabs-item-selected");
+
   }
 }
 
