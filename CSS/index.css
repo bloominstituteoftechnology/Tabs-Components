@@ -105,7 +105,7 @@ body {
   box-sizing: border-box;
   min-width: 300px;
   margin: 0;
-  background-image: url(/memphis-colorful.png);
+  background-image: url(../memphis-colorful.png);
 }
 .box-title,
 .tabs-item-title {
