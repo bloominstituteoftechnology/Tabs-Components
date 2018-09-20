@@ -8,9 +8,13 @@
     padding-top: 60px;
   }
   .tabs-item {
-    display: none; 
+    opacity: 0;
+    visibility: hidden;
+    position:absolute;
+    width: 55vw;
+    margin: 0 auto;
 
-    width: 75%;
+    // width: 75%;
     .tabs-item-title {
       font-size: 24px;
       font-weight: bold;
@@ -18,7 +22,10 @@
     }
   }
   .tabs-item-selected {
-    display: block;
+    //display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
   }
 
   .tabs-links {
