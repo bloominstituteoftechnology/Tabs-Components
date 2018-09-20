@@ -1,13 +1,13 @@
 
 class TabLink {
   constructor(element) {
-    this.element;
+    this.element = element;
     
     // Get the custom data attribute on the Link
-    this.data;
+    this.data = this.element.dataset.tab;
     
     // Using the custom data attribute get the associated Item element
-    this.itemElement;
+    this.itemElement = document.querySelector(`.tab-item[data-tab='${this.data}']`);
     
     // Using the Item element, create a new instance of the TabItem class
     this.tabItem;
@@ -45,9 +45,11 @@ class TabItem {
 
 
 // START HERE: create a reference to the ".tabs" classes
-let links = document.querySelectorAll();
+let links = document.querySelectorAll('.tabs');
 
 // Following the code in the Dropdown file, iterate through the array you created above creating a new instance of the TabLink class for each item. 
-links = Array.from(links)
+links = Array.from(links).map(element => {
+  return new TabLink(element);
+});
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
