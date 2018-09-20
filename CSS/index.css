@@ -65,6 +65,7 @@
 }
 .tabs .tabs-item-selected {
   display: block;
+  overflow-y: auto;
 }
 .tabs .tabs-links {
   display: flex;
