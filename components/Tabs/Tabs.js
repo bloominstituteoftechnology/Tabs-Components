@@ -1,4 +1,3 @@
-
 class TabLink {
   constructor(element) {
     this.element;
