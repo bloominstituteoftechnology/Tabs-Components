@@ -6,7 +6,7 @@ class TabLink {
     this.data = this.element.dataset.tab;
 
     // Using the custom data attribute get the associated Item element
-    this.itemElement = document.querySelector(
+    this.tabItem = document.querySelector(
       `.tabs-item[data-tab='${this.data}']`
     );
 
@@ -37,18 +37,16 @@ class TabLink {
 }
 
 class TabItem {
-  constructor(tabItem) {
-    this.tabItem = tabItem;
-    console.log('this.tabItem', this.tabItem);
+  constructor(element) {
+    this.element = element;
   }
 
   select() {
     // Select all items elements from the DOM
     let items = document.querySelectorAll('.tabs-item');
-    console.log('items', items);
+
     // Remove the class "tabs-item-selected" from each element
     Array.from(items).forEach(element => {
-      console.log('element', element);
       element.classList.remove('tabs-item-selected');
     });
 
@@ -64,3 +62,4 @@ let links = document.querySelectorAll('.tabs-link');
 links = Array.from(links).map(link => new TabLink(link));
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
+links[0].select();
