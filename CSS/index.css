@@ -93,6 +93,12 @@
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
 }
+.tabs .content {
+  height: 50px;
+  padding: 20px;
+  border: 1px solid black;
+  display: none;
+}
 body {
   box-sizing: border-box;
   min-width: 300px;
