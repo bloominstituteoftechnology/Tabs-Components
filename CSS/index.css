@@ -90,6 +90,9 @@
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
 }
+.deselect-toggle {
+  display: none;
+}
 body {
   box-sizing: border-box;
   min-width: 300px;

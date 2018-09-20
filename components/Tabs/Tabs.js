@@ -15,8 +15,8 @@ class TabLink {
     this.tabItem =  new TabItem(this.itemElement);
     
     // Add a click event listener on this instance, calling the select method on click
-    this.element.addEventListener('click', () => {
-      this.select();
+    this.element.addEventListener('click', (e) => {
+      this.select(e);
     });
 
   };
@@ -36,6 +36,8 @@ class TabLink {
     // Call the select method on the item associated with this link
     this.tabItem.select();
   }
+
+ 
 }
 
 class TabItem {
@@ -45,7 +47,7 @@ class TabItem {
 
   select() {
     // Select all items elements from the DOM
-    const itemElements = document.querySelectorAll('.tab-item')
+    const itemElements = document.querySelectorAll('.tabs-item')
 
     // Remove the class "tabs-item-selected" from each element
     itemElements.forEach( link => {
@@ -66,4 +68,4 @@ links = Array.from(links).map(link => new TabLink(link));
 
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
-tabLinks[0].select();
+links[0].select();
