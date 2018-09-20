@@ -90,6 +90,15 @@
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
 }
+.carousel {
+  width: 100%;
+}
+.carousel .carousel-image {
+  display: none;
+}
+.carousel .carousel-image-selected {
+  display: block;
+}
 body {
   box-sizing: border-box;
   min-width: 300px;
