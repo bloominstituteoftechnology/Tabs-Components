@@ -16,7 +16,7 @@ class TabLink {
     }
   
 
-  select() {
+  select(event) {
     // Get all of the elements with the tabs-link class
     let links = document.querySelectorAll('.tabs-link');
 
@@ -36,7 +36,7 @@ class TabItem {
   this.element = element;
   }
 
-  select() {
+  select(event) {
     // Select all items elements from the DOM
     let items = document.querySelectorAll('.tabs-item');
     // Remove the class "tabs-item-selected" from each element
