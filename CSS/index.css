@@ -27,6 +27,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
+  transition: all 200ms ease-out;
   border: 2.5px solid #931d25;
 }
 .dropdown .dropdown-link {
@@ -38,11 +39,11 @@
   color: #931d25;
 }
 .dropdown .dropdown-link:hover {
-  color: #ffffff;
+  scolor: #ffffff;
   background-color: #931d25;
 }
 .dropdown .dropdown-hidden {
-  display: none;
+  transform: translateX(-500px);
 }
 .tabs {
   width: 100%;
