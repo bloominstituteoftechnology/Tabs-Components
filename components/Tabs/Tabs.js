@@ -37,16 +37,27 @@ class TabLink {
     this.element.classList.toggle('tabs-link-selected');
 
     // Call the select method on the item associated with this link
+    this.tabItem.select();
 
   }
 }
 
 class TabItem {
   constructor(element) {
-    this.element;
+    this.element = element;
+
   }
 
   select() {
+    const tabItems = document.querySelectorAll('.tabs-item')
+      // console.log(tabItems);
+    tabItems.forEach(item => {
+      item.classList.remove('tabs-item-selected');
+    });
+
+    this.element.classList.add('tabs-item-selected');
+    // console.log(this.element)
+
     // Select all items elements from the DOM
     // Remove the class "tabs-item-selected" from each element
     // Add a class named "tabs-item-selected" to this element 
@@ -56,7 +67,7 @@ class TabItem {
 
 // START HERE: create a reference to the ".tabs" classes
 let links = document.querySelectorAll('.tabs-link');
-// Following the code in the Dropdown file, iterate through the array you created above creating a new instance of the TabLink class for each item. 
+// Following the code in the Dropdown file, iterate through the array you created above creating a new instance of the TabLink class for each item.
 links = Array.from(links).map(link => new TabLink(link));
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
