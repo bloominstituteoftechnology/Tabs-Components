@@ -19,6 +19,13 @@
 .dropdown .dropdown-button:hover {
   background-color: #be2530;
 }
+
+.dropdown .dropdown-hide {
+  top: -220px;
+  opacity: 0;
+  transition: top 0.4s linear 0.2s, opacity 0.5s;
+}
+
 .dropdown .dropdown-content {
   width: 100%;
   position: absolute;
