@@ -18,6 +18,16 @@ class TabLink {
   }
 
   select() {
+    this.deselect();
+
+    // Add a class named "tabs-link-selected" to this link
+    this.element.classList.add('tabs-link-selected');
+
+    // Call the select method on the item associated with this link
+    this.tabItem.select();
+  }
+
+  deselect() {
     // Get all of the elements with the tabs-link class
     const links = document.querySelectorAll('.tabs-link');
 
@@ -25,12 +35,6 @@ class TabLink {
     Array.from(links).forEach(link =>
       link.classList.remove('tabs-link-selected')
     );
-
-    // Add a class named "tabs-link-selected" to this link
-    this.element.classList.add('tabs-link-selected');
-
-    // Call the select method on the item associated with this link
-    this.tabItem.select();
   }
 }
 
@@ -40,14 +44,18 @@ class TabItem {
   }
 
   select() {
+    this.deselect();
+    // Add a class named "tabs-item-selected" to this element
+    this.element.classList.add('tabs-item-selected');
+  }
+
+  deselect() {
     // Select all items elements from the DOM
     const items = document.querySelectorAll('.tabs-item');
     // Remove the class "tabs-item-selected" from each element
     Array.from(items).forEach(item =>
       item.classList.remove('tabs-item-selected')
     );
-    // Add a class named "tabs-item-selected" to this element
-    this.element.classList.add('tabs-item-selected');
   }
 }
 
@@ -58,3 +66,7 @@ let links = document.querySelectorAll('.tabs-link');
 links = Array.from(links).map(link => new TabLink(link));
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
+
+// class Tabs {
+
+// }

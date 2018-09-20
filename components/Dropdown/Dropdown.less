@@ -21,6 +21,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
+    transition: all 200ms ease-out;
     border: 2.5px solid @lambda-red;
   }
   .dropdown-link {
@@ -36,6 +37,7 @@
     }
   }
   .dropdown-hidden {
-    display: none;
+    // display: none;
+    transform: translateX(-500px);
   }
 }
