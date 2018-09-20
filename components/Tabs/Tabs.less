@@ -8,7 +8,7 @@
     padding-top: 60px;
   }
   .tabs-item {
-    display: none; 
+    display: none;
 
     width: 75%;
     .tabs-item-title {
@@ -19,6 +19,8 @@
   }
   .tabs-item-selected {
     display: block;
+    animation-name: fadeIn;
+    animation-duration: 2s;
   }
 
   .tabs-links {
@@ -33,6 +35,7 @@
     border-right: 1px solid white;
     color: @white;
     cursor: pointer;
+    transition: background-color 0.25s ease;
     &:hover {
       background-color: @lambda-light-red;
     }
@@ -48,4 +51,7 @@
   }
 }
 
-
+@keyframes fadeIn{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
