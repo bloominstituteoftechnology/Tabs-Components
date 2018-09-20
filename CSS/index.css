@@ -44,6 +44,9 @@
 .dropdown .dropdown-hidden {
   display: none;
 }
+.dropdown .change {
+  display: flex;
+}
 .tabs {
   width: 100%;
 }

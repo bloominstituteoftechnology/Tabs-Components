@@ -1,5 +1,15 @@
 **TABS-COMPONENTS**
 ----------------------------------
+notes from lecture:
+C:\Users\tomut\Notes\Tabs-Components\components\datatab img.PNG
+
+https://codepen.io/Tomutsey/pen/bxzjJZ
+https://codepen.io/Tomutsey/pen/JaxaPJ?editors=0010
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+https://codepen.io/Tomutsey/pen/VGgGxV?editors=0100
+https://codepen.io/Tomutsey/pen/vzbzvM?editors=0010
+
+https://codepen.io/Tomutsey/pen/OodBbX?editors=0010
 
 Topics:
 * Constructors with ES6 class syntax
