@@ -28,7 +28,7 @@ class Carousel {
       this.current = 0;
     }
     this.items[this.current].classList.add('box-active');
-    TweenMax.from(this.items[this.current], 2, {opacity: 0});
+    TweenMax.from(this.items[this.current], 2, {opacity: 0, delay: 0.25});
     this.buttonSpan.innerText = this.current + 1;
   }
 }
