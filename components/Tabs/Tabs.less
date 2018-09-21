@@ -8,9 +8,11 @@
     padding-top: 60px;
   }
   .tabs-item {
-    display: none; 
+    display: none;
+    width: 70%;
 
-    width: 75%;
+
+
     .tabs-item-title {
       font-size: 24px;
       font-weight: bold;
@@ -19,6 +21,10 @@
   }
   .tabs-item-selected {
     display: block;
+    // visibility: visible;
+    opacity: 1;
+    animation: fadein 1s linear;
+
   }
 
   .tabs-links {
@@ -49,3 +55,7 @@
 }
 
 
+    @keyframes fadein {
+      0% { opacity: 0 }
+      100% { opacity: 1 }
+    }

@@ -1,0 +1,62 @@
+.carousel {
+  position: relative;
+  width: 70%;
+  height: 30%;
+  margin: 45px auto;
+  border: 1px solid @lambda-red;
+  box-shadow: 1px 1px 5px @lambda-red;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+
+  .inside {
+    width: 100%;
+    overflow: hidden;
+
+    .box {
+      display: none;
+      padding: 40px;
+
+        .box-title {
+          font-size: 24px;
+          padding-bottom: 10px;
+          font-weight: bold;
+        }//end box-title
+    }//end box
+    .active{
+      display: block;
+      opacity: 1;
+      animation: fadein 1s linear;
+
+    }
+
+  }//end inside
+
+      }
+      .carousel-control {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 53px;
+        height: 53px;
+        top: 40%;
+        cursor: pointer;
+        opacity: 0.6;
+
+          &:hover{
+            opacity: 1;
+          }
+          .left{
+            position: relative;
+            left: 3%;
+            }
+          }
+          .right {
+            left: 95%
+}//end carousel
+//
+@keyframes fadein {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
