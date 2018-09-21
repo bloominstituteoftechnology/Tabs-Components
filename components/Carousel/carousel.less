@@ -12,44 +12,24 @@
   .inside {
     width: 100%;
     overflow: hidden;
+
     .box {
       display: none;
       padding: 40px;
-      animation: 0.5s ease-in-out;
-      .container {
-        margin: 0 auto;
 
         .box-title {
           font-size: 24px;
           padding-bottom: 10px;
           font-weight: bold;
         }//end box-title
-      }//end container
     }//end box
     .active{
       display: block;
-    }
-    .next{
-      display: block;
-      position: absolute;
-      top: 0;
-      width: 100%;
+      opacity: 1;
+      animation: fadein 1s linear;
+
     }
 
-    .to-left{
-      animation-name: left;
-    }
-    .from-right{
-      animation-name: right;
-    }
-    .to-right{
-      animation-name: right;
-      animation-direction: reverse;
-    }
-    .from-left{
-      animation-name: left;
-      animation-direction: reverse;
-    }
   }//end inside
 
       }
@@ -58,6 +38,9 @@
         top: 0;
         bottom: 0;
         left: 0;
+        width: 53px;
+        height: 53px;
+        top: 40%;
         cursor: pointer;
         opacity: 0.6;
 
@@ -66,32 +49,14 @@
           }
           .left{
             position: relative;
-            top: 50%;
-            left: 0px;
+            left: 3%;
             }
           }
           .right {
-            top: 50%;
-            left: 94%
-            // img{
-            //   display: block;
-            // }
+            left: 95%
 }//end carousel
-
-@keyframes left {
-  from {
-    left: 0;
-  }
-  to {
-    left: -100%;
-  }
-}
-
-@keyframes right {
-  from {
-    left: 100%;
-  }
-  to {
-    left: 0;
-  }
+//
+@keyframes fadein {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
 }
