@@ -32,7 +32,12 @@ class TabLink {
         // { x: 0, opacity: 1 },
         0.2
       );
-      TweenMax.from(".header", 1, { scale: 0.3, opacity: 0, delay: 3.7 });
+      TweenMax.from(".header", 0.8, { scale: 0.3, opacity: 0, delay: 3 });
+      TweenMax.from(".box-title", 1, {
+        opacity: 0,
+        y: -100,
+        ease: Bounce.easeOut
+      });
     });
 
     // Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links

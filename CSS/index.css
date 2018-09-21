@@ -23,7 +23,6 @@
 .dropdown .dropdown-content {
   width: 100%;
   position: absolute;
-  top: -155px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -44,9 +43,6 @@
 .dropdown .dropdown-link:hover {
   color: #ffffff;
   background-color: #931d25;
-}
-.dropdown .dropdown-hidden {
-  display: block;
 }
 .tabs {
   width: 100%;

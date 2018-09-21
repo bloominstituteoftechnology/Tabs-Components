@@ -1,5 +1,10 @@
 let dropdownLink = document.querySelectorAll(".dropdown-link");
-let tweenMenu = TweenMax.to(".dropdown-content", 0.4, { y: 220 }).reverse();
+let tweenMenu = TweenMax.fromTo(
+  ".dropdown-content",
+  0.5,
+  { opacity: 0 },
+  { opacity: 1 }
+).reverse();
 
 class Dropdown {
   constructor(element) {
@@ -39,5 +44,10 @@ dropdowns = Array.from(dropdowns).map(dropdown => new Dropdown(dropdown));
 
 // ======== ICON ANIMATION ========
 window.addEventListener("load", function() {
-  TweenMax.staggerFrom(".fab", 0.8, { y: -40, opacity: 0, delay: 1.5 }, 0.5);
+  TweenMax.staggerFrom(
+    ".fab",
+    1,
+    { scale: 0, opacity: 0, rotation: -60, delay: 2.2, ease: Elastic.easeOut },
+    0.1
+  );
 });
