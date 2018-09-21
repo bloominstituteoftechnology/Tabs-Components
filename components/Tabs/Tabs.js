@@ -1,4 +1,5 @@
 
+
 class TabLink {
   constructor(element) {
     this.element = element;
@@ -50,6 +51,7 @@ class TabItem {
     });
     // Add a class named "tabs-item-selected" to this element 
     this.element.classList.add('tabs-item-selected');
+    TweenMax.fromTo('.tabs-item-selected', 1, {opacity: 0}, {opacity:1})
   }
 }
 

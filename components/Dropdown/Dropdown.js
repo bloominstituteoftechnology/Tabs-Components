@@ -1,4 +1,4 @@
-let toggleMenu = TweenMax.fromTo('.dropdown-content', 1, {opacity: 1}, {opacity:0}).reverse();
+let toggleMenu = TweenMax.fromTo('.dropdown-content', 1, {opacity: 0}, {opacity:1}).reverse();
 
 class Dropdown {
   constructor(element) {
