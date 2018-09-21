@@ -125,9 +125,37 @@ body {
 }
 .section .box {
   padding: 40px;
+  display: none;
 }
 .section .box .box-title {
   font-size: 24px;
   padding-bottom: 10px;
   font-weight: bold;
+}
+.section .images {
+  margin: 7.5px auto;
+  display: none;
+}
+.section .images .bumper-arrow {
+  background: lightgray;
+  color: #be2530;
+  height: 100%;
+  opacity: 0.4;
+  transition: all 0.1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+.section .images .bumper-arrow:hover {
+  opacity: 0.7;
+  color: #931d25;
+}
+.section .images img {
+  height: 300px;
+  width: auto;
+}
+.section .images-current {
+  display: flex;
+  justify-content: center;
 }

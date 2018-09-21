@@ -41,11 +41,40 @@ body {
   overflow: hidden;
   .box {
     padding: 40px;
+    display: none;
     .box-title {
       font-size: 24px;
       padding-bottom: 10px;
       font-weight: bold;
     }
+  }
+  .images{
+    margin: 7.5px auto;
+    display: none;
+    .bumper-arrow{
+      background: lightgray;
+      color: @lambda-light-red;
+      height: 100%;
+      opacity: .4;
+      transition: all .1s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      &:hover{
+        opacity: .7;
+        color: @lambda-red;
+      }
+    }
+    img{
+      height: 300px;
+      width: auto;
+    }
+  }
+  .images-current{
+    display: flex;
+    justify-content: center;
+    
   }
 }
 
