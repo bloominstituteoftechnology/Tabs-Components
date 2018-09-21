@@ -25,13 +25,14 @@ class TabLink {
     // Get all of the elements with the tabs-link class
     const links = document.querySelectorAll(".tabs-link");
     window.addEventListener("load", function() {
-      TweenMax.staggerFromTo(
+      TweenMax.staggerFrom(
         links,
         1,
         { x: 300, opacity: 0 },
-        { x: 0, opacity: 1 },
+        // { x: 0, opacity: 1 },
         0.2
       );
+      TweenMax.from(".header", 1, { scale: 0.3, opacity: 0, delay: 3.7 });
     });
 
     // Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links

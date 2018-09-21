@@ -37,13 +37,7 @@ class Dropdown {
 let dropdowns = document.querySelectorAll(".dropdown");
 dropdowns = Array.from(dropdowns).map(dropdown => new Dropdown(dropdown));
 
-let icons = document.querySelectorAll(".fab");
+// ======== ICON ANIMATION ========
 window.addEventListener("load", function() {
-  TweenMax.staggerFromTo(
-    icons,
-    1,
-    { y: -40, opacity: 0 },
-    { y: 0, opacity: 1 },
-    0.5
-  );
+  TweenMax.staggerFrom(".fab", 0.8, { y: -40, opacity: 0, delay: 1.5 }, 0.5);
 });

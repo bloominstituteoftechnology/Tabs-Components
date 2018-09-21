@@ -13,6 +13,7 @@
   padding: 15px;
   border: 3px solid #ffffff;
   color: #ffffff;
+  font-family: "Fira Mono", monospace;
   font-size: 20px;
   font-weight: bold;
 }
@@ -36,6 +37,7 @@
   text-align: center;
   padding: 15px 0;
   font-size: 18px;
+  font-family: "Fira Mono", monospace;
   text-decoration: none;
   color: #931d25;
 }
@@ -78,6 +80,7 @@
   background-color: #931d25;
   border-right: 1px solid white;
   color: #ffffff;
+  font-family: "Roboto Slab", serif;
   cursor: pointer;
 }
 .tabs .tabs-link:hover {
@@ -96,6 +99,7 @@ body {
   box-sizing: border-box;
   min-width: 300px;
   margin: 0;
+  font-family: "Raleway", sans-serif;
 }
 .header-container {
   width: 100%;
@@ -142,5 +146,6 @@ body {
 .section .box .box-title {
   font-size: 24px;
   padding-bottom: 10px;
+  font-family: "Roboto Slab", serif;
   font-weight: bold;
 }
