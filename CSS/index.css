@@ -22,12 +22,14 @@
 .dropdown .dropdown-content {
   width: 100%;
   position: absolute;
+  top: -155px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
   border: 2.5px solid #931d25;
+  z-index: 0;
 }
 .dropdown .dropdown-link {
   width: 100%;
@@ -42,7 +44,7 @@
   background-color: #931d25;
 }
 .dropdown .dropdown-hidden {
-  display: none;
+  display: block;
 }
 .tabs {
   width: 100%;
@@ -106,6 +108,24 @@ body {
 }
 .header-container .header {
   height: 50px;
+}
+.header-container .social-media {
+  position: absolute;
+  right: 35px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.header-container .social-media .fab {
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.7em;
+  margin: 0 10px;
+}
+.header-container .social-media .fab:hover {
+  color: #ddd;
+}
+.header-container .social-media .fab:active {
+  color: #be2530;
 }
 .section {
   width: 70%;

@@ -16,12 +16,14 @@
   .dropdown-content {
     width: 100%;
     position: absolute;
+    top: -155px;
     background-color: @white;
     display: flex;
     flex-direction: column;
-    align-items: center;  
+    align-items: center;
     margin-top: 10px;
     border: 2.5px solid @lambda-red;
+    z-index: 0; // **bug - goes over header instead of under
   }
   .dropdown-link {
     width: 100%;
@@ -36,11 +38,6 @@
     }
   }
   .dropdown-hidden {
-    display: none;
+    display: block;
   }
 }
-
-
-
-
-
