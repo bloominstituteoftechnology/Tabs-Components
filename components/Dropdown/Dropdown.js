@@ -1,5 +1,4 @@
 let dropdownLink = document.querySelectorAll(".dropdown-link");
-// let dropdownContent = document.querySelectorAll(".dropdown-content");
 let tweenMenu = TweenMax.to(".dropdown-content", 0.4, { y: 220 }).reverse();
 
 class Dropdown {
@@ -37,3 +36,14 @@ class Dropdown {
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
 let dropdowns = document.querySelectorAll(".dropdown");
 dropdowns = Array.from(dropdowns).map(dropdown => new Dropdown(dropdown));
+
+let icons = document.querySelectorAll(".fab");
+window.addEventListener("load", function() {
+  TweenMax.staggerFromTo(
+    icons,
+    1,
+    { y: -40, opacity: 0 },
+    { y: 0, opacity: 1 },
+    0.5
+  );
+});
