@@ -42,7 +42,7 @@
   background-color: #931d25;
 }
 .dropdown .dropdown-hidden {
-  display: none;
+  display: flex;
 }
 .tabs {
   width: 100%;

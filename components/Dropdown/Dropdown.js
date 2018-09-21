@@ -1,3 +1,5 @@
+let toggleMenu = TweenMax.fromTo('.dropdown-content', 1, {opacity: 1}, {opacity:0}).reverse();
+
 class Dropdown {
   constructor(element) {
     
@@ -19,11 +21,11 @@ class Dropdown {
   toggleContent() {
     
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('dropdown-hidden')
-    TweenMax.fromTo(this.domElement, 3, 
-      {x:100},
-      {x:0}
-      )}
+    this.content.classList.toggle('dropdown-hidden');
+    if (!toggleMenu.isActive()){
+      toggleMenu.reversed(!toggleMenu.reversed())
+    }
+};
 }
 
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
