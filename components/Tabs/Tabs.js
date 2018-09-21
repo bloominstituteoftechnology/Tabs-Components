@@ -78,14 +78,14 @@ class TabItem {
     // });
     // Add a class named "tabs-item-selected" to this element 
     this.element.classList.add("tabs-item-selected");
-    TweenLite.from(this.element, 2, {opacity: 0});
+    // TweenLite.from(this.element, 2, {opacity: 0});
   }
 
   deselect() {
-    TweenLite.to(this.element, 2, {opacity: 0, onComplete: function() {
-      this.element.classList.remove("tabs-item-selected");
-    }});
-    // this.element.classList.remove("tabs-item-selected");
+    // TweenLite.to(this.element, 2, {opacity: 0, onComplete: function() {
+    //   this.element.classList.remove("tabs-item-selected");
+    // }});
+    this.element.classList.remove("tabs-item-selected");
   }
 }
 
