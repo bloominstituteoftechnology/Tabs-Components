@@ -42,15 +42,18 @@ class TabItem {
     this.element = element;
   }
 
+
   select(event) {
     // Select all items elements from the DOM
     let items = document.querySelectorAll('.tabs-item');
+
     // Remove the class "tabs-item-selected" from each element
     items = Array.from(items).forEach( item => item.classList.remove('tabs-item-selected'));
     // Add a class named "tabs-item-selected" to this element
     this.element.classList.add('tabs-item-selected');
   }
 }
+
 
 
 // START HERE: create a reference to the ".tabs" classes
