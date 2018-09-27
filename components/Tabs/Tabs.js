@@ -1,7 +1,7 @@
 
 class TabLink {
   constructor(element) {
-    this.element;
+    this.element = element;
     
     // Get the custom data attribute on the Link
     this.data;
