@@ -4,6 +4,7 @@ class TabLink {
     this.link = link;
 
     this.tabLink = this.link.dataset.tab;
+    console.log(this.tabLink);
     this.tabContent = document.querySelector(`.tabs-item[data-tab='${this.tabLink}']`);
     
     this.link.addEventListener('click', () => {this.select()});
@@ -26,7 +27,7 @@ class TabLink {
 class TabGuts {
   constructor(tabGuts) {
     this.tabGuts = tabGuts;
-    console.log(this.tabGuts);
+    // console.log(this.tabGuts);
   }
   selectGuts() {
     let allGuts = document.querySelectorAll(".tabs-item");
