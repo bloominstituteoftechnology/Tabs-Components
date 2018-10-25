@@ -7,12 +7,19 @@ class Carousel {
     
     this.leftButton = this.element.querySelector('.left');
     this.rightButton = this.element.querySelector('.right');
+    this.leftButton.style.display = 'none';
 
     this.leftButton.addEventListener('click', () => this.moveLeft());
     this.rightButton.addEventListener('click', () => this.moveRight());
   }
 
   moveLeft() {
+    if (this.currentIndex === this.images.length - 1) {
+      this.rightButton.style.display = 'block'; 
+    }
+    if (this.currentIndex === 1) {
+      this.leftButton.style.display = 'none';
+    }
     if (this.currentIndex > 0) {
       this.images[this.currentIndex].style.display = 'none';
       this.currentIndex--;
@@ -21,6 +28,12 @@ class Carousel {
   }
 
   moveRight() {
+    if (this.currentIndex === 0) {
+      this.leftButton.style.display = 'block';  
+    }
+    if (this.currentIndex === this.images.length - 2) {
+      this.rightButton.style.display = 'none';
+    }
     if (this.currentIndex < this.images.length - 1) {
       this.images[this.currentIndex].style.display = 'none';
       this.currentIndex++;
