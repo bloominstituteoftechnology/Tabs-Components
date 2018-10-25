@@ -25,7 +25,7 @@ class TabLink {
         Array.from(links).forEach(link => link.classList.remove('tabs-link-selected'));
 
         // Add a class named ."tabs-link-selected" to this link
-        // this.element;
+        this.element.classList.toggle('tabs-link-selected');
 
         // Call the select method on the item associated with this link
 
