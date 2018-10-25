@@ -1,25 +1,45 @@
 class Dropdown {
   constructor(element) {
-    
-    // Assign this.element to the dropdown element
-    this.element;
-    
-    // Get the element with the ".dropdown-button" class found in the dropdown element (look at the HTML for context)
-    this.button = this.element.querySelector();
-    
-    // assign the reference to the ".dropdown-content" class found in the dropdown element
-    this.content;
-    
-    // Add a click handler to the button reference and call the toggleContent method.
-    this.button.addEventListener('click', () => {
 
-    })
+    // Assign this.element to the dropdown element
+    this.element = element;
+
+    // Get the element with the ".dropdown-button" class found in the dropdown element (look at the HTML for context)
+    this.button = this.element.querySelector('.dropdown-button');
+
+    // assign the reference to the ".dropdown-content" class found in the dropdown element
+    this.content = this.element.querySelector('.dropdown-content');
+
+    this.state = false;
+
+    // Add a click handler to the button reference and call the toggleContent method.
+    this.element.addEventListener('mouseenter', () => {
+      this.toggleContent();
+    });
+    this.element.addEventListener('mouseleave', () => {
+      this.toggleContent();
+    });
   }
 
   toggleContent() {
-    
+
     // Toggle the ".dropdown-hidden" class off and on
-    this.content;
+
+    this.state = !this.state;
+
+    if (this.state) {
+
+      this.content.classList.remove('dropdown-hidden');
+      TweenMax.to(this.content, 0.5, {css: {opacity: 1, marginTop: '0px'}});
+
+    }
+
+    else {
+
+      TweenMax.to(this.content, 0.5, {css: {opacity: 0, marginTop: '-20px'}, onComplete: () => this.content.classList.add('dropdown-hidden')});
+
+    }
+
   }
 }
 

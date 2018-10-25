@@ -3,11 +3,10 @@
 	<head>
 		<title>Advanced Components</title>
 		<link rel="stylesheet" href="./CSS/index.css">
+		<meta charset="UTF-8">
 	</head>
 	<body>
-		<script defer="defer" src="./components/Dropdown/Dropdown.js"></script>
-		<script defer="defer" src="./components/Tabs/Tabs.js"></script>
-		
+
 		<div class="header-container">
 			<div class="dropdown">
 				<div class="dropdown-button">Dropdown</div>
@@ -21,13 +20,12 @@
 		</div>
 
 		<div class="section">
-			<div class="box">
-				<div class="box-title">Box Title 1</div>
-				<div class="box-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
-			</div>
-			<div class="box">
-				<div class="box-title">Box Title 2</div>
-				<div class="box-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
+			<div class="img-carousel">
+				<div class="previous-button">< Previous</div>
+				<img src="img/doug2.png">
+				<img src="img/doug1.jpg">
+				<img src="img/doug3.jpg">
+				<div class="next-button">Next ></div>
 			</div>
 		</div>
 
@@ -38,12 +36,14 @@
 						<div class="tabs-link" data-tab="2">Tab 2</div>
 						<div class="tabs-link" data-tab="3">Tab 3</div>
 						<div class="tabs-link" data-tab="4">Tab 4</div>
+						<div class="tabs-link" data-tab="5">Tab 5</div>
+						<div class="tabs-link" data-tab="6">Tab 6</div>
 					</div>
 					<div class="tabs-items">
 						<div class="tabs-item" data-tab="1">
 							<div class="tabs-item-title">Quote 1</div>
 							<div class="tabs-item-description">
-								Don’t Panic.
+								Dont Panic.
 							</div>
 						</div>
 						<div class="tabs-item" data-tab="2">
@@ -72,9 +72,33 @@
 								that this has already happened.
 							</div>
 						</div>
+						<div class="tabs-item" data-tab="5">
+							<div class="tabs-item-title">Quote 5</div>
+							<div class="tabs-item-description">
+								It is a curious fact, and one to which no-one knows quite how much importance to attach, that something like 85 percent of all
+								known worlds in the Galaxy, be they primitive or highly advanced, have invented a drink called jynnan tonyx, or gee-N'N-T'N-ix,
+								or jinond-o-nicks, or any one of a thousand variations on this phonetic theme. The drinks themselves are not the same, and vary
+								between the Sivolvian ‘chinanto/mnigs’ which is ordinary water served just above room temperature, and the Gagrakackan 'tzjin-anthony-ks’
+								which kills cows at a hundred paces; and in fact the only one common factor between all of them, beyond the fact that their names
+								sound the same, is that they were all invented and named before the worlds concerned made contact with any other worlds.
+							</div>
+						</div>
+						<div class="tabs-item" data-tab="6">
+							<div class="tabs-item-title">Quote 6</div>
+							<div class="tabs-item-description">
+								“My doctor says that I have a malformed public-duty gland and a natural deficiency in moral fibre,” Ford muttered to himself,
+								“and that I am therefore excused from saving Universes.”
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- GreenSock TweenMax library -->
+		<script src="./TweenMax.min.js"></script>
+		<script src="./components/Dropdown/Dropdown.js"></script>
+		<script src="./components/Tabs/Tabs.js"></script>
+		<script src="./components/Carousel/Carousel.js"></script>
+
 	</body>
 </html>

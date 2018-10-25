@@ -1,0 +1,41 @@
+.img-carousel {
+
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 0;
+
+  img {
+
+    height: 100%;
+    width: auto;
+    display: none;
+    z-index: -1;
+    position: relative;
+
+  }
+
+  .previous-button, .next-button {
+
+    padding: 15px;
+    border: 1px solid black;
+    cursor: pointer;
+    color: black;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    z-index: 1;
+
+    &:hover {
+
+      color: grey;
+
+    }
+
+  }
+
+}
