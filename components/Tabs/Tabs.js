@@ -16,9 +16,6 @@ class Tab {
     this.selected = data;
 
   }
-  getTab(data) {
-    return this.element.querySelector(`.tabs-item[data-tab="${data}"]`);
-  }
 }
 
 class TabLink {
@@ -26,7 +23,7 @@ class TabLink {
     this.link = link;
     this.tab = parent;
     this.data = this.link.dataset.tab;
-    this.tabItem = parent.getTab(this.data);
+    this.tabItem = document.querySelector(`.tabs-item[data-tab="${this.data}"]`)
     this.tabItem = new TabItem(this.tabItem);
 
     this.link.addEventListener('click', () => {
