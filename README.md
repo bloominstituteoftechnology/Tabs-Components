@@ -17,7 +17,9 @@ In this project, our design team has already built an HTML/CSS web page for us, 
 
 #### Part Two (Tabs):
 * Now that we have an idea of how to create a component with a single class, we will be creating a complex component made up of itself and sister component. The greater component wrapper will be called `TabLink` and the smaller component it will create will be called `TabItem`.
+
   * The `TabLink` component will be the overall wrapper of the sub component. This higher level component will find and create the sub component within it. This component will be on each of what we may consider the `tabs` on top of the box. These links will control the associated item, as well as selecting and deselecting themselves.
+  
   * The `TabItem` component will be the text displayed when a tab is selected. It will share a data attribute with it's corresponding tab, and should only show when it's tab has been selected.
 
 * The `Tabs.js` file starts at the bottom of the page and then jumps around. Pay attention to what is being called and when. Study the corresponding HTML and LESS to get a better idea of how the tabs were built.
