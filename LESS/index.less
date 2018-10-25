@@ -6,8 +6,8 @@
 
 @import './mixins.less';
 @import '../components/Dropdown/Dropdown.less';
-@import '../components/Tabs/Tabs.less';
-
+@import '../components/Tabs/Tabs.less'; 
+@import '../components/Carousel/Carousel.less';
 
 
 body {
@@ -21,7 +21,7 @@ body {
   height: 70px;
   border-bottom: 1px solid @white;
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   align-items: center;
   background-color: @lambda-red;
   .header {
@@ -39,12 +39,4 @@ body {
   box-shadow: 1px 1px 5px @lambda-red;
   border-radius: 10px;
   overflow: hidden;
-  .box {
-    padding: 40px;
-    .box-title {
-      font-size: 24px;
-      padding-bottom: 10px;
-      font-weight: bold;
-    }
-  }
 }

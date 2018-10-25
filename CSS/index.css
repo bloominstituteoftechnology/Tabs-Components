@@ -93,6 +93,38 @@
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
 }
+.img-carousel {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 0;
+}
+.img-carousel img {
+  height: 100%;
+  width: auto;
+  display: none;
+  z-index: -1;
+  position: relative;
+}
+.img-carousel .previous-button,
+.img-carousel .next-button {
+  padding: 15px;
+  border: 1px solid black;
+  cursor: pointer;
+  color: black;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  z-index: 1;
+}
+.img-carousel .previous-button:hover,
+.img-carousel .next-button:hover {
+  color: grey;
+}
 body {
   box-sizing: border-box;
   min-width: 300px;
@@ -118,12 +150,4 @@ body {
   box-shadow: 1px 1px 5px #931d25;
   border-radius: 10px;
   overflow: hidden;
-}
-.section .box {
-  padding: 40px;
-}
-.section .box .box-title {
-  font-size: 24px;
-  padding-bottom: 10px;
-  font-weight: bold;
 }
