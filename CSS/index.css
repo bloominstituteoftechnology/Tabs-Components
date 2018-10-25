@@ -8,6 +8,7 @@
   position: absolute;
   left: 25px;
   cursor: pointer;
+  transition: all 1s ease-in-out;
 }
 .dropdown .dropdown-button {
   padding: 15px;
@@ -27,7 +28,10 @@
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
-  border: 2.5px solid #931d25;
+  border: 1px solid #931d25;
+  color: #68151a;
+  height: 268%;
+  transition: all 1s ease-in-out;
 }
 .dropdown .dropdown-link {
   width: 100%;
@@ -35,14 +39,18 @@
   padding: 15px 0;
   font-size: 18px;
   text-decoration: none;
-  color: #68151a;
+  color: inherit;
 }
 .dropdown .dropdown-link:hover {
   color: #ffffff;
   background-color: #931d25;
 }
 .dropdown .dropdown-hidden {
-  display: none;
+  transition: all 1s ease-in-out;
+  height: 0;
+  display: hidden;
+  color: transparent;
+  pointer-events: none;
 }
 .tabs {
   width: 100%;
