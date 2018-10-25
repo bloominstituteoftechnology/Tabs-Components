@@ -46,6 +46,7 @@ class TabItem {
 
     // Add a class named "tabs-item-selected" to this element
     this.element.classList.add('tabs-item-selected');
+    TweenMax.to(this.element, 1, {css:{opacity:1}});
 
   }
 
@@ -53,6 +54,7 @@ class TabItem {
 
     // Remove a class named "tabs-item-selected" from this element
     this.element.classList.remove('tabs-item-selected');
+    TweenMax.to(this.element, 1, {css:{opacity:0}});
 
   }
 }
