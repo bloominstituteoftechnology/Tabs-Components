@@ -11,21 +11,27 @@ class Dropdown {
     this.content = this.element.querySelector(`.dropdown-content`);
     console.log(this.content);
     // Add a click handler to the button reference and call the toggleContent method.
-    this.button.addEventListener('click', () => {
-      this.toggleContent();
+    this.button.addEventListener('click', (event) => {
+      this.toggleContent();  
     });
 
-    this.tween = TweenMax.to('.dropdown-content', 1, {
+    this.tween = TweenMax.to('.dropdown-content', 2, {
       rotationY: 360,
       ease: Power1.easeInOut
     });
+    this.check = false;
   }
 
   toggleContent() {
-    event.preventDefault();
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle(`dropdown-hidden`);
-    this.content.classList.tween;
+    this.content.classList.toggle(`dropdown-hidden`) 
+    if (!this.check) {
+      this.content.classList.tween;
+      this.check = false;
+    } else {
+      this.check = true;
+      this.content.classList.tween;
+    }
   }
 }
 

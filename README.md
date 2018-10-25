@@ -33,6 +33,8 @@ In this project, our design team has already built an HTML/CSS web page for us, 
   - Add a `deselect` method to each the `TabItem` and `TabLink` classes. This will deselect that specific tab.
   - Remove the code deselecting all `TabLink`s and `TabItem`s, only relying on the deselect method.
   - `Tabs` should deselect the currently selected tab each time a new tab is selected.
+
+  
 - Animations. (Use the animation library of your choice)
   - Get the dropdown to slide in and out, rather than just appearing and disappearing
   - Get the TabsItem text to fade in and out, or slide in and out.
