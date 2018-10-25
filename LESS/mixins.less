@@ -1,3 +1,18 @@
 @lambda-red: rgb(147,29,37);
 @lambda-light-red: lighten(@lambda-red,10%);
 @white: rgb(255,255,255);
+
+.carouselBtn() {
+  position: absolute;
+  top: 5px;
+  padding: 5px;
+  background-color: @lambda-red;
+  color: @white;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: @white;
+    color: @lambda-red;
+    cursor: pointer;
+  }
+}
