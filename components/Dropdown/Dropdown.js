@@ -19,6 +19,7 @@ class Dropdown {
     
     // Toggle the ".dropdown-hidden" class off and on
     content.classList.toggle('dropdown-hidden');
+    TweenMax.from(content, 2.5, {ease: Elastic.easeOut.config(1.2, 0.2), y: -200});
   }
 }
 
