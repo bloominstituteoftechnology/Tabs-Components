@@ -7,6 +7,7 @@
 @import './mixins.less';
 @import '../components/Dropdown/Dropdown.less';
 @import '../components/Tabs/Tabs.less';
+@import '../components/Carousel/Carousel.less';
 
 
 
@@ -32,6 +33,7 @@ body {
 
 
 .section {
+  position: relative;
   width: 70%;
   margin: 45px auto;
   display: flex;
@@ -39,15 +41,46 @@ body {
   box-shadow: 1px 1px 5px @lambda-red;
   border-radius: 10px;
   overflow: hidden;
-  .box {
-    padding: 40px;
-    .box-title {
-      font-size: 24px;
-      padding-bottom: 10px;
-      font-weight: bold;
-    }
+}
+
+.carousel {
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 100%;
+  padding: 40px;
+  display: none;
+  .box-title {
+    font-size: 24px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    margin: 0 auto;
+    width: 100%;
+  }
+  img {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    max-width:100%;
+    height:50vh;
+    width: auto;
+    // height: auto;
   }
 }
 
+.box[data-img="1"] {
+  display: 'block';
+}
 
+.left {
+  left: 10px;
+  .carouselBtn();
+}
+
+.right {
+  right: 10px;
+  .carouselBtn();
+}
 
