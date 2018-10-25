@@ -5,7 +5,6 @@ class Tabs {
         this.tabElements = document.querySelectorAll(`.tabs-link[data-panel='${this.data}']`);
 
         this.links = Array.from(this.tabElements).map(link => new TabLink(link));
-        this.currentLink = this.
 
         console.log(this.links);
     }
