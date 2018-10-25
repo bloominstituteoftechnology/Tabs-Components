@@ -43,7 +43,7 @@
   .tabs-link-selected {
     z-index: 2;
     border-right: 1px solid @lambda-red;
-    background-color: @white;
+    background-color:@lambda-light-red;
     color: black;
     &:hover {
       background-color: @white;
@@ -66,4 +66,18 @@
         opacity: 1;
         transform: translate(0);
     }
+}
+.tabs-link-selected{
+  background-color: red;
+}
+.lambda-pic{
+  background-color: @lambda-red;
+  padding: 10px 15px;
+  border-radius: 10px;
+  position: absolute;
+  transform: translateY(160px);
+}
+
+.box1{
+  background-color: blue;
 }
