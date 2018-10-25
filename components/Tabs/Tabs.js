@@ -3,7 +3,8 @@ class TabLink {
   constructor(element) {
     
     this.element = element;
-    
+
+
     // Get the custom data attribute on the Link
     this.data = this.element.dataset.tab; // 1, 2, 3, 4
     
