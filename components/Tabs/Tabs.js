@@ -38,25 +38,25 @@ class TabLink {
 class TabItem {
   constructor(element) {
     this.element = element;
-    console.log(this.element)
-
-    // this.test = document.querySelectorAll('.tabs-items')
-    // console.log(this.test)
   }
 
   select() {
+
+    let test = false
+    if (this.element.classList.value.includes('tabs-item-selected')) test = true;
+
     // Select all ".tabs-item" elements from the DOM
     const tabItems = document.querySelectorAll('.tabs-item');
     // console.log(this.element)
 
     // Remove the class "tabs-item-selected" from each element
     tabItems.forEach(tab => {
-      console.log(tab)
       tab.classList.remove('tabs-item-selected')
     })
 
     // Add a class named "tabs-item-selected" to this element 
-    this.element.classList.add('tabs-item-selected')
+    if (test) this.element.classList.remove('tabs-item-selected')
+    else this.element.classList.add('tabs-item-selected')
   }
 }
 
