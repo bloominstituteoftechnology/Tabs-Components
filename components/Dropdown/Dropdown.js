@@ -10,7 +10,6 @@ class Dropdown {
     // assign the reference to the ".dropdown-content" class found in the dropdown element
     this.content = this.element.querySelector(".dropdown-content");
     
-    
     // Add a click handler to the button reference and call the toggleContent method.
     this.button.addEventListener('click', () => {
       this.toggleContent();
@@ -18,8 +17,7 @@ class Dropdown {
   }
 
   toggleContent() {
-    
-    // Toggle the ".dropdown-hidden" class off and on
+    TweenMax.from(".dropdown-content", 0.8, {y: -15,height: 0, opacity: 30, clearProps: 'all'});
     this.content.classList.toggle('dropdown-hidden');
   }
 }

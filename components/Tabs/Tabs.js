@@ -44,6 +44,7 @@ class TabItem {
 
   select() {
     this.element.classList.toggle('tabs-item-selected');
+    TweenMax.from(".tabs-item-selected", 1.5, {y: 50, opacity: 0});
   }
 }
 
