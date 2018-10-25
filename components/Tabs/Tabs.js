@@ -5,6 +5,7 @@ class Tabs {
         this.tabElements = document.querySelectorAll(`.tabs-link[data-panel='${this.data}']`);
 
         this.links = Array.from(this.tabElements).map(link => new TabLink(link));
+        this.currentLink = this.
 
         console.log(this.links);
     }
@@ -48,6 +49,10 @@ class TabLink {
         console.log(this.tabItem);
 
     }
+
+    deselect() {
+        this.element.classList.remove('tabs-link-selected');
+    }
 }
 
 class TabItem {
@@ -65,6 +70,10 @@ class TabItem {
         Array.from(items).forEach(item => item.classList.remove('tabs-item-selected'));
 
         this.element.classList.toggle('tabs-item-selected');
+    }
+
+    deselect() {
+        this.element.classList.remove('tabs-item-selected');
     }
 }
 
