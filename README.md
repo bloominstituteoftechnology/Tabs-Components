@@ -1,5 +1,7 @@
 **TABS-COMPONENTS**
 ----------------------------------
+First edit, for trevor and co and the whole gang.
+
 
 Topics:
 * Constructors with ES6 class syntax
