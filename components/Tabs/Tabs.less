@@ -1,11 +1,13 @@
 .tabs {
   width: 100%;
+  background-color: @gold;
   .tabs-items {
     width: 100%;
     height: 300px;
     display: flex;
     justify-content: center;
     padding-top: 60px;
+    color: maroon;
   }
   .tabs-item {
     display: none; 
@@ -23,14 +25,14 @@
 
   .tabs-links {
     display: flex;
-    background-color: @lambda-red;
+    background-color: @lambda-dark-red;
   }
 
   .tabs-link {
     padding: 20px 25px;
     font-size: 24px;
     background-color: @lambda-red;
-    border-right: 1px solid white;
+    border-right: 1px solid @gold;
     color: @white;
     cursor: pointer;
     &:hover {
@@ -39,11 +41,11 @@
   }
   .tabs-link-selected {
     z-index: 2;
-    border-right: 1px solid @lambda-red;
-    background-color: @white;
-    color: black;
+    border-right: 1px solid @gold;
+    background-color: @gold;
+    color: maroon;
     &:hover {
-      background-color: @white;
+      background-color: @gold;
     }
   }
 }

@@ -22,7 +22,7 @@
 .dropdown .dropdown-content {
   width: 100%;
   position: absolute;
-  background-color: #ffffff;
+  background-color: rgba(216, 185, 46, 0.608);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +35,7 @@
   padding: 15px 0;
   font-size: 18px;
   text-decoration: none;
-  color: #931d25;
+  color: #68151a;
 }
 .dropdown .dropdown-link:hover {
   color: #ffffff;
@@ -46,6 +46,7 @@
 }
 .tabs {
   width: 100%;
+  background-color: rgba(216, 185, 46, 0.608);
 }
 .tabs .tabs-items {
   width: 100%;
@@ -53,6 +54,7 @@
   display: flex;
   justify-content: center;
   padding-top: 60px;
+  color: maroon;
 }
 .tabs .tabs-item {
   display: none;
@@ -68,13 +70,13 @@
 }
 .tabs .tabs-links {
   display: flex;
-  background-color: #931d25;
+  background-color: #68151a;
 }
 .tabs .tabs-link {
   padding: 20px 25px;
   font-size: 24px;
   background-color: #931d25;
-  border-right: 1px solid white;
+  border-right: 1px solid rgba(216, 185, 46, 0.608);
   color: #ffffff;
   cursor: pointer;
 }
@@ -83,17 +85,19 @@
 }
 .tabs .tabs-link-selected {
   z-index: 2;
-  border-right: 1px solid #931d25;
-  background-color: #ffffff;
-  color: black;
+  border-right: 1px solid rgba(216, 185, 46, 0.608);
+  background-color: rgba(216, 185, 46, 0.608);
+  color: maroon;
 }
 .tabs .tabs-link-selected:hover {
-  background-color: #ffffff;
+  background-color: rgba(216, 185, 46, 0.608);
 }
 body {
   box-sizing: border-box;
   min-width: 300px;
   margin: 0;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #be2530, #68151a);
 }
 .header-container {
   width: 100%;
@@ -117,7 +121,9 @@ body {
   overflow: hidden;
 }
 .section .box {
+  background-color: rgba(216, 185, 46, 0.608);
   padding: 40px;
+  color: maroon;
 }
 .section .box .box-title {
   font-size: 24px;
