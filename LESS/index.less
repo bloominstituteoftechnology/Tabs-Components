@@ -36,12 +36,12 @@ body {
   margin: 45px auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   border: 1px solid @lambda-red;
   box-shadow: 1px 1px 5px @lambda-red;
   border-radius: 10px;
   overflow: hidden;
-  height: 450px;
+  height: 500px;
   .box {
     padding: 40px;
     .box-title {
@@ -51,6 +51,7 @@ body {
     }
   }
   .last-btn, .next-btn {
+    padding: 10px;
     font-size: 2rem;
     font-weight: bold;
     border: 2px solid black;
@@ -61,15 +62,21 @@ body {
     }
   }
   .picture-box {
-    width: 80%;
+    width: 75%;
+    height:100%;
     position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    // align-self: flex-start;
   }
   img {
     width: 100%;
     height: auto;
     position: absolute;
-    z-index: -10;
-    // left: 0;
+    z-index: -1;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px 2px @lambda-red;
   }
   .hidden {
     display: none;

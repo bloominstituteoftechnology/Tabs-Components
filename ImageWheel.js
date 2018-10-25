@@ -15,7 +15,7 @@ images[imgIndex].classList.remove('hidden');
 
 nextBtn.addEventListener('click',()=>{
     let currentIndex = imgIndex;
-    TweenMax.to(images[currentIndex],1,{left:-600,onComplete:()=>{
+    TweenMax.to(images[currentIndex],1,{left:-650,onComplete:()=>{
         images[currentIndex].classList.add('hidden');
         images[currentIndex].removeAttribute("style");
     }})
@@ -26,13 +26,13 @@ nextBtn.addEventListener('click',()=>{
     else{;
         imgIndex++;
     }
-    TweenMax.from(images[imgIndex],1,{right:-600});
+    TweenMax.from(images[imgIndex],1,{right:-650});
     images[imgIndex].classList.remove('hidden');
 });
 
 lastBtn.addEventListener('click',()=>{
     let currentIndex = imgIndex;
-    TweenMax.to(images[currentIndex],1,{right:-600,onComplete:()=>{
+    TweenMax.to(images[currentIndex],1,{right:-650,onComplete:()=>{
         images[currentIndex].classList.add('hidden');
         images[currentIndex].removeAttribute("style");
     }})
@@ -42,6 +42,6 @@ lastBtn.addEventListener('click',()=>{
     else{
         imgIndex--;
     }
-    TweenMax.from(images[imgIndex],1,{left:-600});
+    TweenMax.from(images[imgIndex],1,{left:-650});
     images[imgIndex].classList.remove('hidden');
 });}
