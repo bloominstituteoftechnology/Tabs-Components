@@ -25,14 +25,14 @@ In this project, our design team has already built an HTML/CSS web page for us, 
 # [ x ]  * Once you have completed the above, add a couple Tabs to the HTML in order to see first hand how great building webpages with components is!
 
 #### Stretch Goals:
-* Create a Single `Tabs` component that creates all instances of `TabLink`. It will also hold the currently selected tab. 
-  * Add a `deselect` method to each the `TabItem` and `TabLink` classes. This will deselect that specific tab.
-  * Remove the code deselecting all `TabLink`s and `TabItem`s, only relying on the deselect method.
-  * `Tabs` should deselect the currently selected tab each time a new tab is selected. 
-* Animations. (Use the animation library of your choice)
-  * Get the dropdown to slide in and out, rather than just appearing and disappearing
-  * Get the TabsItem text to fade in and out, or slide in and out.
-  * Look through the LESS code and see where you can refactor using animations to achieve similar results.
-* Add styling using the LESS files.
-* Remove the boxes on the top card and replace them with an image carousel. This will have to be done from scratch, and should be pretty difficult, but it uses the same techniques as the `Tabs` component. Give it a left and right button, and a number of images that scroll as the buttons are pressed.
+# [  ] * Create a Single `Tabs` component that creates all instances of `TabLink`. It will also hold the currently selected tab. 
+  # [  ] * Add a `deselect` method to each the `TabItem` and `TabLink` classes. This will deselect that specific tab.
+  # [  ] * Remove the code deselecting all `TabLink`s and `TabItem`s, only relying on the deselect method.
+  # [  ] * `Tabs` should deselect the currently selected tab each time a new tab is selected. 
+# [  ] * Animations. (Use the animation library of your choice)
+  # [  ] * Get the dropdown to slide in and out, rather than just appearing and disappearing
+  # [  ] * Get the TabsItem text to fade in and out, or slide in and out.
+  # [  ] * Look through the LESS code and see where you can refactor using animations to achieve similar results.
+# [  ] * Add styling using the LESS files.
+# [  ] * Remove the boxes on the top card and replace them with an image carousel. This will have to be done from scratch, and should be pretty difficult, but it uses the same techniques as the `Tabs` component. Give it a left and right button, and a number of images that scroll as the buttons are pressed.
   
