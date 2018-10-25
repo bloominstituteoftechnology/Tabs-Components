@@ -35,6 +35,8 @@ body {
   width: 70%;
   margin: 45px auto;
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   border: 1px solid @lambda-red;
   box-shadow: 1px 1px 5px @lambda-red;
   border-radius: 10px;
@@ -46,6 +48,24 @@ body {
       padding-bottom: 10px;
       font-weight: bold;
     }
+  }
+  .last-btn, .next-btn {
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .picture-box {
+    width: 80%;
+  }
+  img {
+    width: 100%;
+  }
+  .hidden {
+    display: none;
   }
 }
 
