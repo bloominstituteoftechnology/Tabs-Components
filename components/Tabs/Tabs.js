@@ -5,6 +5,11 @@ class Tab {
     this.link = Array.from(this.link).map(link => new TabLink(link, this));
 
     this.selected = this.link[0];
+    this.start();
+  }
+
+  start() {
+    this.selected.select()
   }
   update(data) {
     this.selected.deselect();
