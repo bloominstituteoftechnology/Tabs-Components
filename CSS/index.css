@@ -117,6 +117,7 @@ body {
   box-shadow: 1px 1px 5px #931d25;
   border-radius: 10px;
   overflow: hidden;
+  height: 450px;
 }
 .section .box {
   padding: 40px;
@@ -132,6 +133,7 @@ body {
   font-weight: bold;
   border: 2px solid black;
   border-radius: 10px;
+  background-color: white;
 }
 .section .last-btn:hover,
 .section .next-btn:hover {
@@ -139,9 +141,13 @@ body {
 }
 .section .picture-box {
   width: 80%;
+  position: relative;
 }
 .section img {
   width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: -10;
 }
 .section .hidden {
   display: none;

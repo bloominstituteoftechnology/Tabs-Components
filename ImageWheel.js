@@ -1,4 +1,4 @@
-let nextBtn = document.querySelector('.next-btn');
+{let nextBtn = document.querySelector('.next-btn');
 let lastBtn = document.querySelector('.last-btn');
 
 // class WheelImg {
@@ -14,23 +14,34 @@ let imgIndex = 0;
 images[imgIndex].classList.remove('hidden');
 
 nextBtn.addEventListener('click',()=>{
-    images[imgIndex].classList.add('hidden');
+    let currentIndex = imgIndex;
+    TweenMax.to(images[currentIndex],1,{left:-600,onComplete:()=>{
+        images[currentIndex].classList.add('hidden');
+        images[currentIndex].removeAttribute("style");
+    }})
+    // images[imgIndex].classList.add('hidden');
     if(imgIndex >= images.length-1){
         imgIndex = 0;
     }
     else{;
         imgIndex++;
     }
+    TweenMax.from(images[imgIndex],1,{right:-600});
     images[imgIndex].classList.remove('hidden');
 });
 
 lastBtn.addEventListener('click',()=>{
-    images[imgIndex].classList.add('hidden');
+    let currentIndex = imgIndex;
+    TweenMax.to(images[currentIndex],1,{right:-600,onComplete:()=>{
+        images[currentIndex].classList.add('hidden');
+        images[currentIndex].removeAttribute("style");
+    }})
     if(imgIndex <= 0){
         imgIndex = images.length-1;
     }
     else{
         imgIndex--;
     }
+    TweenMax.from(images[imgIndex],1,{left:-600});
     images[imgIndex].classList.remove('hidden');
-});
+});}

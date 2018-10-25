@@ -41,6 +41,7 @@ body {
   box-shadow: 1px 1px 5px @lambda-red;
   border-radius: 10px;
   overflow: hidden;
+  height: 450px;
   .box {
     padding: 40px;
     .box-title {
@@ -54,15 +55,21 @@ body {
     font-weight: bold;
     border: 2px solid black;
     border-radius: 10px;
+    background-color: white;
     &:hover {
       cursor: pointer;
     }
   }
   .picture-box {
     width: 80%;
+    position: relative;
   }
   img {
     width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -10;
+    // left: 0;
   }
   .hidden {
     display: none;
