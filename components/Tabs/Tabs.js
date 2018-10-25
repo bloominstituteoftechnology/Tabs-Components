@@ -3,18 +3,15 @@ class Tab {
     this.element = element;
     this.link = this.element.querySelectorAll('.tabs-link');
     this.link = Array.from(this.link).map(link => new TabLink(link, this));
-
     this.selected = this.link[0];
     this.start();
   }
-
   start() {
     this.selected.select()
   }
   update(data) {
     this.selected.deselect();
     this.selected = data;
-
   }
 }
 
@@ -25,7 +22,6 @@ class TabLink {
     this.data = this.link.dataset.tab;
     this.tabItem = document.querySelector(`.tabs-item[data-tab="${this.data}"]`)
     this.tabItem = new TabItem(this.tabItem);
-
     this.link.addEventListener('click', () => {
       this.tab.update(this);
       this.select();
