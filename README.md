@@ -36,3 +36,4 @@ In this project, our design team has already built an HTML/CSS web page for us, 
 * Add styling using the LESS files.
 * Remove the boxes on the top card and replace them with an image carousel. This will have to be done from scratch, and should be pretty difficult, but it uses the same techniques as the `Tabs` component. Give it a left and right button, and a number of images that scroll as the buttons are pressed.
   
+
