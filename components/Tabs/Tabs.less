@@ -9,6 +9,9 @@
   }
   .tabs-item {
     display: none; 
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 
     width: 75%;
     .tabs-item-title {
@@ -49,3 +52,18 @@
 }
 
 
+@keyframes fade-in {
+   0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80%{
+        transform: translateX(0);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
