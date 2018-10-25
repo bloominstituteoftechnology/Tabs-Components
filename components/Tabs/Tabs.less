@@ -9,6 +9,9 @@
   }
   .tabs-item {
     display: none; 
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 
     width: 75%;
     .tabs-item-title {
@@ -40,7 +43,7 @@
   .tabs-link-selected {
     z-index: 2;
     border-right: 1px solid @lambda-red;
-    background-color: @white;
+    background-color:@lambda-light-red;
     color: black;
     &:hover {
       background-color: @white;
@@ -49,3 +52,32 @@
 }
 
 
+@keyframes fade-in {
+   0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80%{
+        transform: translateX(0);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.tabs-link-selected{
+  background-color: red;
+}
+.lambda-pic{
+  background-color: @lambda-red;
+  padding: 10px 15px;
+  border-radius: 10px;
+  position: absolute;
+  transform: translateY(160px);
+}
+
+.box1{
+  background-color: blue;
+}

@@ -22,6 +22,9 @@
     align-items: center;  
     margin-top: 10px;
     border: 2.5px solid @lambda-red;
+    animation-name: move-right;
+    animation-duration: .25s;
+    animation-timing-function: ease-out;
   }
   .dropdown-link {
     width: 100%;
@@ -44,3 +47,18 @@
 
 
 
+@keyframes move-right {
+   0%{
+        opacity: 1;
+        transform: translateX(-100px);
+    }
+
+    80%{
+        transform: translateX(0);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}

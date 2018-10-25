@@ -41,6 +41,9 @@ body {
   overflow: hidden;
   .box {
     padding: 40px;
+    animation-name: faded-af;
+    animation-duration: 8s;
+    animation-timing-function: ease-out;
     .box-title {
       font-size: 24px;
       padding-bottom: 10px;
@@ -51,3 +54,28 @@ body {
 
 
 
+
+
+@keyframes faded-af{
+   0%{
+        opacity: 0;
+        transform: translate(500px,-500px);
+
+    }
+    20%{
+      transform: translate(-500px,0px);
+    }
+    40%{
+         transform: translate(500px,500px);
+    }
+    60%{
+      transform: translate(500px,-500px)
+    }
+    80%{
+       transform: translate(0px,-500px)
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+  }
