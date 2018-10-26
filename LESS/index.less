@@ -29,7 +29,9 @@ body {
   }
 }
 
-
+.imageWheel {
+  height: 500px;
+}
 
 .section {
   width: 70%;
@@ -41,7 +43,7 @@ body {
   box-shadow: 1px 1px 5px @lambda-red;
   border-radius: 10px;
   overflow: hidden;
-  height: 500px;
+  
   .box {
     padding: 40px;
     .box-title {
@@ -66,12 +68,14 @@ body {
     height:100%;
     position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 20px 0;
     // align-self: flex-start;
   }
   img {
     width: 100%;
+    max-width: 700px;
     height: auto;
     position: absolute;
     z-index: -1;

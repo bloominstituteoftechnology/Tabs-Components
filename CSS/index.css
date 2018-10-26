@@ -108,6 +108,9 @@ body {
 .header-container .header {
   height: 50px;
 }
+.imageWheel {
+  height: 500px;
+}
 .section {
   width: 70%;
   margin: 45px auto;
@@ -118,7 +121,6 @@ body {
   box-shadow: 1px 1px 5px #931d25;
   border-radius: 10px;
   overflow: hidden;
-  height: 500px;
 }
 .section .box {
   padding: 40px;
@@ -146,11 +148,13 @@ body {
   height: 100%;
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 20px 0;
 }
 .section img {
   width: 100%;
+  max-width: 700px;
   height: auto;
   position: absolute;
   z-index: -1;
