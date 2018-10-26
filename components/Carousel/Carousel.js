@@ -12,11 +12,9 @@ class GalleryIcon {
     imageIcons.forEach(icon => {
       icon.classList.remove('active');
       this.imageSlide.element.classList.remove('image-active');
-      console.log(this.imageSlide);
-      
     });
     this.element.classList.add('active');
-    // this.element.imageSlide.classList.add('image-active');
+    // this.imageElement.classList.add('image-active');
     this.imageSlide.select();
   }
 }
@@ -27,18 +25,15 @@ class ImageSlide {
   }
 
   select() {
-    let imageSlideElements = document.querySelectorAll('carousel-image');
+    let imageSlideElements = document.querySelectorAll('.carousel-image');
     imageSlideElements.forEach(slideElement => {
-      slideElement.classList.remove('image-active');
+    slideElement.classList.remove('image-active');
     });
     this.element.classList.add('image-active');
   }
 }
 
 let icons = document.querySelectorAll('.carousel-image-icon');
-// console.log(document.querySelector('.carousel-image-icon'));
 
 icons = Array.from(icons).map( icon => new GalleryIcon(icon));
-// console.log(icons);
-
 icons[0].select();
