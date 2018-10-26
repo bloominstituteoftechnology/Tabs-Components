@@ -6,30 +6,28 @@ class Dropdown {
     this.button = this.element.querySelector(`.dropdown-button`);
     // assign the reference to the ".dropdown-content" class found in the dropdown element
     this.content = this.element.querySelector(`.dropdown-content`);
-
     //GSAP
     this.timeLine = new TimelineLite();
     this.timeLine
-      .from('.dropdown-content', 1.5, { opacity: 0, ease: Sine.easeIn })
-      .staggerFrom('.dropdown-link', 0.5, { opacity: 0, ease: Sine.easeIn });
+      .from('.dropdown-content', 1, { opacity: 0, ease: Sine.easeIn })
+      .staggerFrom('.dropdown-link', 0.25, { opacity: 0, ease: Sine.easeIn });
 
     //Click handler
-    this.button.addEventListener(
-      'click',
-      () => {
-        // console.log(this.content.classList);
-        if (this.content.classList.contains(`dropdown-hidden`)) {
-          this.toggleContent();
-          this.timeLine.play();
-        } else {
-          this.timeLine.reverse();
-          this.toggleContent(); 
-        }
-      });
+    this.button.addEventListener('mouseenter', () => {
+      // console.log(this.content.classList);
+      this.toggleContent();
+      this.timeLine.play();
+    });
+    this.button.addEventListener('mouseleave', () => {
+      // console.log(this.content.classList);
+      this.timeLine.reverse();
+      this.toggleContent();
+    });
   }
 
   toggleContent() {
-    this.content.classList.toggle(`dropdown-hidden`);
+    this.content.classList.add(`dropdown-hidden`);
+    this.content.classList.remove(`dropdown-hidden`);
   }
 }
 
