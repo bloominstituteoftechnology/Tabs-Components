@@ -30,7 +30,7 @@ In this project, our design team has already built an HTML/CSS web page for us, 
   # [  ] * Remove the code deselecting all `TabLink`s and `TabItem`s, only relying on the deselect method.
   # [  ] * `Tabs` should deselect the currently selected tab each time a new tab is selected. 
 # [  ] * Animations. (Use the animation library of your choice)
-  # [  ] * Get the dropdown to slide in and out, rather than just appearing and disappearing
+  # [ x ] * Get the dropdown to slide in and out, rather than just appearing and disappearing
   # [  ] * Get the TabsItem text to fade in and out, or slide in and out.
   # [  ] * Look through the LESS code and see where you can refactor using animations to achieve similar results.
 # [ x ] * Add styling using the LESS files.
