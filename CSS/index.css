@@ -95,6 +95,9 @@
   color: #ffffff;
   cursor: pointer;
 }
+.tabs .tabs-link:last-child {
+  border-right: 0;
+}
 .tabs .tabs-link:hover {
   background-color: #be2530;
 }
