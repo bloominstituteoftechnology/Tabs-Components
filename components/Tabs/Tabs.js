@@ -6,7 +6,9 @@ class Tabs {
 
         this.links = Array.from(this.tabElements).map(link => new TabLink(link));
 
-        console.log(this.links);
+        this.currentLink = this.links[0]
+
+        console.log(this.currentLink);
     }
 
     // methods
@@ -90,5 +92,4 @@ let tabPanel = document.querySelectorAll('.tabs-links')
 tabPanel = Array.from(tabPanel).map(panel => new Tabs(panel));
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
-
-// links[0].select();
+tabPanel[0].links[0].select();
