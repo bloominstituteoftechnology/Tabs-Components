@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     padding-top: 60px;
+  
   }
   .tabs-item {
     display: none; 
@@ -18,32 +19,41 @@
     }
   }
   .tabs-item-selected {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
   }
 
   .tabs-links {
     display: flex;
+    justify-content: space-around;
     background-color: @lambda-red;
   }
+ 
 
   .tabs-link {
     padding: 20px 25px;
     font-size: 24px;
     background-color: @lambda-red;
-    border-right: 1px solid white;
-    color: @white;
+    border-right: 1px solid #D6D9CE;
+    margin: 0;
+    color: #F3DAD8;
+    width: 100%;
     cursor: pointer;
     &:hover {
       background-color: @lambda-light-red;
     }
   }
+   .tabs-link[data-tab='6'] {
+    border-right: none;
+  }
   .tabs-link-selected {
     z-index: 2;
     border-right: 1px solid @lambda-red;
-    background-color: @white;
+    background-color:  #D6D9CE;
     color: black;
     &:hover {
-      background-color: @white;
+      background-color: #D6D9CE;
     }
   }
 }
