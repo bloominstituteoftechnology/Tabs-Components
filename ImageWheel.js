@@ -15,7 +15,7 @@ images[imgIndex].classList.remove('hidden');
 
 nextBtn.addEventListener('click',()=>{
     let currentIndex = imgIndex;
-    TweenMax.to(images[currentIndex],1,{left:-650,onComplete:()=>{
+    TweenMax.to(images[currentIndex],1,{left:-750,onComplete:()=>{
         images[currentIndex].classList.add('hidden');
         images[currentIndex].removeAttribute("style");
     }})
@@ -26,7 +26,7 @@ nextBtn.addEventListener('click',()=>{
     else{;
         imgIndex++;
     }
-    TweenMax.from(images[imgIndex],1,{right:-650});
+    TweenMax.from(images[imgIndex],1,{right:-750});
     images[imgIndex].classList.remove('hidden');
 });
 
