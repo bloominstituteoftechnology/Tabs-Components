@@ -1,37 +1,35 @@
-let once = { once: false };
 class Dropdown {
   constructor(element) {
     // Assign this.element to the dropdown element
     this.element = element;
-
     // Get the element with the ".dropdown-button" class found in the dropdown element (look at the HTML for context)
     this.button = this.element.querySelector(`.dropdown-button`);
-    console.log(this.button);
     // assign the reference to the ".dropdown-content" class found in the dropdown element
     this.content = this.element.querySelector(`.dropdown-content`);
-    console.log(this.content);
-    // Add a click handler to the button reference and call the toggleContent method.
-    this.button.addEventListener('click', (event) => {
-      this.toggleContent();  
-    });
 
-    this.tween = TweenMax.to('.dropdown-content', 2, {
-      rotationY: 360,
-      ease: Power1.easeInOut
-    });
-    this.check = false;
+    //GSAP
+    this.timeLine = new TimelineLite();
+    this.timeLine
+      .from('.dropdown-content', 1.5, { opacity: 0, ease: Sine.easeIn })
+      .staggerFrom('.dropdown-link', 0.5, { opacity: 0, ease: Sine.easeIn });
+
+    //Click handler
+    this.button.addEventListener(
+      'click',
+      () => {
+        // console.log(this.content.classList);
+        if (this.content.classList.contains(`dropdown-hidden`)) {
+          this.toggleContent();
+          this.timeLine.play();
+        } else {
+          this.timeLine.reverse();
+          this.toggleContent(); 
+        }
+      });
   }
 
   toggleContent() {
-    // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle(`dropdown-hidden`) 
-    if (!this.check) {
-      this.content.classList.tween;
-      this.check = false;
-    } else {
-      this.check = true;
-      this.content.classList.tween;
-    }
+    this.content.classList.toggle(`dropdown-hidden`);
   }
 }
 
