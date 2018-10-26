@@ -29,16 +29,22 @@ body {
   }
 }
 
-
+.imageWheel {
+  height: 500px;
+}
 
 .section {
   width: 70%;
   margin: 45px auto;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   border: 1px solid @lambda-red;
   box-shadow: 1px 1px 5px @lambda-red;
   border-radius: 10px;
   overflow: hidden;
+  max-width: 900px;
+  
   .box {
     padding: 40px;
     .box-title {
@@ -46,6 +52,39 @@ body {
       padding-bottom: 10px;
       font-weight: bold;
     }
+  }
+  .last-btn, .next-btn {
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .picture-box {
+    width: 75%;
+    height:100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    // align-self: flex-start;
+  }
+  img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px 2px @lambda-red;
+  }
+  .hidden {
+    display: none;
   }
 }
 

@@ -13,7 +13,7 @@ In this project, our design team has already built an HTML/CSS web page for us, 
 * Once you load the page, you will notice a dropdown menu in the upper left side of the page. Currently when you click on it nothing happens. We will build out the functionality to allow a dropdown menu to open and close when a user clicks on the dropdown button.
   * Study the HTML in the index.html file corresponding to the dropdown component.
   * Study the LESS file in the Dropdown folder. 
-  * With your knowledge of the HTML and CSS, complete the `Dropdown.js` file. You will be creating a dropdown component.
+  * [X] With your knowledge of the HTML and CSS, complete the `Dropdown.js` file. You will be creating a dropdown component.
 
 #### Part Two (Tabs):
 * Now that we have an idea of how to create a component with a single class, we will be creating a complex component made up of itself and sister component. The greater component wrapper will be called `TabLink` and the smaller component it will create will be called `TabItem`.
@@ -22,7 +22,7 @@ In this project, our design team has already built an HTML/CSS web page for us, 
 
 * The `Tabs.js` file starts at the bottom of the page and then jumps around. Pay attention to what is being called and when. Study the corresponding HTML and LESS to get a better idea of how the tabs were built.
 
-* Once you have completed the above, add a couple Tabs to the HTML in order to see first hand how great building webpages with components is!
+* [X] Once you have completed the above, add a couple Tabs to the HTML in order to see first hand how great building webpages with components is!
 
 #### Stretch Goals:
 * Create a Single `Tabs` component that creates all instances of `TabLink`. It will also hold the currently selected tab. 
@@ -30,9 +30,9 @@ In this project, our design team has already built an HTML/CSS web page for us, 
   * Remove the code deselecting all `TabLink`s and `TabItem`s, only relying on the deselect method.
   * `Tabs` should deselect the currently selected tab each time a new tab is selected. 
 * Animations. (Use the animation library of your choice)
-  * Get the dropdown to slide in and out, rather than just appearing and disappearing
-  * Get the TabsItem text to fade in and out, or slide in and out.
+  * [X] Get the dropdown to slide in and out, rather than just appearing and disappearing
+  * [X] Get the TabsItem text to fade in and out, or slide in and out.
   * Look through the LESS code and see where you can refactor using animations to achieve similar results.
 * Add styling using the LESS files.
-* Remove the boxes on the top card and replace them with an image carousel. This will have to be done from scratch, and should be pretty difficult, but it uses the same techniques as the `Tabs` component. Give it a left and right button, and a number of images that scroll as the buttons are pressed.
+* [X] Remove the boxes on the top card and replace them with an image carousel. This will have to be done from scratch, and should be pretty difficult, but it uses the same techniques as the `Tabs` component. Give it a left and right button, and a number of images that scroll as the buttons are pressed.
   

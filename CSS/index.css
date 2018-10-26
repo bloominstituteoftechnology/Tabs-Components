@@ -28,6 +28,7 @@
   align-items: center;
   margin-top: 10px;
   border: 2.5px solid #931d25;
+  z-index: -1;
 }
 .dropdown .dropdown-link {
   width: 100%;
@@ -107,14 +108,20 @@ body {
 .header-container .header {
   height: 50px;
 }
+.imageWheel {
+  height: 500px;
+}
 .section {
   width: 70%;
   margin: 45px auto;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   border: 1px solid #931d25;
   box-shadow: 1px 1px 5px #931d25;
   border-radius: 10px;
   overflow: hidden;
+  max-width: 900px;
 }
 .section .box {
   padding: 40px;
@@ -123,4 +130,38 @@ body {
   font-size: 24px;
   padding-bottom: 10px;
   font-weight: bold;
+}
+.section .last-btn,
+.section .next-btn {
+  padding: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+.section .last-btn:hover,
+.section .next-btn:hover {
+  cursor: pointer;
+}
+.section .picture-box {
+  width: 75%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.section img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+  border-radius: 30px;
+  box-shadow: 0px 0px 5px 2px #931d25;
+}
+.section .hidden {
+  display: none;
 }

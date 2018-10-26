@@ -5,9 +5,10 @@
 		<link rel="stylesheet" href="./CSS/index.css">
 	</head>
 	<body>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 		<script defer="defer" src="./components/Dropdown/Dropdown.js"></script>
 		<script defer="defer" src="./components/Tabs/Tabs.js"></script>
-		
+		<script defer="defer" src="./ImageWheel.js"></script>
 		<div class="header-container">
 			<div class="dropdown">
 				<div class="dropdown-button">Dropdown</div>
@@ -20,17 +21,28 @@
 			<img src="./lambda_logo_light_small.png" class="header" />
 		</div>
 
-		<div class="section">
-			<div class="box">
+		<div class="section imageWheel">
+			<div class="last-btn">Last</div>
+			<div class="picture-box">
+					<img src="images/nature4.jpg" alt="" class='hidden'>
+					<img src="images/nature3.jpg" alt="" class='hidden'>
+					<img src="images/nature2.jpg" alt="" class='hidden'>
+					<img src="images/nature1.jpg" alt="" class='hidden'>
+					<!-- <img src="images/AnB_Snek4.jpg" alt="" class='hidden'>
+					<img src="images/AnB_Snek3.jpg" alt="" class='hidden'>
+					<img src="images/AnB_Snek2.jpg" alt="" class='hidden'>
+					<img src="images/AnB_Snek1.jpg" alt="" class='hidden'> -->
+			</div>
+			<div class="next-btn">Next</div>
+			<!-- <div class="box">
 				<div class="box-title">Box Title 1</div>
 				<div class="box-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
 			</div>
 			<div class="box">
 				<div class="box-title">Box Title 2</div>
 				<div class="box-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
-			</div>
+			</div> -->
 		</div>
-
 		<div class="section">
 				<div class="tabs">
 					<div class="tabs-links">
@@ -38,6 +50,8 @@
 						<div class="tabs-link" data-tab="2">Tab 2</div>
 						<div class="tabs-link" data-tab="3">Tab 3</div>
 						<div class="tabs-link" data-tab="4">Tab 4</div>
+						<div class="tabs-link" data-tab="zombie">Zombies</div>
+						<div class="tabs-link" data-tab="monty">Monty</div>
 					</div>
 					<div class="tabs-items">
 						<div class="tabs-item" data-tab="1">
@@ -70,6 +84,25 @@
 								There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will
 								instantly disappear and be replaced by something even more bizarre and inexplicable. There is another theory which states
 								that this has already happened.
+							</div>
+						</div>
+						<div class="tabs-item" data-tab="zombie">
+							<div class="tabs-item-title">Zombies!</div>
+							<div class="tabs-item-description">
+								Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus 
+								brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, 
+								imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks 
+								terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi 
+								eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.
+							</div>
+						</div>
+						<div class="tabs-item" data-tab="monty">
+							<div class="tabs-item-title">Pythonage</div>
+							<div class="tabs-item-description">
+								Oh, what wouldn't I give to be spat at in the face? I sometimes hang awake at night, dreaming of being spat at in the face Well, I 
+								think I should point out first, Brian, in all fairness, we are not, in fact, the rescue committee. However, I have been asked to read 
+								the following prepare statement on behalf of the movement. "We the People's Front of Judea, brackets, officials, end brackets, do hereby 
+								convey our sincere fraternal and sisterly greetings to you, Brian, on this, the occasion of your martyrdom."
 							</div>
 						</div>
 					</div>
