@@ -115,6 +115,8 @@
 .carousel-container .carousel-image-container {
   border: 15px ridge #be2530;
   background-color: black;
+  height: 350px;
+  overflow: hidden;
 }
 .carousel-container .carousel-image-container .carousel-image {
   transition: transform 0.7s ease-in-out;
@@ -127,18 +129,21 @@
 }
 .carousel-container .carousel-image-container .carousel-image[data-gallery="1"] {
   background-image: url('https://images.pexels.com/photos/1161446/pexels-photo-1161446.jpeg?auto=compress&cs=tinysrgb&h=350');
+  display: none;
 }
 .carousel-container .carousel-image-container .carousel-image[data-gallery="2"] {
   background-image: url('https://images.pexels.com/photos/1139541/pexels-photo-1139541.jpeg?auto=compress&cs=tinysrgb&h=350');
+  display: none;
 }
 .carousel-container .carousel-image-container .carousel-image[data-gallery="3"] {
   background-image: url('https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&h=350');
+  display: none;
 }
 .carousel-container .carousel-image-icons-container {
   height: 15px;
   width: 30%;
   position: absolute;
-  bottom: 10px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -153,6 +158,9 @@
 }
 .active {
   background-color: rgba(255, 255, 255, 0.657);
+}
+#image-active {
+  display: block;
 }
 body {
   box-sizing: border-box;
