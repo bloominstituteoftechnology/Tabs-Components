@@ -19,7 +19,9 @@
     }
   }
   .tabs-item-selected {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
   }
 
   .tabs-links {
@@ -36,6 +38,7 @@
     border-right: 1px solid #D6D9CE;
     margin: 0;
     color: #F3DAD8;
+    width: 100%;
     cursor: pointer;
     &:hover {
       background-color: @lambda-light-red;
