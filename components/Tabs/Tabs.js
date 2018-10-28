@@ -52,11 +52,18 @@ class TabItem {
 
   select() {
     // Add a class named "tabs-item-selected" to this element 
-    this.element.classList.add('tabs-item-selected');
+    TweenMax.fromTo(this.element, 1, { opacity: 0 }, {
+      opacity: 1,
+      delay: 1,
+      onStart: () => this.element.classList.add('tabs-item-selected')
+    });
   }
 
   deselect() {
-    this.element.classList.remove('tabs-item-selected');
+    TweenMax.to(this.element, 1, {
+      opacity: 0,
+      onComplete: () => this.element.classList.remove('tabs-item-selected')
+    });
   }
 }
 
