@@ -86,6 +86,7 @@
   border-right: 1px solid #931d25;
   background-color: #ffffff;
   color: black;
+  cursor: not-allowed;
 }
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
