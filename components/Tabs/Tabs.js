@@ -28,7 +28,7 @@ class TabLink {
     Array.from(links).forEach(element => new Tablink(element));
 
     // Add a class named "tabs-link-selected" to this link
-    this.element =this.dataset.tabs-link-selected;
+    this.element.dataset("tabs-link-selected")
     
     // Call the select method on the item associated with this link
 
