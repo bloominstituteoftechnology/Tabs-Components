@@ -17,8 +17,13 @@ class Dropdown {
   toggleContent() {
     
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('dropdown-hidden');
-    TweenMax.fromTo(this.content, 1, {x: -200}, {x: 0}, {ease: Power4.easeIn});
+    // this.content.classList.toggle('dropdown-hidden');
+    // TweenMax.fromTo(this.content, 1, {x: -200}, {left: 200}, {ease: Power4.easeIn});
+
+    if (this.content.classList.contains('dropdown-hidden')) {
+      TweenMax.fromTo(this.content, 1, {x: -200}, {left: 200}, {ease: Power4.easeIn});
+      this.content.classList.remove('dropdown-hidden');
+    } else {TweenMax.fromTo(this.content, 1, {x: -200}, {left: 0}, {ease: Power4.easeIn}); onCompleteParam: () => this.content.classList.add('dropdown-hidden')}
   }
 }
 
