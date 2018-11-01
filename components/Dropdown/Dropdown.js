@@ -18,9 +18,14 @@ class Dropdown {
     
     // Toggle the ".dropdown-hidden" class off and on
     this.content.classList.toggle('dropdown-hidden');
+    TweenMax.fromTo(this.content, 1, {x: -200}, {x: 0}, {ease: Power4.easeIn});
   }
 }
 
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
 let dropdowns = document.querySelectorAll('.dropdown');
 dropdowns = Array.from(dropdowns).map( dropdown => new Dropdown(dropdown));
+
+let body = document.querySelector('body');
+
+body.addEventListener('dblclick', () => document.body.style.backgroundImage = "url('/img/background-img.jpg')");
