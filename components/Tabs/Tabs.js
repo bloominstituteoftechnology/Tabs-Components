@@ -45,7 +45,12 @@ class TabItem {
   select() {
     // Select all ".tabs-item" elements from the DOM
     const items = document.querySelectorAll('.tabs-item');
+
     // Remove the class "tabs-item-selected" from each element
+    Array.from(items).forEach(function(element){
+      element.classList.remove('tabs-item-selected');
+    });
+    
     // Add a class named "tabs-item-selected" to this element 
   }
 }
