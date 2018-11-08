@@ -10,6 +10,10 @@ class Dropdown {
     // assign the reference to the ".dropdown-content" class found in the dropdown element
     this.content = this.element.querySelector('.dropdown .dropdown-content');
     
+    //close menu
+    TweenMax.to(this.content, 0, {y:-250, opacity:0});
+    this.flag = true;
+
     // Add a click handler to the button reference and call the toggleContent method.
     this.button.addEventListener('click', () => { 
       this.toggleContent();
@@ -19,7 +23,14 @@ class Dropdown {
   toggleContent() {
     
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('dropdown-hidden');
+    // this.content.classList.toggle('dropdown-hidden');
+    if(this.flag) { // Open menu
+      TweenMax.to(this.content, 2, {y:0, opacity:1});
+      this.flag = false;
+    } else { // Close menu
+      this.flag = true;
+      TweenMax.to(this.content, 2, {y:-250, opacity:0});
+    }
   }
 }
 
