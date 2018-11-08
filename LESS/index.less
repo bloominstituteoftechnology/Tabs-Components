@@ -51,7 +51,8 @@ body {
   .carousel {
     display: flex;
     position: absolute;
-
+    left: 0;
+    
     .box {
       flex-basis: 1;
       width: 640px;
@@ -73,7 +74,7 @@ body {
     background-color: @lambda-red;
     width: 1em;
     height: 5em;
-    opacity: 0.65;
+    opacity: 0.5;
     font-weight: bold;
     font-size: 16px;
     font-family: sans-serif;
@@ -89,6 +90,7 @@ body {
     content: '<';
     left: 0;
     border-radius: 0 5px 5px 0;
+    z-index: 500;
   }
 
   .next:hover::after, .prev:hover::after {

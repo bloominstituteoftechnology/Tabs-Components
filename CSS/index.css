@@ -128,6 +128,7 @@ body {
 #carousel-container .carousel {
   display: flex;
   position: absolute;
+  left: 0;
 }
 #carousel-container .carousel .box {
   flex-basis: 1;
@@ -148,7 +149,7 @@ body {
   background-color: #931d25;
   width: 1em;
   height: 5em;
-  opacity: 0.65;
+  opacity: 0.5;
   font-weight: bold;
   font-size: 16px;
   font-family: sans-serif;
@@ -163,6 +164,7 @@ body {
   content: '<';
   left: 0;
   border-radius: 0 5px 5px 0;
+  z-index: 500;
 }
 #carousel-container .next:hover::after,
 #carousel-container .prev:hover::after {
