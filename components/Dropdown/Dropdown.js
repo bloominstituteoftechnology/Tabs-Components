@@ -12,15 +12,13 @@ class Dropdown {
 
     //assign regerence to the links
     this.links = this.element.querySelectorAll('.dropdown-content a');
-      console.log(this.links)
-
 
     // Add a click handler to the button reference and call the toggleContent method.
     this.button.addEventListener('click', () => { this.toggleContent() })
   }
 
   animateArray() {
-    this.links.forEach(link => TweenMax.fromTo(link, .45, {css: {height: 0, opacity: 0}}, {css:{height: 100, opacity: 1}} ));
+    this.links.forEach(link => TweenMax.fromTo(link, .55, {css: {height: 0, opacity: 0}}, {css:{height: 100, opacity: 1}} ));
   }
 
   reverseAnimateArray() {

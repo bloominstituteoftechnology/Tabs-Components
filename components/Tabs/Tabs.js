@@ -38,14 +38,26 @@ class TabItem {
     this.element = element;
   }
 
+  fadeInAnimation() {
+    TweenMax.fromTo(this.element, 1, {css: {opacity: 0}}, {css:{opacity: 1}});
+  }
+
+  fadeOutAnimation() {
+    TweenMax.fromTo(this.element, 1, {css: {opacity: 1}}, {css:{opacity: 0}});
+  }
+
   select() {
     // Select all ".tabs-item" elements from the DOM
     const items = document.querySelectorAll('.tabs-item');
 
     // Remove the class "tabs-item-selected" from each element
     items.forEach(link => link.classList.remove('tabs-item-selected'))
+
     // Add a class named "tabs-item-selected" to this element
     this.element.classList.add('tabs-item-selected');
+
+    //Fade in new text
+    this.fadeInAnimation()
   }
 }
 
