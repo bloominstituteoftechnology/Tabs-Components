@@ -21,6 +21,7 @@
 }
 .dropdown .dropdown-content {
   width: 100%;
+  opacity: 0;
   position: absolute;
   background-color: #ffffff;
   display: flex;
@@ -41,8 +42,9 @@
   color: #ffffff;
   background-color: #931d25;
 }
-.dropdown .dropdown-hidden {
-  display: none;
+.dropdown .dropdown-hidden a {
+  padding: 0;
+  margin: 0;
 }
 .tabs {
   width: 100%;

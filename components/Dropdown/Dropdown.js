@@ -10,14 +10,35 @@ class Dropdown {
     // assign the reference to the ".dropdown-content" class found in the dropdown element
     this.content = this.element.querySelector('.dropdown .dropdown-content');
 
+    //assign regerence to the links
+    this.links = this.element.querySelectorAll('.dropdown-content a');
+      console.log(this.links)
+
+
     // Add a click handler to the button reference and call the toggleContent method.
     this.button.addEventListener('click', () => { this.toggleContent() })
+  }
+
+  animateArray() {
+    this.links.forEach(link => TweenMax.fromTo(link, .45, {css: {height: 0, opacity: 0}}, {css:{height: 100, opacity: 1}} ));
+  }
+
+  reverseAnimateArray() {
+    this.links.forEach(link => TweenMax.fromTo(link, .4, {css: {height: 100, opacity: 1}}, {css:{height: 0, opacity: 0}} ));
   }
 
   toggleContent() {
 
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('dropdown-hidden');
+    if(this.content.classList.contains('dropdown-hidden')) {
+      TweenMax.fromTo(this.content, .4, {css: {height: 0, opacity: 0}}, {css:{height: 200, opacity: 1}} );
+      this.animateArray();
+      this.content.classList.toggle('dropdown-hidden');
+    } else {
+      this.reverseAnimateArray();
+      TweenMax.fromTo(this.content, .4, {css: {height: 200, opacity: 1}}, {css:{height: 0, opacity: 0}} );
+      this.content.classList.toggle('dropdown-hidden');
+    }
   }
 }
 
