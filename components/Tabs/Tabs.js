@@ -76,3 +76,5 @@ links = document.querySelectorAll('.tabs-link')
   // console.log(link)
   new TabLink(link)
  });
+
+ 
