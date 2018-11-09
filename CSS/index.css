@@ -4,7 +4,6 @@
   padding: 0;
 }
 .dropdown {
-  z-index: 2;
   position: absolute;
   left: 25px;
   cursor: pointer;
@@ -28,8 +27,9 @@
   align-items: center;
   margin-top: 10px;
   border: 2.5px solid #931d25;
+  overflow: hidden;
 }
-.dropdown .dropdown-link {
+.dropdown .dropdown-content .dropdown-link {
   width: 100%;
   text-align: center;
   padding: 15px 0;
@@ -37,12 +37,9 @@
   text-decoration: none;
   color: #931d25;
 }
-.dropdown .dropdown-link:hover {
+.dropdown .dropdown-content .dropdown-link:hover {
   color: #ffffff;
   background-color: #931d25;
-}
-.dropdown .dropdown-hidden {
-  display: none;
 }
 .tabs {
   width: 100%;
