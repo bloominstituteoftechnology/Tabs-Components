@@ -1,3 +1,21 @@
+class Tabs {
+  constructor(container) {
+    this.container = container;
+  
+    this.linkElement = [];
+    for(let i = 0; i < this.container.children.length; i++) {
+      this.linkElement.push(container.children[i]);
+    }
+    
+    this.linkItem = [];
+    this.linkElement.forEach(link => this.linkItem.push(new TabLink(link)));
+
+    this.selectedTab = () => {
+       return this.linkItem.filter(link => link.tabItem.element.className.includes('selected'));
+    }
+  }
+}
+
 
 class TabLink {
   constructor(element) {
@@ -61,5 +79,6 @@ class TabItem {
 
 */
 
-const links = document.querySelectorAll('.tabs-links .tabs-link')
-                .forEach(link => new TabLink(link));
+const links = new Tabs(document.querySelector('.tabs-links'));
+// const links = document.querySelectorAll('.tabs-links .tabs-link')
+// .forEach(link => new TabLink(link));
