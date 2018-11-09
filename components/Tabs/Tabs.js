@@ -31,7 +31,6 @@ class TabLink {
     
     // Call the select method on the item associated with this link
    this.tabItem.select();
-   console.log(this.tabItem.select())
   }
 }
 
@@ -68,5 +67,4 @@ let links = document.querySelectorAll('.tabs-link');
 
 links = Array.from(links).forEach(tabLink => new TabLink(tabLink));
 
-console.log(links)
 
