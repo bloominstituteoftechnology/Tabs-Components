@@ -50,7 +50,6 @@ class TabItem {
       item.classList.remove('tabs-item-selected')
   });
     // Remove the class "tabs-item-selected" from each element
-    this.element.classList.remove("tabs-item-selected");
     // Add a class named "tabs-item-selected" to this element
     this.element.classList.add("tabs-item-selected");
   }
