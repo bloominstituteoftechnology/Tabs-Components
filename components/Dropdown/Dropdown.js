@@ -1,6 +1,6 @@
 class Dropdown {
   constructor(element) {
-    let counter = 1;
+    let counter = 2;
     // Assign this.element to the dropdown element
     this.element = element;
 
@@ -10,23 +10,33 @@ class Dropdown {
     this.content = this.element.querySelector('.dropdown-content');
 
     this.button.addEventListener('click', () => {
-      TweenLite.fromTo(
-        this.content,
-        1,
-        {width: 126, height: 0},
-        {width: 126, height: 158},
-      );
+      if (counter % 2 === 0) {
+        TweenLite.fromTo(
+          this.content,
+          1,
+          {width: 126, height: 0},
+          {width: 126, height: 158},
+        );
+      } else if (counter % 2 === 1) {
+        TweenLite.fromTo(
+          this.content,
+          1,
+          {width: 126, height: 158},
+          {width: 126, height: 0},
+        );
+      }
+      counter++;
     });
+
     // Add a click handler to the button reference and call the toggleContent method.
-    //   this.button.addEventListener('click', () => {
-    //     this.toggleContent();
-    //   });
-    // }
-    //
-    // toggleContent() {
-    //   // Toggle the ".dropdown-hidden" class off and on
-    //   this.content.classList.toggle('dropdown-hidden');
-    // }
+    this.button.addEventListener('click', () => {
+      this.toggleContent();
+    });
+  }
+
+  toggleContent() {
+    // Toggle the ".dropdown-hidden" class off and on
+    this.content.classList.toggle('dropdown-hidden');
   }
 }
 
