@@ -75,10 +75,5 @@ links = document.querySelectorAll('.tabs-link')
 .forEach(link=>{
   // console.log(link)
   new TabLink(link)
-<<<<<<< HEAD
  });
 
- 
-=======
- });
->>>>>>> 5c71174ee2d06e6ef21d0701a6a70ba3248556fc
