@@ -56,6 +56,9 @@
 }
 .tabs .tabs-item {
   display: none;
+  height: 0;
+  overflow: hidden;
+  transition: height 5350ms ease-in-out;
   width: 75%;
 }
 .tabs .tabs-item .tabs-item-title {
@@ -65,6 +68,7 @@
 }
 .tabs .tabs-item-selected {
   display: block;
+  height: auto;
 }
 .tabs .tabs-links {
   display: flex;

@@ -8,7 +8,12 @@
     padding-top: 60px;
   }
   .tabs-item {
-    display: none; 
+    display: none;
+	height: 0;
+	overflow: hidden;
+  transition: height 5350ms ease-in-out;
+  
+  // this was display:none before attempting to add animations
 
     width: 75%;
     .tabs-item-title {
@@ -18,7 +23,10 @@
     }
   }
   .tabs-item-selected {
+    // display: block;
+    //changed here to add animations
     display: block;
+	height: auto;
   }
 
   .tabs-links {
