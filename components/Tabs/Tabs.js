@@ -63,8 +63,8 @@ class TabItem {
 */
 
 
-let links = document.querySelectorAll('.tabs-link');
+let links = document.querySelectorAll('.tabs-link').forEach(tabLink => new TabLink(tabLink));
 
-links = Array.from(links).forEach(tabLink => new TabLink(tabLink));
+// links = Array.from(links).forEach(tabLink => new TabLink(tabLink));
 
 
