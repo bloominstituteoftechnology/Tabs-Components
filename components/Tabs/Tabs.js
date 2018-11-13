@@ -13,11 +13,16 @@ class Tab {
     // Add the click event listener on each TabLink, and reset selectedTab to the clicked TabLink
     links = links.map(link => {
       link.element.addEventListener('click', () => {
-        this.selectedTab.deselect();
+        this.deselect();
         link.select();
         this.selectedTab = link;
       });
     });
+  }
+
+  deselect() {
+    this.selectedTab.element.classList.remove('tabs-link-selected');
+    this.selectedTab.tabItem.element.classList.remove('tabs-item-selected');
   }
 }
 
@@ -41,10 +46,6 @@ class TabLink {
     this.tabItem.select();
   }
 
-  deselect() {
-    this.element.classList.remove('tabs-link-selected');
-    this.tabItem.deselect();
-  }
 }
 
 class TabItem {
@@ -58,9 +59,6 @@ class TabItem {
     this.element.classList.add('tabs-item-selected');
   }
 
-  deselect() {
-    this.element.classList.remove('tabs-item-selected');
-  }
 }
 
 /* START HERE */
