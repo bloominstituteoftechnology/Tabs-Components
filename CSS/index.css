@@ -27,7 +27,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
-  border: 2.5px solid #931d25;
+  border: 1px solid #931d25;
 }
 .dropdown .dropdown-link {
   width: 100%;
@@ -67,6 +67,7 @@
 }
 .tabs .tabs-item-selected {
   display: block;
+  opacity: 0;
 }
 .tabs .tabs-links {
   display: flex;
