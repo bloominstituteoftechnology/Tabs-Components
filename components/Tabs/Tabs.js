@@ -33,15 +33,13 @@ class Tabs {
 
   select(e, link) {
     this.deselect(e);
-    this.selectedTab = link;
     
-    link.element.classList.add("tabs-link-selected");
-    link.tabItem.element.classList.add("tabs-item-selected");
+    this.selectedTab = link;
+    link.select(e);
   }
 
   deselect(e) {
-    this.selectedTab.element.classList.remove("tabs-link-selected");
-    this.selectedTab.tabItem.element.classList.remove("tabs-item-selected");
+    this.selectedTab.deselect(e);
   }
 }
 
@@ -56,12 +54,30 @@ class TabLink {
     // Create a TabItem pertaining to this link's custom data attribute
     this.tabItem = new TabItem(document.querySelector(`.tabs-item[data-tab="${this.data}"]`));
   }
+
+  select(e) {
+    this.element.classList.add("tabs-link-selected");
+    this.tabItem.select(e);
+  }
+
+  deselect(e) {
+    this.element.classList.remove("tabs-link-selected");
+    this.tabItem.deselect(e)
+  }
 }
 
 class TabItem {
   constructor(element) {
     // Assign this.element to the passed in element
     this.element = element;
+  }
+
+  select(e) {
+    this.element.classList.add("tabs-item-selected");
+  }
+
+  deselect(e) {
+    this.element.classList.remove("tabs-item-selected");
   }
 }
 
