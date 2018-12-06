@@ -77,6 +77,7 @@
   border-right: 1px solid white;
   color: #ffffff;
   cursor: pointer;
+  transition: backgroundColor 1s;
 }
 .tabs .tabs-link:hover {
   background-color: #be2530;

@@ -4,6 +4,7 @@ class Tabs {
   constructor() {
     this.selectedTab;
     this.tabLinks = [];
+    this.animating = false;
     this.initialize(); //Method that creates all TabLink components
   }
 
@@ -19,11 +20,19 @@ class Tabs {
     //Add an event listener for every tab link
     this.tabLinks.forEach(t => {
       //use implicit binding with the arrow function to allow us to use `this` as a reference to the Tabs class that we are currently in.
-      t.element.addEventListener('click', () => {
-          this.selectedTab.deselect();
-          t.select();
-          this.selectedTab = t;
-      });      
+      
+        //We don't allow another tab to be animated or switch if one is currently animating, as this will cause two tabs to show.
+        t.element.addEventListener('click', () => {
+          if(!this.animating && this.selectedTab !== t) {
+            this.animating = true;
+            this.selectedTab.deselect();
+            t.select();
+            this.selectedTab = t;
+            setTimeout(() => {
+              this.animating = false;
+            }, 1000);
+          }
+        });
     });
   }
 }
@@ -65,11 +74,27 @@ class TabItem {
 
   select() {
     // Add a class named "tabs-item-selected" to this element
-    this.element.classList.add('tabs-item-selected');
+    setTimeout(() => {
+      this.element.classList.add('tabs-item-selected');
+      TweenMax.fromTo(this.element, .75, {
+        opacity: 0
+      }, {
+        opacity: 1
+      });
+    }, 500)
+    
   }
 
   deselect() {
-    this.element.classList.remove('tabs-item-selected');
+    TweenMax.fromTo(this.element, .5, {
+      opacity: 1
+    }, {
+      opacity: 0,
+      onComplete: () => {
+        this.element.classList.remove('tabs-item-selected')
+      }
+    });
+    //this.element.classList.remove('tabs-item-selected');
   }
 }
 
