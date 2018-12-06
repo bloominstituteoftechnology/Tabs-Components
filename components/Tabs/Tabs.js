@@ -44,9 +44,9 @@ console.log(this.element)
 
   select() {
 
-    // const links = document.querySelectorAll(".tabs-link");
+    const links = document.querySelectorAll(".tabs-link");
 
-    // links.forEach(link => link.classList.remove("tabs-link-selected"));
+    links.forEach(link => link.classList.remove("tabs-link-selected"));
     console.log("TabLink select method");
 
     this.element.classList.add("tabs-link-selected");
@@ -56,16 +56,16 @@ console.log(this.element)
   }//TabLink select()
 
 
+//Stretch attempt:
+  // deselect() {
 
-  deselect() {
-
-    console.log("TabLink deselect method");
+  //   console.log("TabLink deselect method");
     
-    this.element.classList.remove("tabs-link-selected");
+  //   this.element.classList.remove("tabs-link-selected");
 
-    this.tabItem.deselect();
+  //   this.tabItem.deselect();
 
-  }//TabLink deselect()
+  // }//TabLink deselect()
 }//TabLink
 
 
@@ -81,23 +81,23 @@ class TabItem {
   select() {
   
     console.log("TabItem select method");
-    // const items = document.querySelectorAll(".tabs-item");
+    const items = document.querySelectorAll(".tabs-item");
 
-    // items.forEach(item => item.classList.remove("tabs-item-selected"));
+    items.forEach(item => item.classList.remove("tabs-item-selected"));
 
     this.element.classList.add("tabs-item-selected");
 
   }//TabItem select()
 
 
+// Stretch attempt:
+  // deselect() {
 
-  deselect() {
+  //   console.log("TabItem deselect method");
 
-    console.log("TabItem deselect method");
+  //   this.element.classList.remove("tabs-item-selected");
 
-    this.element.classList.remove("tabs-item-selected");
-
-  }//TabItem deselect()
+  // }//TabItem deselect()
 }//TabItem
 
 
