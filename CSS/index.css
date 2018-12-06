@@ -20,6 +20,7 @@
   background-color: #be2530;
 }
 .dropdown .dropdown-content {
+  opacity: 0;
   z-index: -1;
   top: -170px;
   width: 100%;
@@ -89,6 +90,14 @@
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
 }
+.carouselButtons {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 0;
+}
+.deselected {
+  display: none;
+}
 body {
   box-sizing: border-box;
   min-width: 300px;
@@ -122,12 +131,4 @@ body {
   font-size: 24px;
   padding-bottom: 10px;
   font-weight: bold;
-}
-.carouselButtons {
-  display: flex;
-  justify-content: space-between;
-  margin: 2% 0;
-}
-.box-selected {
-  display: block;
 }
