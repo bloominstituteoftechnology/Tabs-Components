@@ -1,7 +1,9 @@
 
 class TabLink {
   constructor(element) {
+
     // Assign this.element to the passed in DOM element
+
     this.element = element;
 
     // Get the custom data attribute on the Link
@@ -41,7 +43,6 @@ class TabLink {
 
     this.tabItem.select();
 
-
   }
 }
 
@@ -62,8 +63,6 @@ class TabItem {
     // Remove the class "tabs-item-selected" from each element
 
     Array.from(items).forEach(item=>item.classList.remove('tabs-item-selected'));
-
-
 
     // Add a class named "tabs-item-selected" to this element
 
