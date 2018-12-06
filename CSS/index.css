@@ -29,6 +29,17 @@
   margin-top: 10px;
   border: 2.5px solid #931d25;
 }
+.dropdown .dropdown-content::after {
+  content: '';
+  height: 5px;
+  width: 5px;
+  background-color: white;
+  bottom: 154px;
+  position: absolute;
+  border-left: 3px solid #931d25;
+  border-top: 3px solid #931d25;
+  transform: rotate(45deg);
+}
 .dropdown .dropdown-link {
   width: 100%;
   text-align: center;

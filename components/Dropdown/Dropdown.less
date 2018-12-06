@@ -22,6 +22,17 @@
     align-items: center;  
     margin-top: 10px;
     border: 2.5px solid @lambda-red;
+    &::after {
+      content: '';
+      height: 5px;
+      width: 5px;
+      background-color: white;
+      bottom: 154px;
+      position: absolute;
+      border-left: 3px solid @lambda-red;
+      border-top: 3px solid @lambda-red;
+      transform: rotate(45deg);
+    }
   }
   .dropdown-link {
     width: 100%;
@@ -39,6 +50,8 @@
     display: none;
   }
 }
+
+
 
 
 
