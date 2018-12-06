@@ -22,12 +22,12 @@ class TabLink {
     this.itemElement = document.querySelector(`.tabs-item[data-tab="${this.data}"]`);
 
 
-    // console.log("itemElement: ", this.itemElement);
+    console.log("itemElement: ", this.itemElement);
     // Using the Item element, create a new instance of the TabItem class
     // this.tabItem;
 
     this.tabItem = new TabItem(this.itemElement);
-    // console.log(this.tabItem)
+    console.log(this.tabItem)
 
 
     // Add a click event listener on this instance, calling the select method on click
@@ -43,7 +43,6 @@ class TabLink {
     // const links;
 
     const links = document.querySelectorAll(".tabs-link");
-    console.log(links);
 
 
     // Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links
@@ -59,7 +58,7 @@ class TabLink {
 
 
     // Call the select method on the item associated with this link
-    this.element.select();
+    this.tabItem.select();
 
   }//TabLink select()
 }//TabLink
