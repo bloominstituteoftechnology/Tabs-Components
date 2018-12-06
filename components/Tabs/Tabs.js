@@ -26,3 +26,13 @@ class TabItem {
 }
 
 links = document.querySelectorAll(".tabs-link").forEach(element => { return new TabLink(element) }); 
+
+// Stretch animation 
+
+let  duration = 'slow';
+$('.dropdown-button').click(function () {
+  console.log("Iam being clicked");
+    $('.dropdown-link').hide(duration, function() {
+        $('.dropdown-link').show('slide', {direction: 'left'}, duration);});
+});
+
