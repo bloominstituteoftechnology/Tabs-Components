@@ -8,14 +8,14 @@ class TabLink {
     this.data= this.element.dataset.tab;
     
     // Using the custom data attribute get the associated Item element
-    this.itemElement= document.querySelector(`.tabs-item[data-tab]="${this.data}"`);
+    this.itemElement= document.querySelector(`.tabs-item[data-tab= "${this.data}"]`);
     
     // Using the Item element, create a new instance of the TabItem class
     this.tabItem = new TabItem(this.itemElement);
     
     // Add a click event listener on this instance, calling the select method on click
     this.element.addEventListener('click', () => this.select());
-  }
+  };
 
   select() {
     // Get all of the elements with the tabs-link class
@@ -45,7 +45,7 @@ class TabItem {
     // Remove the class "tabs-item-selected" from each element
   items.forEach(link => link.classList.remove('tab-item-selected'));  
     // Add a class named "tabs-item-selected" to this element
-  this.element.class;
+  this.element.classList.add('tabs-item-selected');
   }
 }
 
@@ -59,4 +59,4 @@ class TabItem {
 
 */
 
-let links = document.querySelectorAll('.tabs-link').forEach(link => new TabLink (link));
+const links = document.querySelectorAll('.tabs-link').forEach(link => new TabLink(link));
