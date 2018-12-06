@@ -3,10 +3,10 @@ class TabLink {
   constructor(link) {
     // Assign this.element to the passed in DOM element
     // this.link;
-    this.link = link
+    this.link = link;
     // Get the custom data attribute on the Link
     // this.data;
-    
+    this.data = this.link.dataset.tab;
     // Using the custom data attribute get the associated Item element
     // this.itemElement;
     
