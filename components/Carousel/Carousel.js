@@ -21,7 +21,8 @@ class Carousel {
     moveRight() {
         let currentSlideData = Number(this.activeSlide.dataset.slide);
         let nextSlideData = currentSlideData + 1;
-        this.activeSlide.classList.add('hidden');
+        let exitSlide = this.activeSlide;
+        //exitSlide.classList.add('hidden');
         //If there isn't a slide after the current, loop back to the first
         if(document.querySelector(`img[data-slide="${nextSlideData}"`) === null) {
             this.activeSlide = document.querySelector(`img[data-slide="1"`);
@@ -29,7 +30,27 @@ class Carousel {
             //If there IS a slider after the current, go to that one.
             this.activeSlide = document.querySelector(`img[data-slide="${nextSlideData}"`);
         }
-        this.activeSlide.classList.remove('hidden');
+
+        this.animateCarousel(exitSlide, this.activeSlide);
+    }
+
+    animateCarousel(curr, next) {
+        TweenMax.fromTo(curr, .5, {
+            opacity: 1
+        }, {
+            opacity: 0,
+            onComplete: () => {
+                curr.classList.add('hidden');
+                next.classList.remove('hidden');
+                TweenMax.fromTo(next, .5, {
+                    opacity: 0
+                }, {
+                    opacity: 1
+                });
+            }
+        });
+
+        
     }
 }
 

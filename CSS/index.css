@@ -99,11 +99,12 @@
   justify-content: center;
   font-size: 2.8rem;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: black;
 }
 .carousel .left {
   width: 3%;
   text-align: left;
+  z-index: 10;
 }
 .carousel .right {
   width: 3%;
