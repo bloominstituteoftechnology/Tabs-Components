@@ -1,23 +1,18 @@
 class Dropdown {
   constructor(element) {
-    
     // Assign this.element to the dropdown element
     this.element = element;
-    
     // Get the element with the ".dropdown-button" class found in the dropdown element (look at the HTML for context)
-    this.button = document.querySelector('.dropdown-button');
-    
+    this.button = this.element.querySelector('.dropdown-button');
     // assign the reference to the ".dropdown-content" class found in the dropdown element
-    this.content = this.button.querySelector('.dropdown-content');
-    
+    this.Content = this.element.querySelector('.dropdown-content');
     // Add a click handler to the button reference and call the toggleContent method.
-    this.button.addEventListener('click', () => 
-    {this.toggleContent()})
+    this.button.addEventListener('click', this.toggleContent.bind(this));
   }
-
   toggleContent() {
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('.dropdown-hidden');
+    console.log('Woo Hoo')
+    this.Content.classList.toggle('dropdown-hidden');
   }
 }
 
