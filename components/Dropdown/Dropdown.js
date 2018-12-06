@@ -1,28 +1,28 @@
-class Dropdown {
-  constructor(element) {
+// class Dropdown {
+//   constructor(element) {
     
-    // Assign this.element to the dropdown element
-    this.element;
+//     // Assign this.element to the dropdown element
+//     this.element;
     
-    // Get the element with the ".dropdown-button" class found in the dropdown element (look at the HTML for context)
-    this.button = this.element.querySelector();
+//     // Get the element with the ".dropdown-button" class found in the dropdown element (look at the HTML for context)
+//     this.button = this.element.querySelector();
     
-    // assign the reference to the ".dropdown-content" class found in the dropdown element
-    this.content;
+//     // assign the reference to the ".dropdown-content" class found in the dropdown element
+//     this.content;
     
-    // Add a click handler to the button reference and call the toggleContent method.
-    this.button.addEventListener('click', () => {
+//     // Add a click handler to the button reference and call the toggleContent method.
+//     this.button.addEventListener('click', () => {
 
-    })
-  }
+//     })
+//   }
 
-  toggleContent() {
+//   toggleContent() {
     
-    // Toggle the ".dropdown-hidden" class off and on
-    this.content;
-  }
-}
+//     // Toggle the ".dropdown-hidden" class off and on
+//     this.content;
+//   }
+// }
 
 
-// Nothing to do here, just study what the code is doing and move on to the Dropdown class
-let dropdowns = document.querySelectorAll('.dropdown').forEach( dropdown => new Dropdown(dropdown));
+// // Nothing to do here, just study what the code is doing and move on to the Dropdown class
+// let dropdowns = document.querySelectorAll('.dropdown').forEach( dropdown => new Dropdown(dropdown));
