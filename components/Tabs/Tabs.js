@@ -26,6 +26,8 @@ class TabLink {
     links.forEach(link => {
       if(!link){
         link.classList.remove('.tabs-link-selected')
+      }else{
+        link.classList.add('.tabs-link-selected')
       }
     })
     // Add a class named "tabs-link-selected" to this link
