@@ -14,11 +14,24 @@ class Dropdown {
   }
 
   toggleContent(e) {
-    // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle("dropdown-hidden");
+    //Toggle the ".dropdown-hidden" class off and on
+    if (this.content.classList.contains("dropdown-closed")) {
+      this.content.classList.toggle("dropdown-closed");
+      TweenMax.set(this.content, {
+        height: "auto"
+      });
+      TweenMax.from(this.content, 0.75, { 
+        height: 0,
+        ease: Power1.easeOut
+      });
+     } else {
+      TweenMax.to(this.content, 0.75, {
+        height: 0,
+        onComplete: () => this.content.classList.toggle("dropdown-closed")
+      });
+    }
   }
 }
-
 
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
 let dropdowns = document.querySelectorAll('.dropdown')
