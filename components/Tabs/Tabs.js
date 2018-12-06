@@ -1,5 +1,6 @@
 class Tabs {
   constructor(element) {
+    // Assign this.element to the passed in DOM element
     this.element = element;
 
     /* START HERE: 
@@ -13,27 +14,27 @@ class Tabs {
     */
 
     // Get and instantiate all tab links in the tab area
-    const links = Array.from(this.element.querySelectorAll(".tabs-link"))
-      .map(link => new TabLink(link));
+    this.links = this.element.querySelectorAll(".tabs-link");
+    this.links = Array.from(this.links).map(link => new TabLink(link));
 
     // Get currently selected tab
-    let selectedTab;
-    for (let i = 0; i < links.length; i++) {
-      if (links[i].element.classList.contains("tabs-link-selected")) {
-        this.selectedTab = links[i];
+    this.selectedTab;
+    for (let i = 0; i < this.links.length; i++) {
+      if (this.links[i].element.classList.contains("tabs-link-selected")) {
+        this.selectedTab = this.links[i];
         break;
       }
     }
 
     // Add a click event listener on the tab link instances, calling the select method on click
-    links.forEach(link => {
+    this.links.forEach(link => {
       link.element.addEventListener("click", e => this.select(e, link));
     });
   }
 
   select(e, link) {
     this.deselect(e);
-    
+
     this.selectedTab = link;
     link.select(e);
   }
