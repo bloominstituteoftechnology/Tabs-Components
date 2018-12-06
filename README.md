@@ -15,7 +15,7 @@ In this project, our design team has already built an HTML/CSS web page for us, 
 * Once you load the page, you will notice a dropdown menu in the upper left side of the page. Currently when you click on it nothing happens. We will build out the functionality to allow a dropdown menu to open and close when a user clicks on the dropdown button.
   * [x] Study the HTML in the index.html file corresponding to the dropdown component.
   * [x] Study the LESS file in the Dropdown folder. 
-  * With your knowledge of the HTML and CSS, complete the `Dropdown.js` file. You will be creating a dropdown component.
+  * [x] With your knowledge of the HTML and CSS, complete the `Dropdown.js` file. You will be creating a dropdown component.
 
 ### Part Two (Tabs)
 
