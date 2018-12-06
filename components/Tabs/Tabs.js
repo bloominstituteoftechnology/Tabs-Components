@@ -1,3 +1,15 @@
+class Tabs {
+  constructor(tabConstructor){
+    this.tabConstructor = tabConstructor;
+    this.data = tabConstructor.dataset.tab;
+    this.tabLink = new TabLink(this.tabConstructor);
+    this.tabSelect = document.querySelector('.tabs-link-selected');
+  }
+
+  deselect() {
+  }
+}
+
 
 class TabLink {
   constructor(element) {
@@ -24,6 +36,11 @@ class TabLink {
     this.tabItem.select();
 
   }
+
+  deselect(){
+    this.element.classList.remove('tabs-link-selected');
+    this.tabItem.deselect();
+  }
 }
 
 class TabItem {
@@ -35,12 +52,14 @@ class TabItem {
   select() {
     // Select all ".tabs-item" elements from the DOM
     const items = document.querySelectorAll('.tabs-item');
-
     // Remove the class "tabs-item-selected" from each element
     items.forEach(item => item.classList.remove('tabs-item-selected'));
-    
     // Add a class named "tabs-item-selected" to this element
     this.element.classList.add('tabs-item-selected');
+  }
+
+  deselect(){
+    this.element.classList.remove('tabs-link-selected');
   }
 }
 
