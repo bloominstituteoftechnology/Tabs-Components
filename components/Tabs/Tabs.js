@@ -25,10 +25,10 @@ class TabLink {
     links.forEach(link => link.classList.remove('tab-link-selected'));
 
     // Add a class named "tabs-link-selected" to this link
-    // this.element;
+    this.element.classList.add('tabs-link-selected');
     
     // Call the select method on the item associated with this link
-
+    
   }
 }
 
