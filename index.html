@@ -7,6 +7,7 @@
 	<body>
 		<script defer="defer" src="./components/Dropdown/Dropdown.js"></script>
 		<script defer="defer" src="./components/Tabs/Tabs.js"></script>
+		<script defer="defer" src="./slides.js"></script>
 		
 		<div class="header-container">
 			<div class="dropdown">
@@ -21,23 +22,29 @@
 		</div>
 
 		<div class="section">
-			<div class="box">
-				<div class="box-title">Box Title 1</div>
-				<div class="box-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
-			</div>
-			<div class="box">
-				<div class="box-title">Box Title 2</div>
-				<div class="box-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
-			</div>
+			<div class="slideshow">
+				<div class="left-button"></div>
+			<img class="slide" src="./img/avi-richards-183715-unsplash.jpg">
+			<img class="slide" src="./img/charles-deluvio-456501-unsplash.jpg">
+			<img class="slide" src="./img/clement-h-544786-unsplash.jpg">
+			<img class="slide" src="./img/john-schnobrich-520019-unsplash.jpg">
+			<img class="slide" src="./img/markus-spiske-507983-unsplash.jpg">
+			<img class="slide" src="./img/rawpixel-679094-unsplash.jpg">
+			<img class="slide" src="./img/sergi-kabrera-705414-unsplash.jpg">
+			<img class="slide" src="./img/thought-catalog-641073-unsplash.jpg">
+			<div class="right-button"></div>
 		</div>
+	</div>
 
-		<div class="section">
+		<div class="section all-tabs-show">
 				<div class="tabs">
 					<div class="tabs-links">
 						<div class="tabs-link tabs-link-selected" data-tab="1">Tab 1</div>
 						<div class="tabs-link" data-tab="2">Tab 2</div>
 						<div class="tabs-link" data-tab="3">Tab 3</div>
 						<div class="tabs-link" data-tab="4">Tab 4</div>
+												<div class="tabs-link" data-tab="5">Tab 5</div>
+
 					</div>
 					<div class="tabs-items">
 						<div class="tabs-item tabs-item-selected" data-tab="1">
@@ -67,11 +74,27 @@
 						<div class="tabs-item" data-tab="4">
 							<div class="tabs-item-title">Quote 4</div>
 							<div class="tabs-item-description">
+								It is known that there are an infinite number of worlds, simply because there is an infinite amount of space for them
+								to
+								be in. However, not every one of them is inhabited. Therefore, there must be a finite number of inhabited worlds. Any
+								finite
+								number divided by infinity is as near to nothing as makes no odds, so the average population of all the planets in
+								the Universe
+								can be said to be zero. From this it follows that the population of the whole Universe is also zero, and that any
+								people
+								you may meet from time to time are merely the products of a deranged imagination.
+							</div>
+						</div>
+						<div class="tabs-item" data-tab="5">
+							<div class="tabs-item-title">Quote 5</div>
+							<div class="tabs-item-description">
 								There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will
 								instantly disappear and be replaced by something even more bizarre and inexplicable. There is another theory which states
 								that this has already happened.
 							</div>
 						</div>
+												
+
 					</div>
 				</div>
 			</div>

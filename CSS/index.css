@@ -3,6 +3,12 @@
   margin: 0;
   padding: 0;
 }
+.slideShow {
+  display: flex;
+}
+.slide {
+  width: 100%;
+}
 .dropdown {
   z-index: 2;
   position: absolute;
@@ -28,6 +34,9 @@
   align-items: center;
   margin-top: 10px;
   border: 2.5px solid #931d25;
+  transition: transform 0.2s ease-out;
+  transform: scaleY(1);
+  transform-origin: top;
 }
 .dropdown .dropdown-link {
   width: 100%;
@@ -42,7 +51,25 @@
   background-color: #931d25;
 }
 .dropdown .dropdown-hidden {
+  transform: scaleY(0);
+}
+.all-tabs {
   display: none;
+}
+.all-tabs .tabs-button-show {
+  display: block;
+}
+.all-tabs .tabs-button-hide {
+  display: none;
+}
+.all-tabs-show {
+  display: block;
+}
+.all-tabs-show .tabs-button-show {
+  display: none;
+}
+.all-tabs-show .tabs-button-hide {
+  display: block;
 }
 .tabs {
   width: 100%;
