@@ -1,14 +1,20 @@
 class Tabs {
   constructor(tab) {
-    
+
     this.tab = tab;
+    console.log(this.tab)
   
     this.data = this.tab.dataset.tab;
    
     this.tabLink = new TabLink(this.tab);
 
     this.selectedTab = document.querySelector(`.tabs-link-selected`);
-    
+    // console.log("selected tab: ", this.selectedTab);
+
+    this.tab.addEventListener("click", () => {
+      
+      // links.forEach(link => link.classList.remove("tabs-link-selected"));
+    });
   }//Tabs constructor
 }//Tabs
 
@@ -16,24 +22,32 @@ class Tabs {
 class TabLink {
   constructor(element) {
     this.element = element;
-
+console.log(this.element)
     this.data = this.element.dataset.tab;
 
     this.itemElement = document.querySelector(`.tabs-item[data-tab="${this.data}"]`);
-console.log(this.itemElement)
 
     this.tabItem = new TabItem(this.itemElement);
 
-    this.element.addEventListener("click", () => {this.select()});
+    // this.element.addEventListener("click", () => {this.select()});
+
+    this.element.addEventListener("click", () => {
+      if (this.element.classList.contains("tabs-link-selected")) {
+        this.deselect();
+      } else {
+        this.select();
+      }
+      });
 
   }//TabLink constructor
 
 
   select() {
 
-    const links = document.querySelectorAll(".tabs-link");
+    // const links = document.querySelectorAll(".tabs-link");
 
-    links.forEach(link => link.classList.remove("tabs-link-selected"));
+    // links.forEach(link => link.classList.remove("tabs-link-selected"));
+    console.log("TabLink select method");
 
     this.element.classList.add("tabs-link-selected");
 
@@ -44,6 +58,8 @@ console.log(this.itemElement)
 
 
   deselect() {
+
+    console.log("TabLink deselect method");
     
     this.element.classList.remove("tabs-link-selected");
 
@@ -64,9 +80,10 @@ class TabItem {
 
   select() {
   
-    const items = document.querySelectorAll(".tabs-item");
+    console.log("TabItem select method");
+    // const items = document.querySelectorAll(".tabs-item");
 
-    items.forEach(item => item.classList.remove("tabs-item-selected"));
+    // items.forEach(item => item.classList.remove("tabs-item-selected"));
 
     this.element.classList.add("tabs-item-selected");
 
@@ -75,6 +92,8 @@ class TabItem {
 
 
   deselect() {
+
+    console.log("TabItem deselect method");
 
     this.element.classList.remove("tabs-item-selected");
 
