@@ -28,7 +28,7 @@ class TabLink {
     this.element.classList.add('tabs-link-selected');
     
     // Call the select method on the item associated with this link
-    this.itemElement.select();
+    this.tabItem.select();
   }
 }
 
@@ -43,7 +43,8 @@ class TabItem {
     const items = document.querySelectorAll(".tabs-item");
 
     // Remove the class "tabs-item-selected" from each element
-    items.classList.remove("tabs-item-selected");
+    //items.classList.remove("tabs-item-selected");
+    items.forEach(item => item.classList.remove("tabs-item-selected"));
     // Add a class named "tabs-item-selected" to this element
     this.element.classList.add("tabs-item-selected");
   }
