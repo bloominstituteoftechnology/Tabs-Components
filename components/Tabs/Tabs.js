@@ -20,7 +20,7 @@ class TabItem {
   constructor(element) {
     this.element = element;
   }
-  
+
   select() {
     const items = document.querySelectorAll('.tabs-item');
     items.forEach(currentValue => {currentValue.classList.toggle('tabs-item-selected', false)});
