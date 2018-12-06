@@ -19,9 +19,9 @@ class Dropdown {
     // Toggle the ".dropdown-hidden" class off and on
     
     if (this.content.classList.contains('dropdown-hidden')) {
-      TweenMax.to(this.content, 1, {opacity: 1});
+      TweenMax.to(this.content, 0.5, {height: 160});
     } else {
-      TweenMax.to(this.content, 1, {opacity: 0});
+      TweenMax.to(this.content, 0.5, {height: 0});
     }
     this.content.classList.toggle('dropdown-hidden');
 

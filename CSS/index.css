@@ -36,13 +36,15 @@
   font-size: 18px;
   text-decoration: none;
   color: #931d25;
+  overflow: hidden;
 }
 .dropdown .dropdown-link:hover {
   color: #ffffff;
   background-color: #931d25;
 }
 .dropdown .dropdown-hidden {
-  opacity: 0;
+  height: 0px;
+  overflow: hidden;
 }
 .tabs {
   width: 100%;
