@@ -124,6 +124,7 @@
   height: 100%;
 }
 .carousel .carousel-images img {
+  height: 100%;
   width: 100%;
 }
 .carousel .carousel-images .hidden {
