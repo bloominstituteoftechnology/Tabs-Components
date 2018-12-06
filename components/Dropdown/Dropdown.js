@@ -19,7 +19,9 @@ class Dropdown {
   toggleContent() {
     
     // Toggle the ".dropdown-hidden" class off and on
+    TweenMax.from('.dropdown-hidden', 1, {y:-50, ease: Power4.easeOut,});
     this.content.classList.toggle('dropdown-hidden');
+    
   }
 }
 
