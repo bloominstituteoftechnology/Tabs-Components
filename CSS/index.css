@@ -90,6 +90,33 @@
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
 }
+.carousel {
+  display: flex;
+  width: 520px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+.carousel .left {
+  position: absolute;
+  font-size: 26px;
+  top: 46%;
+  left: 10px;
+  cursor: pointer;
+}
+.carousel .right {
+  position: absolute;
+  font-size: 26px;
+  top: 46%;
+  right: 10px;
+  cursor: pointer;
+}
+.carousel .slide {
+  border: 2px solid red;
+  min-width: 520px;
+  width: 500px;
+  padding: 50px 30px;
+}
 body {
   box-sizing: border-box;
   min-width: 300px;
