@@ -1,11 +1,11 @@
 class Dropdown {
-  constructor(link) {
+  constructor(element) {
     
     // Assign this.element to the dropdown element
-    this.link = link;
+    this.element = element;
     
     // Get the element with the ".dropdown-button" class found in the dropdown element (look at the HTML for context)
-    this.button = document.querySelector(`.dropdown-button[data-tab="${this.linkData}"]`);
+    this.button = document.querySelector(`.dropdown-button[data-tab="${this.content}"]`);
     
     // assign the reference to the ".dropdown-content" class found in the dropdown element
     this.content = this.link.dataset.tab;
@@ -18,7 +18,7 @@ class Dropdown {
   toggleContent() {
     
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('dropdown-open');
+    this.content.classList.toggle('toggle-on');
   }
 }
 
