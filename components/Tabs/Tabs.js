@@ -3,6 +3,9 @@ class Tabs{
   constructor(element){
     this.element = element;
     this.links = document.querySelectorAll(".tabs-link").forEach(link =>  new TabLink(link));
+    this.itemSelected = document.querySelector('.tabs-item-selected');
+    this.linkSelected = document.querySelector('.tabs-link-selected');
+    
   }
   // methods
  
@@ -65,7 +68,7 @@ class TabItem {
 
 */
 
-const tabs = document.querySelector(".tabs")
+
 new Tabs()
 console.log(Tabs);
 
