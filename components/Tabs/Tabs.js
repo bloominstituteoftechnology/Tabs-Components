@@ -1,10 +1,11 @@
 
 class Tabs{
   constructor(element){
-
+    this.element = element;
+    this.links = document.querySelectorAll(".tabs-link").forEach(link =>  new TabLink(link));
   }
   // methods
-
+ 
 }
 class TabLink {
   constructor(element) {
@@ -17,17 +18,17 @@ class TabLink {
     // Using the Item element, create a new instance of the TabItem class
     this.itemElement = new TabItem(this.itemElement);
     // Add a click event listener on this instance, calling the select method on click
-    this.element.addEventListener('click', ()=> this.linkSelect());
+    this.element.addEventListener('click', ()=> this.select());
   };
 
-  linkSelect() {
-    this.linkDeselect();
+  select() {
+    this.deselect();
     // Add a class named "tabs-link-selected" to this link
     this.element.classList.add("tabs-link-selected");
     // Call the select method on the item associated with this link
     this.itemElement.select();
   }
-  linkDeselect(){
+  deselect(){
     // Get all of the elements with the tabs-link class
     const links = document.querySelectorAll(".tabs-link");
      // Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links
@@ -64,4 +65,9 @@ class TabItem {
 
 */
 
-const links = document.querySelectorAll(".tabs-link").forEach(link =>  new TabLink(link));
+const tabs = document.querySelector(".tabs")
+new Tabs()
+console.log(Tabs);
+
+
+// const links = document.querySelectorAll(".tabs-link").forEach(link =>  new TabLink(link));
