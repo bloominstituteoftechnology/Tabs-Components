@@ -21,18 +21,18 @@ class Tabs {
     this.tabLinks.forEach(t => {
       //use implicit binding with the arrow function to allow us to use `this` as a reference to the Tabs class that we are currently in.
       
-        //We don't allow another tab to be animated or switch if one is currently animating, as this will cause two tabs to show.
-        t.element.addEventListener('click', () => {
-          if(!this.animating && this.selectedTab !== t) {
-            this.animating = true;
-            this.selectedTab.deselect();
-            t.select();
-            this.selectedTab = t;
-            setTimeout(() => {
-              this.animating = false;
-            }, 1000);
-          }
-        });
+      //We don't allow another tab to be animated or switch if one is currently animating, as this will cause two tabs to show.
+      t.element.addEventListener('click', () => {
+        if(!this.animating && this.selectedTab !== t) {
+          this.animating = true;
+          this.selectedTab.deselect();
+          t.select();
+          this.selectedTab = t;
+          setTimeout(() => {
+            this.animating = false;
+          }, 1000);
+        }
+      });
     });
   }
 }
