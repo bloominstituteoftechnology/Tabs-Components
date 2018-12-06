@@ -11,6 +11,11 @@ class Dropdown {
 
     // Add a click handler to the button reference and call the toggleContent method.
     this.button.addEventListener("click", () => {
+      if (this.content.classList.contains("dropdown-hidden")) {
+        TweenMax.to(this.content, 0.3, { top: "60px" });
+      } else {
+        TweenMax.to(this.content, 0.3, { top: "-200px" });
+      }
       this.toggleContent();
     });
   }
