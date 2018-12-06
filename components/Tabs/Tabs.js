@@ -48,12 +48,24 @@ class TabItem {
   }
 }
 
+class Tabs {
+  constructor(elements) {
+    this.elements = elements
+    
+    this.links = this.elements.forEach(link => new TabLink(link))
+  }
+
+  deselect() {
+    this.elements.forEach(link => console.log(link));
+  }
+}
+
 
 // START HERE: create a reference to the ".tabs" classes
-let links = document.querySelectorAll('.tabs-link');
+let links = new Tabs(document.querySelectorAll('.tabs-link'));
 
 // Following the code in the Dropdown file, iterate through the array you created above creating a new instance of the TabLink class for each item. 
-links = Array.from(links).map(link => new TabLink(link))
+//links = Array.from(links).map(link => new TabLink(link))
 
 // DO THIS LAST: Once you have created an array of TabLink instances. call select() on the first item in the array
-links[0].select();
+//links[0].select();
