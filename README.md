@@ -25,7 +25,7 @@ In this project, our design team has already built an HTML/CSS web page for us, 
 
 * [x] The `Tabs.js` file starts at the bottom of the page and then jumps around. Pay attention to what is being called and when. Study the corresponding HTML and LESS to get a better idea of how the tabs were built.
 
-* Once you have completed the above, add a couple Tabs to the HTML in order to see first hand how great building webpages with components is!
+* [x] Once you have completed the above, add a couple Tabs to the HTML in order to see first hand how great building webpages with components is!
 
 ### Stretch Goals
 
@@ -34,7 +34,7 @@ In this project, our design team has already built an HTML/CSS web page for us, 
   * Remove the code deselecting all `TabLink`s and `TabItem`s, only relying on the deselect method.
   * `Tabs` should deselect the currently selected tab each time a new tab is selected.
 * Animations. (Use the animation library of your choice)
-  * Get the dropdown to slide in and out, rather than just appearing and disappearing
+  * [x] Get the dropdown to slide in and out, rather than just appearing and disappearing
   * Get the TabsItem text to fade in and out, or slide in and out.
   * Look through the LESS code and see where you can refactor using animations to achieve similar results.
 * Add styling using the LESS files.

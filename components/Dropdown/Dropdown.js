@@ -20,6 +20,18 @@ class Dropdown {
     
     // Toggle the ".dropdown-hidden" class off and on
     this.content.classList.toggle("dropdown-hidden");
+    const slideDown = document.querySelector(".dropdown-content");
+    if (this.content.classList.contains("dropdown-hidden")) {
+      TweenMax.to(slideDown, 1, {
+        top: -350,
+    
+      })
+    } else {
+      TweenMax.to(slideDown, 1, {
+        top: 70,
+ 
+      })
+    }
   }
 }
 
