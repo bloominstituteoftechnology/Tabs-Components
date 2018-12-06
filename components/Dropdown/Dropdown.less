@@ -14,8 +14,10 @@
     }
   }
   .dropdown-content {
+    z-index: -10;
     width: 100%;
     position: absolute;
+    top: -350px;
     background-color: @white;
     display: flex;
     flex-direction: column;
@@ -36,7 +38,7 @@
     }
   }
   .dropdown-hidden {
-    display: none;
+    // display: none;
   }
 }
 

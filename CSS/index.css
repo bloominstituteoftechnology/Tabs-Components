@@ -20,8 +20,10 @@
   background-color: #be2530;
 }
 .dropdown .dropdown-content {
+  z-index: -10;
   width: 100%;
   position: absolute;
+  top: -350px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -40,9 +42,6 @@
 .dropdown .dropdown-link:hover {
   color: #ffffff;
   background-color: #931d25;
-}
-.dropdown .dropdown-hidden {
-  display: none;
 }
 .tabs {
   width: 100%;
