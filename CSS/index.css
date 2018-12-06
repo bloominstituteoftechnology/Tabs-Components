@@ -73,6 +73,8 @@
 .tabs .tabs-link {
   padding: 20px 25px;
   font-size: 24px;
+  width: 16.67%;
+  text-align: center;
   background-color: #931d25;
   border-right: 1px solid white;
   color: #ffffff;
@@ -89,6 +91,9 @@
 }
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
+}
+.tabs-link:nth-child(6) {
+  border: none;
 }
 body {
   box-sizing: border-box;
