@@ -17,9 +17,16 @@ class Dropdown {
   }
 
   toggleContent() {
-    
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('dropdown-hidden');
+    if (this.content.classList.contains('dropdown-hidden')) {
+      this.content.classList.toggle('dropdown-hidden');
+      TweenMax.fromTo(this.content, .3, {x:-200}, {x:0})
+    } else {
+      setTimeout(() => {
+        this.content.classList.toggle('dropdown-hidden')
+      },150);
+      TweenMax.fromTo(this.content, .3, {x:0}, {x:-200}) 
+    }
   }
 }
 
