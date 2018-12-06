@@ -116,6 +116,10 @@
   min-width: 520px;
   width: 500px;
   padding: 50px 30px;
+  display: none;
+}
+.carousel .slide-show {
+  display: block;
 }
 body {
   box-sizing: border-box;
