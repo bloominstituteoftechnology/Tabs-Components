@@ -19,7 +19,26 @@ class Dropdown {
   toggleContent() {
     
     // Toggle the ".dropdown-hidden" class off and on
+    if(this.content.classList.contains('dropdown-hidden')){ 
+      TweenMax.fromTo(this.content, 1, {
+        left: -350,
+        display: 'none'
+      }, {
+        left: 0,
+        display: 'flex'
+      });
+
+    } else {
+      TweenMax.fromTo(this.content, 1, {
+        left: 0,
+        display: 'flex'
+      }, {
+        left: -350,
+        display: 'none'
+      });
+    }
     this.content.classList.toggle('dropdown-hidden');
+
   }
 }
 
