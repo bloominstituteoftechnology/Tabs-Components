@@ -102,13 +102,13 @@
   background-color: black;
 }
 .carousel .left {
-  width: 3%;
-  text-align: left;
+  width: 4%;
+  text-align: center;
   z-index: 10;
 }
 .carousel .right {
-  width: 3%;
-  text-align: right;
+  width: 4%;
+  text-align: center;
 }
 .carousel .left,
 .carousel .right {
@@ -120,7 +120,7 @@
   cursor: pointer;
 }
 .carousel .carousel-images {
-  width: 94%;
+  width: 92%;
   height: 100%;
 }
 .carousel .carousel-images img {
@@ -129,6 +129,14 @@
 }
 .carousel .carousel-images .hidden {
   display: none;
+}
+.carousel .carousel-images .time-bar {
+  background-color: silver;
+  opacity: 0.6;
+  z-index: 2;
+  width: 0%;
+  height: 12px;
+  position: absolute;
 }
 body {
   box-sizing: border-box;

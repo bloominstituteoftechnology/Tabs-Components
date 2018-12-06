@@ -5,8 +5,8 @@ class Carousel {
         this.leftBtn = this.element.querySelector('.left');
         this.rightBtn = this.element.querySelector('.right');
         this.slides = this.element.querySelectorAll('img');
-        this.nextSlide; //This is an interval that automatically goes to the next slide
         this.activeSlide = document.querySelector('img[data-slide="1"');
+        this.timeBar = document.querySelector('.time-bar');
         this.transitioning = false;
         this.initialize();
     }
@@ -15,9 +15,7 @@ class Carousel {
         this.rightBtn.addEventListener('click', () => this.moveRight());
         this.leftBtn.addEventListener('click', () => this.moveLeft());
         this.activeSlide.classList.remove('hidden');
-        this.nextSlide = setInterval(() => {
-            this.moveRight();
-        }, 3000)
+        this.timeBarStart();
     }
 
     moveRight() {
@@ -33,7 +31,7 @@ class Carousel {
                 //If there IS a slider after the current, go to that one.
                 this.activeSlide = document.querySelector(`img[data-slide="${nextSlideData}"`);
             }
-    
+            
             this.animateCarousel(exitSlide, this.activeSlide);
         }
         
@@ -77,8 +75,25 @@ class Carousel {
                 });
             }
         });
+    }
 
-        
+    timeBarStart() {
+        TweenMax.fromTo(this.timeBar, 4, {width: '0%', ease: Power0.easeNone}, {
+            width: this.slides[0].clientWidth,
+            onComplete: () => {
+                this.moveRight();
+                this.timeBarReset();
+            }
+        });
+    }
+
+    timeBarReset() {
+        TweenMax.to(this.timeBar, 1, {
+            width: '0%',
+            onComplete: () => {
+                this.timeBarStart();
+            }
+        });
     }
 }
 
