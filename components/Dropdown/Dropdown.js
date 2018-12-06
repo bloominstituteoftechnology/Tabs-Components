@@ -17,9 +17,29 @@ class Dropdown {
   }
 
   toggleContent() {
-    
-    // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('dropdown-hidden');
+    //Get Y offset of dropdown button, since the animation will start from where the button is.
+    if(this.content.classList.contains('dropdown-hidden')) {
+      this.content.classList.remove('dropdown-hidden');
+      TweenMax.fromTo(this.content, 0.3, {
+        y: -50,
+        opacity: 0
+      }, {
+        y: 0,
+        opacity: 1
+      });
+    } else if (!this.content.classList.contains('dropdown-hidden')) {
+      TweenMax.fromTo(this.content, 0.3, {
+        y: 0,
+        opacity: 1
+      }, {
+        y: -50,
+        opacity: 0,
+        onComplete: () => {
+          this.content.classList.add('dropdown-hidden');
+        }
+      });
+      
+    }
   }
 }
 
