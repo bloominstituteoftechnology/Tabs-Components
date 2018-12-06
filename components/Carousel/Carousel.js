@@ -31,7 +31,7 @@ class Carousel {
                 //If there IS a slider after the current, go to that one.
                 this.activeSlide = document.querySelector(`img[data-slide="${nextSlideData}"`);
             }
-            
+            this.timeBarReset();
             this.animateCarousel(exitSlide, this.activeSlide);
         }
         
@@ -39,6 +39,8 @@ class Carousel {
 
     moveLeft() {
         if(!this.transitioning) {
+            TweenMax.killAll();
+            this.timeBar.style.width = '0%';
             let currentSlideData = Number(this.activeSlide.dataset.slide);
             let nextSlideData = currentSlideData - 1;
             let exitSlide = this.activeSlide;
@@ -48,7 +50,7 @@ class Carousel {
                 this.activeSlide = this.slides[this.slides.length - 1];
             } else {
                 //If there IS a slider after the current, go to that one.
-                this.activeSlide = document.querySelector(`img[data-slide="$    {nextSlideData}"`);
+                this.activeSlide = document.querySelector(`img[data-slide="${nextSlideData}"`);
             }
 
             this.animateCarousel(exitSlide, this.activeSlide);
@@ -57,14 +59,16 @@ class Carousel {
     }
 
     animateCarousel(curr, next) {
+        let exit = curr;
+        let nextSlide = next;
         this.transitioning = true;
-        TweenMax.fromTo(curr, .5, {
+        TweenMax.fromTo(exit, .5, {
             opacity: 1
         }, {
             opacity: 0,
             onComplete: () => {
-                curr.classList.add('hidden');
-                next.classList.remove('hidden');
+                exit.classList.add('hidden');
+                nextSlide.classList.remove('hidden');
                 TweenMax.fromTo(next, .5, {
                     opacity: 0
                 }, {
@@ -78,8 +82,9 @@ class Carousel {
     }
 
     timeBarStart() {
+        let maxWidth = document.querySelector('.carousel-images').clientWidth;
         TweenMax.fromTo(this.timeBar, 4, {width: '0%', ease: Power0.easeNone}, {
-            width: this.slides[0].clientWidth,
+            width: maxWidth,
             onComplete: () => {
                 this.moveRight();
                 this.timeBarReset();
