@@ -77,11 +77,11 @@ body {
 }
 .dropdown .dropdown-button:hover {
   background-color: #be2530;
-  border: 3px solid #ffffff;
+  outline: 2px solid #ffffff;
 }
 .dropdown .dropdown-button:active {
   font-weight: bold;
-  border: 1px solid #ffffff;
+  outline: 1px solid #ffffff;
 }
 .dropdown .dropdown-content {
   position: absolute;
