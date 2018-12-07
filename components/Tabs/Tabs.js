@@ -57,12 +57,22 @@ class TabLink {
   }
 
   select(e) {
-    this.element.classList.add("tabs-link-selected");
+    TweenMax.to(this.element, 1, { 
+      backgroundColor: "white",
+      color: "black",
+      onComplete: () => this.element.classList.add("tabs-link-selected")
+    });
+
     this.tabItem.select(e);
   }
 
   deselect(e) {
-    this.element.classList.remove("tabs-link-selected");
+    TweenMax.to(this.element, 0.5, { 
+      backgroundColor: "rgb(147,29,37)",
+      color: "white",
+      onComplete: () => this.element.classList.remove("tabs-link-selected")
+    });
+    
     this.tabItem.deselect(e)
   }
 }
@@ -74,6 +84,12 @@ class TabItem {
   }
 
   select(e) {
+    TweenMax.set(this.element, {
+      opacity: 1
+    });
+    TweenMax.from(this.element, 1, { 
+      opacity: 0
+    });
     this.element.classList.add("tabs-item-selected");
   }
 
