@@ -41,11 +41,12 @@ class TabItem {
   select() {
     // Select all ".tabs-item" elements from the DOM
     const items = document.querySelectorAll('.tabs-item');
-
+    
     // Remove the class "tabs-item-selected" from each element
     items.forEach(item => item.classList.remove('tabs-item-selected'));
     // Add a class named "tabs-item-selected" to this element
     this.element.classList.toggle('tabs-item-selected');
+    TweenMax.from(this.element, 1, {x: -500, clearProps:"x"});
   }
 }
 
