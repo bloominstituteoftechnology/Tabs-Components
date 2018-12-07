@@ -33,6 +33,26 @@ class Dropdown {
   }
 }
 
-// Nothing to do here, just study what the code is doing and move on to the Dropdown class
-let dropdowns = document.querySelectorAll('.dropdown')
-                  .forEach( dropdown => new Dropdown(dropdown));
+
+let dropdownElements = document.querySelectorAll('.dropdown');
+let dropdowns = [];
+
+dropdownElements.forEach(dropdownElement => {
+  // Instantiate Dropdown components
+  dropdowns.push(new Dropdown(dropdownElement));
+
+  // Prevent closing the dropdown menu when clicking within its area
+  dropdownElement.addEventListener("click", e => e.stopImmediatePropagation());
+});
+
+// Close the dropdown menu when clicking outside the menu itself
+window.addEventListener("click", e => {
+  dropdowns.forEach(dropdown => {
+    if(!dropdown.content.classList.contains("dropdown-closed")) {
+      TweenMax.to(dropdown.content, 0.75, {
+        height: 0,
+        onComplete: () => dropdown.content.classList.toggle("dropdown-closed")
+      });
+    }
+  });
+});
