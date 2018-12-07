@@ -92,8 +92,8 @@ body {
   align-items: center;
   width: 100%;
   background-color: #ffffff;
-  border: 2.5px solid #931d25;
-  margin-top: 10px;
+  border: 2.25px solid #931d25;
+  margin-top: 4px;
 }
 .dropdown .dropdown-link {
   width: 100%;
