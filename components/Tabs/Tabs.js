@@ -2,7 +2,7 @@ class Tabs {
   constructor(tab) {
 
     this.tab = tab;
-    console.log(this.tab)
+    // console.log(this.tab)
   
     this.data = this.tab.dataset.tab;
    
@@ -22,7 +22,7 @@ class Tabs {
 class TabLink {
   constructor(element) {
     this.element = element;
-console.log(this.element)
+// console.log(this.element)
     this.data = this.element.dataset.tab;
 
     this.itemElement = document.querySelector(`.tabs-item[data-tab="${this.data}"]`);
