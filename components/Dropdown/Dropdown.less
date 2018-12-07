@@ -22,6 +22,12 @@
     align-items: center;  
     margin-top: 10px;
     border: 2.5px solid @lambda-red;
+    animation-name: redBG ;
+    animation-duration: .3s;
+    & *, &::after {
+      animation-name: opas;
+      animation-duration: .29s; 
+    } 
     &::after {
       content: '';
       height: 5px;
@@ -51,6 +57,16 @@
   }
 }
 
+
+@keyframes redBG {
+  0% {height: 0px;}
+  100% {height: 160px}
+}
+@keyframes opas {
+  0% {opacity: 0;}
+  96% {opacity: 0;}
+  100% {opacity: 1;}
+}
 
 
 
