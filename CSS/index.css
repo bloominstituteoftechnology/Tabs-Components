@@ -9,11 +9,12 @@ html {
 body {
   min-width: 300px;
   font-size: 1.6rem;
-  margin: 0;
   line-height: normal;
+  margin: 0;
 }
 .header-container {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -25,11 +26,18 @@ body {
   height: 50px;
 }
 .section {
-  display: flex;
   overflow: hidden;
+  display: flex;
   width: 70%;
-  box-shadow: 1px 1px 5px #931d25;
+  -webkit-box-shadow: 1px 1px 5px #931d25;
+  -moz-box-shadow: 1px 1px 5px #931d25;
+  -o-box-shadow: 1px 1px 5px #931d25;
+  -ms-box-shadow: 1px 1px 5px #931d25;
   border: 1px solid #931d25;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
   border-radius: 10px;
   margin: 45px auto;
 }
@@ -79,7 +87,8 @@ body {
   position: absolute;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   background-color: #ffffff;
@@ -109,7 +118,9 @@ body {
 }
 .tabs .tabs-items {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
+  align-items: flex-start;
   width: 100%;
   height: 300px;
   padding-top: 60px;
@@ -128,6 +139,9 @@ body {
 }
 .tabs .tabs-links {
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
   background-color: #931d25;
 }
 .tabs .tabs-link {
@@ -136,7 +150,7 @@ body {
   font-size: 2.4rem;
   cursor: pointer;
   padding: 20px 25px;
-  border-right: 1px solid white;
+  border-right: 1px solid #ffffff;
 }
 .tabs .tabs-link:hover {
   background-color: #be2530;
@@ -144,7 +158,7 @@ body {
 .tabs .tabs-link-selected {
   z-index: 2;
   background-color: #ffffff;
-  color: black;
+  color: #000000;
   border-right: 1px solid #931d25;
 }
 .tabs .tabs-link-selected:hover {
