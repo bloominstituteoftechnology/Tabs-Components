@@ -46,6 +46,7 @@
 }
 .tabs {
   width: 100%;
+  margin-bottom: 10px;
 }
 .tabs .tabs-items {
   width: 100%;
@@ -108,6 +109,9 @@ body {
 }
 .header-container .header {
   height: 50px;
+}
+.column {
+  flex-direction: column;
 }
 .section {
   width: 70%;
