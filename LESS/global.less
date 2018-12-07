@@ -22,27 +22,17 @@ body {
     background-color: @lambda-red;
     border-bottom: 1px solid @white;
 
+    @media @device-size[mobile] {
+        .make-flex(column, flex-start, center);
+        height: 140px;
+    }
+
     .header {
         height: 50px;
-    }
-}
+        margin: 7.5px 0;
 
-.section {
-    overflow: hidden;
-    display: flex;
-    width: 70%;
-    #prefixed > .box-shadow(1px, 1px, 5px, @lambda-red);
-    border: 1px solid @lambda-red;
-    #prefixed > .border-radius(10px);
-    margin: 45px auto;
-
-    .box {
-        padding: 40px;
-
-        .box-title {
-            font-size: 2.4rem;
-            font-weight: bold;
-            padding-bottom: 10px;
+        @media @device-size[mobile] {
+            display: block;
         }
     }
 }

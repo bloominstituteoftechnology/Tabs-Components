@@ -22,8 +22,150 @@ body {
   background-color: #931d25;
   border-bottom: 1px solid #ffffff;
 }
+@media (max-width: 500px) {
+  .header-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 140px;
+  }
+}
 .header-container .header {
   height: 50px;
+  margin: 7.5px 0;
+}
+@media (max-width: 500px) {
+  .header-container .header {
+    display: block;
+  }
+}
+#myCarousel {
+  width: 90%;
+  height: 500px;
+  margin: 25px auto;
+}
+@media (max-width: 1025px) {
+  #myCarousel {
+    height: 325px;
+  }
+}
+@media (max-width: 500px) {
+  #myCarousel {
+    height: 125px;
+  }
+}
+#myCarousel .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+#myCarousel .carousel-inner img {
+  width: 70%;
+  margin: auto;
+}
+.dropdown {
+  position: absolute;
+  left: 25px;
+  z-index: 2;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .dropdown {
+    position: relative;
+    left: 0;
+    display: block;
+    order: 1;
+    width: 100%;
+    margin: 10px auto 0;
+  }
+}
+.dropdown .dropdown-button {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px;
+  border: 1px solid #ffffff;
+}
+.dropdown .dropdown-button:hover {
+  background-color: #be2530;
+  outline: 2px solid #ffffff;
+}
+.dropdown .dropdown-button:active {
+  font-weight: bold;
+  outline: 1px solid #ffffff;
+}
+@media (max-width: 500px) {
+  .dropdown .dropdown-button {
+    display: none;
+  }
+}
+.dropdown .dropdown-content {
+  position: absolute;
+  z-index: 20;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+  border: 2.25px solid #931d25;
+  margin-top: 4px;
+}
+@media (max-width: 500px) {
+  .dropdown .dropdown-content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #931d25;
+    border: none;
+  }
+}
+.dropdown .dropdown-link {
+  width: 100%;
+  text-align: center;
+  color: #931d25;
+  font-size: 1.8rem;
+  text-decoration: none;
+  padding: 15px 0;
+}
+.dropdown .dropdown-link:hover {
+  background-color: #931d25;
+  color: #ffffff;
+}
+.dropdown .dropdown-link:active {
+  background-color: #be2530;
+}
+@media (max-width: 500px) {
+  .dropdown .dropdown-link {
+    width: 95%;
+    background-color: #931d25;
+    color: #ffffff;
+    font-size: 1.6rem;
+    border: 2px solid #ffffff;
+    margin: 0 1%;
+  }
+  .dropdown .dropdown-link:hover {
+    background-color: #ffffff;
+    color: #931d25;
+    border: 2px double #931d25;
+  }
+  .dropdown .dropdown-link:active {
+    background-color: #be2530;
+    color: snow;
+  }
+}
+.dropdown .dropdown-closed {
+  display: none;
+}
+@media (max-width: 500px) {
+  .dropdown .dropdown-closed {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 .section {
   overflow: hidden;
@@ -41,82 +183,15 @@ body {
   border-radius: 10px;
   margin: 45px auto;
 }
-.section .box {
-  padding: 40px;
+@media (max-width: 500px) {
+  .section {
+    width: 90%;
+  }
 }
-.section .box .box-title {
-  font-size: 2.4rem;
-  font-weight: bold;
-  padding-bottom: 10px;
-}
-#myCarousel {
-  max-width: 90%;
-  height: 500px;
-  margin: 25px auto;
-}
-#myCarousel .carousel-inner {
-  width: 100%;
-  height: 100%;
-}
-#myCarousel .carousel-inner img {
-  width: 70%;
-  margin: auto;
-}
-.dropdown {
-  position: absolute;
-  left: 25px;
-  z-index: 2;
-  cursor: pointer;
-}
-.dropdown .dropdown-button {
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 15px;
-  border: 1px solid #ffffff;
-}
-.dropdown .dropdown-button:hover {
-  background-color: #be2530;
-  outline: 2px solid #ffffff;
-}
-.dropdown .dropdown-button:active {
-  font-weight: bold;
-  outline: 1px solid #ffffff;
-}
-.dropdown .dropdown-content {
-  position: absolute;
-  overflow: hidden;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  background-color: #ffffff;
-  border: 2.25px solid #931d25;
-  margin-top: 4px;
-}
-.dropdown .dropdown-link {
-  width: 100%;
-  text-align: center;
-  color: #931d25;
-  font-size: 1.8rem;
-  text-decoration: none;
-  padding: 15px 0;
-}
-.dropdown .dropdown-link:hover {
-  background-color: #931d25;
-  color: #ffffff;
-}
-.dropdown .dropdown-link:active {
-  background-color: #be2530;
-}
-.dropdown .dropdown-closed {
-  display: none;
-}
-.tabs {
+.section .tabs {
   width: 100%;
 }
-.tabs .tabs-items {
+.section .tabs .tabs-items {
   overflow: auto;
   display: flex;
   flex-flow: row nowrap;
@@ -127,26 +202,34 @@ body {
   padding-top: 60px;
   margin-bottom: 25px;
 }
-.tabs .tabs-item {
+.section .tabs .tabs-item {
   display: none;
   width: 75%;
 }
-.tabs .tabs-item .tabs-item-title {
+.section .tabs .tabs-item .tabs-item-title {
   font-size: 2.4rem;
   font-weight: bold;
   padding-bottom: 10px;
 }
-.tabs .tabs-item-selected {
+.section .tabs .tabs-item-selected {
   display: block;
 }
-.tabs .tabs-links {
+.section .tabs .tabs-links {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   background-color: #931d25;
 }
-.tabs .tabs-link {
+@media (max-width: 500px) {
+  .section .tabs .tabs-links {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+.section .tabs .tabs-link {
   background-color: #931d25;
   color: #ffffff;
   font-size: 2.4rem;
@@ -154,15 +237,29 @@ body {
   padding: 20px 25px;
   border-right: 1px solid #ffffff;
 }
-.tabs .tabs-link:hover {
+.section .tabs .tabs-link:hover {
   background-color: #be2530;
 }
-.tabs .tabs-link-selected {
+@media (max-width: 500px) {
+  .section .tabs .tabs-link {
+    width: 100%;
+    text-align: center;
+    border-right: none;
+    border-bottom: 1px solid #ffffff;
+  }
+}
+.section .tabs .tabs-link-selected {
   z-index: 2;
   background-color: #ffffff;
   color: #000000;
   border-right: 1px solid #931d25;
 }
-.tabs .tabs-link-selected:hover {
+.section .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
+}
+@media (max-width: 500px) {
+  .section .tabs .tabs-link-selected {
+    border-right: none;
+    border-bottom: 1px solid #931d25;
+  }
 }
