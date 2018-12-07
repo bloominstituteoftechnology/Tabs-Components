@@ -25,9 +25,9 @@ class TabLink {
   // Call the select method on the item associated with this link
   
 select() {
-  const links = document.querySelectorAll('.tabs-links');
-    Array.from(links).forEach(link => 
-      link.classList.remove('tabs-link-selected'));
+  const links = document.querySelectorAll('.tabs-link');
+    links.forEach(links => 
+      links.classList.remove('tabs-link-selected'));
     
     this.element.classList.add('tabs-link-selected');
     this.tabItem.select();
@@ -56,6 +56,8 @@ select() {
     this.element.classList.add('tabs-item-selected');
   }
 }
+
+
 
 /* START HERE: 
 - Select all classes named ".tabs-link" and assign that value to the links variable
