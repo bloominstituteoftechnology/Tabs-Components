@@ -9,17 +9,22 @@ class Dropdown {
     
     // assign the reference to the ".dropdown-content" class found in the dropdown element
     this.content = this.element.querySelector('.dropdown-content');
-    
     // Add a click handler to the button reference and call the toggleContent method.
-    this.button.addEventListener('click', () => {
-      this.toggleContent();
-    })
+    this.button.addEventListener('click', e => this.toggleContent(e));
   }
 
-  toggleContent() {
-    
+  toggleContent(e) {
+    e.stopPropagation();
     // Toggle the ".dropdown-hidden" class off and on
     this.content.classList.toggle('dropdown-hidden');
+
+
+    if(this.content.classList.contains('dropdown-hidden') ) {
+      TweenMax.to(this.content, .5, {height: 3, top: 46});
+    } else {
+      TweenMax.to(this.content, .5, {height: 159, top: 59});
+    }
+    
   }
 }
 
