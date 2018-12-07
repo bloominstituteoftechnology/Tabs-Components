@@ -15,6 +15,7 @@ class Dropdown {
   }
 
   toggleContent() {
+
     
     // Toggle the ".dropdown-hidden" class off and on
     
@@ -24,8 +25,8 @@ class Dropdown {
       TweenMax.to(this.content, 0.5, {height: 0});
     }
     this.content.classList.toggle('dropdown-hidden');
-
   }
+
 }
 
 
