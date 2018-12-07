@@ -35,7 +35,7 @@ class TabLink {
 
   fade () {
     $(function() {
-      $('.tabs-item-selected').hide().fadeIn(1500);
+      $('.tabs-item-selected').hide(0).fadeIn(1500);
     });
   }
 }
