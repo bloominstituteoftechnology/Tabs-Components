@@ -40,7 +40,19 @@ class TabItem {
     // Remove the class "tabs-item-selected" from each element
     items.forEach(item => item.classList.remove("tabs-item-selected"));
     // Add a class named "tabs-item-selected" to this element
-    this.element.classList.add("tabs-item-selected");
+    setTimeout(() => {
+      this.element.classList.add("tabs-item-selected");
+      TweenMax.fromTo(
+        this.element,
+        0.5,
+        {
+          opacity: 0
+        },
+        {
+          opacity: 1
+        }
+      );
+    }, 500);
   }
 }
 
