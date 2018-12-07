@@ -4,6 +4,15 @@
   z-index: 2;
   cursor: pointer;
 
+  @media @device-size[mobile] {
+    position: relative;
+    left: 0;
+    display: block;
+    order: 1;
+    width: 100%;
+    margin: 10px auto 0;
+  }
+
   .dropdown-button {
     color: @white;
     font-size: 20px;
@@ -20,16 +29,27 @@
       font-weight: bold;
       outline: 1px solid @white;
     }
+
+    @media @device-size[mobile] {
+      display: none;
+    }
   }
 
   .dropdown-content {
     position: absolute;
+    z-index: 20;
     overflow: hidden;
     .make-flex(column, flex-start, center);
     width: 100%;
     background-color: @white;
     border: 2.25px solid @lambda-red;
     margin-top: 4px;
+
+    @media @device-size[mobile] {
+      .make-flex(row, space-between);
+      background-color: @lambda-red;
+      border: none;
+    }
   }
 
   .dropdown-link {
@@ -48,10 +68,34 @@
     &:active {
       background-color: @lambda-light-red;
     }
+
+    @media @device-size[mobile] {
+      width: 95%;
+      background-color: @lambda-red;
+      color: @white;
+      font-size: 1.6rem;
+      border: 2px solid @white;
+      margin: 0 1%;
+
+      &:hover {
+        background-color: @white;
+        color: @lambda-red;
+        border: 2px double @lambda-red;
+      }
+
+      &:active {
+        background-color: @lambda-light-red;
+        color: @snow;
+      }
+    }
   }
 
   .dropdown-closed {
     display: none;
+
+    @media @device-size[mobile] {
+      .make-flex(row, space-between);
+    }
   }
 }
 

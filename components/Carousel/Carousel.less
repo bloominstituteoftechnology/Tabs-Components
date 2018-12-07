@@ -1,7 +1,15 @@
 #myCarousel {
-    max-width: 90%;
+    width: 90%;
     height: 500px;
     margin: 25px auto;
+
+    @media @device-size[tablet] {
+        height: 325px;
+    }
+
+    @media @device-size[mobile] {
+        height: 125px;
+    }
 
     .carousel-inner {
         width: 100%;
