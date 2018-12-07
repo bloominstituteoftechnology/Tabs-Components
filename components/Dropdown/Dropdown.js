@@ -13,6 +13,7 @@ class Dropdown {
     // Toggle the ".dropdown-hidden" class off and on
     console.log('Woo Hoo')
     this.Content.classList.toggle('dropdown-hidden');
+    // had a dot before dropdown-hidden
   }
 }
 
