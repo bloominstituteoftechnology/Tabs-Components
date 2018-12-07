@@ -1,7 +1,7 @@
 class TabLink {
   constructor(link){
     this.link = link;// outputs each link div.
-    
+    console.log(this.link)
     this.linkData = this.link.dataset.tab;// outputs the dataset values 1, 2, 3, 4.
     
     this.tabItem = document.querySelector(`.tabs-item[data-tab="${this.linkData}"]`)//ouputs each dataset
@@ -24,4 +24,15 @@ class TabContent {
     this.tabItem.classList.toggle('tabs-item-selected');
   }
 }
-let tabLinks = document.querySelectorAll('.tabs-link').forEach(link => new TabLink(link));
+
+class Tabs {
+  constructor(tabLink){
+    this.tabLink = tabLink;
+    
+    this.tabLink = new TabLink(tabLink);
+  }
+
+}
+
+let tablinks = document.querySelectorAll('.tabs-link');
+tablinks.forEach(link => new Tabs(link))
