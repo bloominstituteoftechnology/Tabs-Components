@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-width: 300px;
+    font-size: 1.6rem;
+    line-height: normal;
+    margin: 0;
+}
+
+.header-container {
+    .make-flex(row, center, center);
+    width: 100%;
+    height: 70px;
+    background-color: @lambda-red;
+    border-bottom: 1px solid @white;
+
+    @media @device-size[mobile] {
+        .make-flex(column, flex-start, center);
+        height: 140px;
+    }
+
+    .header {
+        height: 50px;
+        margin: 7.5px 0;
+
+        @media @device-size[mobile] {
+            display: block;
+        }
+    }
+}

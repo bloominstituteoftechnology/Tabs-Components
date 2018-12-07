@@ -1,42 +1,101 @@
 .dropdown {
-  z-index: 2;
   position: absolute;
   left: 25px;
+  z-index: 2;
   cursor: pointer;
+
+  @media @device-size[mobile] {
+    position: relative;
+    left: 0;
+    display: block;
+    order: 1;
+    width: 100%;
+    margin: 10px auto 0;
+  }
+
   .dropdown-button {
-    padding: 15px;
-    border: 3px solid @white;
     color: @white;
     font-size: 20px;
     font-weight: bold;
+    padding: 15px;
+    border: 1px solid @white;
+
     &:hover {
       background-color: @lambda-light-red;
+      outline: 2px solid @white;
+    }
+
+    &:active {
+      font-weight: bold;
+      outline: 1px solid @white;
+    }
+
+    @media @device-size[mobile] {
+      display: none;
     }
   }
+
   .dropdown-content {
-    width: 100%;
     position: absolute;
+    z-index: 20;
+    overflow: hidden;
+    .make-flex(column, flex-start, center);
+    width: 100%;
     background-color: @white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-    margin-top: 10px;
-    border: 2.5px solid @lambda-red;
+    border: 2.25px solid @lambda-red;
+    margin-top: 4px;
+
+    @media @device-size[mobile] {
+      .make-flex(row, space-between);
+      background-color: @lambda-red;
+      border: none;
+    }
   }
+
   .dropdown-link {
     width: 100%;
     text-align: center;
-    padding: 15px 0;
-    font-size: 18px;
-    text-decoration: none;
     color: @lambda-red;
+    font-size: 1.8rem;
+    text-decoration: none;
+    padding: 15px 0;
+
     &:hover {
-      color: @white;
       background-color: @lambda-red;
+      color: @white;
+    }
+
+    &:active {
+      background-color: @lambda-light-red;
+    }
+
+    @media @device-size[mobile] {
+      width: 95%;
+      background-color: @lambda-red;
+      color: @white;
+      font-size: 1.6rem;
+      border: 2px solid @white;
+      margin: 0 1%;
+
+      &:hover {
+        background-color: @white;
+        color: @lambda-red;
+        border: 2px double @lambda-red;
+      }
+
+      &:active {
+        background-color: @lambda-light-red;
+        color: @snow;
+      }
     }
   }
-  .dropdown-hidden {
+
+  .dropdown-closed {
     display: none;
+
+    @media @device-size[mobile] {
+      .make-flex(row, space-between);
+    }
   }
 }
 

@@ -1,3 +1,23 @@
-@lambda-red: rgb(147,29,37);
-@lambda-light-red: lighten(@lambda-red,10%);
-@white: rgb(255,255,255);
+.make-flex(@flex-direction: row, @justify-content: flex-start, @align-items: flex-start, @flex-wrap: nowrap) {
+    display: flex;
+    flex-flow: @flex-direction @flex-wrap;
+    justify-content: @justify-content;
+    align-items: @align-items;
+}
+
+#prefixed {
+    .border-radius(@radius) {
+        -webkit-border-radius: @radius;
+        -moz-border-radius: @radius;
+        -o-border-radius: @radius;
+        -ms-border-radius: @radius;
+        border-radius: @radius;
+    }
+
+    .box-shadow(...) {
+        -webkit-box-shadow: @arguments;
+        -moz-box-shadow: @arguments;
+        -o-box-shadow: @arguments;
+        -ms-box-shadow: @arguments;
+    }
+}
