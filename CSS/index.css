@@ -244,8 +244,9 @@ body {
   .section .tabs .tabs-link {
     width: 100%;
     text-align: center;
-    border-right: none;
+    border-right: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
   }
 }
 .section .tabs .tabs-link-selected {
