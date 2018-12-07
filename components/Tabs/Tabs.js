@@ -28,13 +28,18 @@ class TabLink {
   select() {
     
     const links = document.querySelectorAll('.tabs-links');
-    Array.from(links).forEach(link => 
+    links.forEach(link => 
     link.classList.remove('tabs-link-selected')); //DOM TOKEN LIST ======> remove
 
     this.element.classList.add('tabs-link-selected'); //DOM TOKEN LIST ======> add
     this.tabItem.select(); // INVOKING TAB ITEM CLASS?
   }
 }
+
+
+
+
+///////// NEW CLASS 
 
 
 // Assign this.element to the passed in element
@@ -44,7 +49,6 @@ class TabLink {
 
 class TabItem {
   constructor(element) {
-    
     this.element = element;
   }
 
