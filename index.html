@@ -4,18 +4,14 @@
 		<title>Advanced Components</title>
 		<link rel="stylesheet" href="./CSS/index.css">
 	</head>
-	<body>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js" async></script>
-		<script defer="defer" src="./components/Dropdown/Dropdown.js" async></script>
-		<script defer="defer" src="./components/Tabs/Tabs.js" async></script>
-		
+	<body>	
 		<div class="header-container">
 			<div class="dropdown">
 				<div class="dropdown-button">Dropdown</div>
 				<div class="dropdown-content dropdown-hidden">
-					<a class="dropdown-link" href="https://lambdaschool.com/" target="_blank">Lambda</a>
-					<a class="dropdown-link" href="https://www.google.com/" target="_blank">Google</a>
-					<a class="dropdown-link" href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a>
+					<a class="dropdown-link dropdown-link-hidden" href="https://lambdaschool.com/" target="_blank">Lambda</a>
+					<a class="dropdown-link dropdown-link-hidden" href="https://www.google.com/" target="_blank">Google</a>
+					<a class="dropdown-link dropdown-link-hidden" href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a>
 				</div>
 			</div>
 			<img src="./lambda_logo_light_small.png" class="header" />
@@ -91,5 +87,9 @@
 				</div>
 			</div>
 		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js" async></script>
+		<script defer="defer" src="./components/Dropdown/Dropdown.js" async></script>
+		<script defer="defer" src="./components/Tabs/Tabs.js" async></script>
+		<script defer="defer" src="./components/Tablink/Tablinks.js" async></script>
 	</body>
 </html>
