@@ -2,6 +2,7 @@ class TabLink {
   constructor(element) {
     // Assign this.element to the passed in DOM element
     this.element = element;
+
     // Get the custom data attribute on the Link
     this.data = this.element.dataset.tab;
     // Using the custom data attribute get the associated Item element
@@ -18,13 +19,19 @@ class TabLink {
 
   select() {
     // Get all of the elements with the tabs-link class
-    const links = document.querySelectorAll(".tabs-link");
+    // const links = document.querySelectorAll(".tabs-link");
     // Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links
-    links.forEach(link => link.classList.remove("tabs-link-selected"));
+    // links.forEach(link => link.classList.remove("tabs-link-selected"));
     // Add a class named "tabs-link-selected" to this link
     this.element.classList.add("tabs-link-selected");
     // Call the select method on the item associated with this link
     this.tabItem.select();
+  }
+
+  deselect() {
+    this.element.classList.remove("tabs-link-selected");
+
+    this.tabItem.deselect();
   }
 }
 
@@ -36,11 +43,15 @@ class TabItem {
 
   select() {
     // Select all ".tabs-item" elements from the DOM
-    const items = document.querySelectorAll(".tabs-item");
+    // const items = document.querySelectorAll(".tabs-item");
     // Remove the class "tabs-item-selected" from each element
-    items.forEach(item => item.classList.remove("tabs-item-selected"));
+    // items.forEach(item => item.classList.remove("tabs-item-selected"));
     // Add a class named "tabs-item-selected" to this element
     this.element.classList.add("tabs-item-selected");
+  }
+
+  deselect() {
+    this.element.classList.remove("tabs-item-selected");
   }
 }
 
@@ -54,6 +65,22 @@ class TabItem {
 
 */
 
-const links = document.querySelectorAll(".tabs-link");
+// const links = document.querySelectorAll(".tabs-link");
+// links.forEach(link => new TabLink(link));
 
-links.forEach(link => new TabLink(link));
+// creates all instances of TabLink
+class Tabs {
+  constructor() {
+    const linkElements = Array.from(document.querySelectorAll(".tabs-link"));
+
+    // creates all instances of TabLink
+    this.links = linkElements.map(link => {
+      return new TabLink(link);
+    });
+
+    // store currently selected tab.
+    this.currentTab = this.links[0];
+  }
+}
+
+const tabs = new Tabs();
