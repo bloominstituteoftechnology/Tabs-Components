@@ -9,14 +9,14 @@ class TabLink {
   constructor(element) {
     this.element = element;
     this.data = this.element.dataset.tab;
-    this.itemElement = document.querySelector(`.tab-item[data-tab='${this.data}']`);
+    this.itemElement = document.querySelector(`.tabs-item[data-tab='${this.data}']`);
     this.tabItem = new TabItem(this.itemElement);
-    this.element.addEventlistener('click', () => {
+    this.element.addEventListener('click',() => {
       this.select() 
     });
   };
  
-  //==============================================================================================//
+  //========================================== SELECT =============================================//
 
   // Get all of the elements with the tabs-link class
   // Using a loop or the forEach method remove the 'tabs-link-selected' 
@@ -25,12 +25,12 @@ class TabLink {
   // Call the select method on the item associated with this link
   
 select() {
-  const links = document.querySelectorAll('tabs-links');
-    Array.from(links).forEach((link) => {
-      link.classList.remove('tabs-link-selected');
-    });
+  const links = document.querySelectorAll('.tabs-links');
+    Array.from(links).forEach(link => 
+      link.classList.remove('tabs-link-selected'));
+    
     this.element.classList.add('tabs-link-selected');
-    this.tabItem.select.select();
+    this.tabItem.select();
   }
 }
 
@@ -51,29 +51,21 @@ select() {
     
   const items = document.querySelectorAll('.tabs-item');
     
-    Array.from(links).forEach((link) => {
-    link.classList.remove('tabs-link-selected');
-    });
-    
+    items.forEach(items => 
+    items.classList.remove('tabs-item-selected'));
     this.element.classList.add('tabs-item-selected');
   }
 }
 
 /* START HERE: 
-
 - Select all classes named ".tabs-link" and assign that value to the links variable
-
-
 - With your selection in place, now chain a .forEach() method onto the links variable to iterate over the DOM NodeList
-
 - In your .forEach() method's callback function, return a new instance of TabLink and pass in each link as a parameter
-
 */
 
-links = document.querySelectorAll('.tab-links');
+links = document.querySelectorAll('.tabs-link');
 links.forEach( link => new TabLink(link));
 
 
-// links = document.querySelectorAll();
 
-// const links = document.querySelectorAll('.tabs-link').forEach(link => new TabLink(link));
+
