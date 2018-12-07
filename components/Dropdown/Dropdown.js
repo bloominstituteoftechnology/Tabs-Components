@@ -33,7 +33,6 @@ class Dropdown {
   }
 }
 
-
 let dropdownElements = document.querySelectorAll('.dropdown');
 let dropdowns = [];
 
