@@ -60,6 +60,7 @@ class TabLink {
     TweenMax.to(this.element, 1, { 
       backgroundColor: "white",
       color: "black",
+      borderRight: "1px solid rgb(147,29,37)",
       onComplete: () => this.element.classList.add("tabs-link-selected")
     });
 
@@ -70,6 +71,7 @@ class TabLink {
     TweenMax.to(this.element, 0.5, { 
       backgroundColor: "rgb(147,29,37)",
       color: "white",
+      borderRight: "1px solid white",
       onComplete: () => this.element.classList.remove("tabs-link-selected")
     });
     
