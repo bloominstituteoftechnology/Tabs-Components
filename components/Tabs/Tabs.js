@@ -2,7 +2,7 @@
 class TabLink {
   constructor(element) {
     // Assign this.element to the passed in DOM element
-    // this.element;
+     //this.element;
     
     // Get the custom data attribute on the Link
     // this.data;
@@ -59,4 +59,4 @@ class TabItem {
 
 */
 
-links = document.querySelectorAll();
+//           links = document.querySelectorAll();
