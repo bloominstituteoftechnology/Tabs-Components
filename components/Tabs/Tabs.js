@@ -11,10 +11,10 @@ class TabLink {
      this.itemElement = document.querySelector(`.tabs-item[data-tab="${this.data}"]`);
     
     // Using the Item element, create a new instance of the TabItem class
-     this.tabItem = new TabItem(this.tabItem);
+     this.tabItem = new TabItem(this.itemElement);
     
     // Add a click event listener on this instance, calling the select method on click
-    this.tabItem.addEventListener('click', () => {this.select()});
+    this.element.addEventListener('click', () => {this.select()});
   };
 
   select() {
@@ -28,7 +28,7 @@ class TabLink {
      this.element.classList.add('tabs-link-selected');
     
     // Call the select method on the item associated with this link
-       this.element.select();
+       this.tabItem.select();
   }
 }
 
@@ -40,12 +40,12 @@ class TabItem {
 
   select() {
     // Select all ".tabs-item" elements from the DOM
-     const items = document.querySelector('.tabs-item');
+     const items = document.querySelectorAll('.tabs-item');
 
     // Remove the class "tabs-item-selected" from each element
        items.forEach(item => item.classList.remove('tabs-item-selected'));
     // Add a class named "tabs-item-selected" to this element
-    this.element.forEach(item => item.classList.add('tabs-item-selected'));
+    this.element.classList.add('tabs-item-selected');
   }
 }
 
