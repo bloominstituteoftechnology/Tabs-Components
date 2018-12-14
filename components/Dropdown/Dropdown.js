@@ -17,7 +17,7 @@ class Dropdown {
     }
 
    toggleContent() {
-    this.tabElement.classList.toggle("change")
+    this.tabElement.classList.toggle("hover")
    }
 }
 
