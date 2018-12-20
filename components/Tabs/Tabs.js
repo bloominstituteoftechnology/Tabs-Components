@@ -14,8 +14,7 @@ class TabLink {
     // this.tabItem;
     this.tabItem = new TabItem(this.tabItem)
     // Add a click event listener on this instance, calling the select method on click
-    this.TabItem.addEventListener("click", () => { this.select() })
-    
+    this.tabItem = document.addEventListener("click", () => { this.select() })
   }
 
 
@@ -32,8 +31,8 @@ select() {
   // this.element;
   this.element.classList.add("tabs-link-selected")
   // Call the select method on the item associated with this link
-  this.content.classList.toggle("tabs-item-description"); 
- 
+  this.tabItem.select()
+  
 }
 };
 class TabItem {
@@ -52,7 +51,7 @@ class TabItem {
   
 
     // Remove the class "tabs-item-selected" from each element
-    items[i].classList.remove("tabs-item");
+    items[i].classList.remove("tabs-item-slected");
       }  // Add a class named "tabs-item-selected" to this element
     //this.element;
     this.element.classList.add("tabs-item-selected");
