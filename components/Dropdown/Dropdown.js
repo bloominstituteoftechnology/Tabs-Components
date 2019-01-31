@@ -1,9 +1,8 @@
-let dropdownLink = document.querySelectorAll(".dropdown-link");
 let tweenMenu = TweenMax.fromTo(
   ".dropdown-content",
   0.5,
-  { opacity: 0 },
-  { opacity: 1 }
+  { scale: 0, opacity: 0 },
+  { scale: 1, opacity: 1 }
 ).reverse();
 
 class Dropdown {
@@ -24,7 +23,7 @@ class Dropdown {
       if (!tweenMenu.isActive()) {
         tweenMenu.reversed(!tweenMenu.reversed());
         // menu z-index set to -1000, header set to 5 but menu still goes over the header when animating
-        TweenMax.staggerFrom(dropdownLink, 0.3, { x: -40 }, 0.09);
+        // TweenMax.staggerFromTo(".dropdown-link", 0.3, { x: -30, opacity: .5 }, {x:0, opacity:1} 0.09);
       }
       // TweenMax.staggerFrom(dropdownLink, 0.2, { x: -20 }, 0.09);
     }); // **Also, why not this.content.toggleContent(event)?**
