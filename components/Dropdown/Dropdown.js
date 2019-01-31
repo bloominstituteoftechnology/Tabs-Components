@@ -8,15 +8,22 @@ class Dropdown {
 
     // assign the reference to the ".dropdown-content" class found in the dropdown element
     this.content = this.element.querySelector(".dropdown-content");
+    this.show = false; // GSAP
 
     // Add a click handler to the button reference and call the toggleContent method.
     this.button.addEventListener("click", () => this.toggleContent());
   }
 
   toggleContent() {
-    // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle("dropdown-hidden");
-    // Note: I could not figure out the syntax for using event.target here (or it isn't possible).
+    // GSAP
+    if (this.show === false) {
+      this.show = true;
+      TweenMax.to(this.content, 0, { display: "flex" });
+      TweenMax.to(this.content, 2, { opacity: 1 });
+    } else {
+      this.show = false;
+      TweenMax.to(this.content, 0.5, { opacity: 0, display: "none" });
+    }
   }
 }
 
