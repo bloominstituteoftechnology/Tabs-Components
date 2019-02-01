@@ -20,7 +20,8 @@ class TabItem {
   }
   select() {
     const items = document.querySelectorAll('.tabs-item').forEach(item =>item.classList.remove("tabs-item-selected"));
-    this.element.classList.add("tabs-item-selected");
+    this.element.classList.add("tabs-item-selected")
+    TweenMax.to( this.element , 3, { opacity:1} )
   }
 }
 
