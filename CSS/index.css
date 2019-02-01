@@ -23,7 +23,7 @@
   width: 100%;
   position: absolute;
   background-color: #ffffff;
-  display: flex;
+  display: none;
   opacity: 0;
   flex-direction: column;
   align-items: center;
