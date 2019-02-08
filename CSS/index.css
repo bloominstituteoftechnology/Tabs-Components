@@ -124,3 +124,6 @@ body {
   padding-bottom: 10px;
   font-weight: bold;
 }
+body {
+  background-color: red;
+}
