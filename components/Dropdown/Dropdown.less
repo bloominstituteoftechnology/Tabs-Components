@@ -22,6 +22,10 @@
     align-items: center;  
     margin-top: 10px;
     border: 2.5px solid @lambda-red;
+    max-height: 999999px;
+    top: 52px;
+    transition: 1s all;
+    z-index:-10;
   }
   .dropdown-link {
     width: 100%;
@@ -34,9 +38,14 @@
       color: @white;
       background-color: @lambda-red;
     }
+    
   }
   .dropdown-hidden {
-    display: none;
+    //display: none;
+    top: -200px;
+    transition: all 1s;
+    max-height: 0;
+    overflow: hidden;
   }
 }
 
