@@ -1,0 +1,25 @@
+{
+  "name": "Tabs-Components",
+  "version": "1.0.0",
+  "description": "Topics:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "less": "less-watch-compiler less css index.less"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebMats/Tabs-Components.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebMats/Tabs-Components/issues"
+  },
+  "homepage": "https://github.com/WebMats/Tabs-Components#readme",
+  "devDependencies": {
+    "less": "^3.9.0",
+    "less-watch-compiler": "^1.13.0"
+  }
+}
