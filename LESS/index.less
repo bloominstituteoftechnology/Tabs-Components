@@ -22,7 +22,7 @@ body {
   border-bottom: 1px solid @white;
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   background-color: @lambda-red;
   .header {
     height: 50px;
@@ -32,22 +32,68 @@ body {
 
 
 .section {
-  width: 70%;
+  width: 47%;
+  overflow: hidden;
   margin: 45px auto;
   display: flex;
   border: 1px solid @lambda-red;
   box-shadow: 1px 1px 5px @lambda-red;
   border-radius: 10px;
-  overflow: hidden;
-  .box {
-    padding: 40px;
-    .box-title {
-      font-size: 24px;
-      padding-bottom: 10px;
-      font-weight: bold;
-    }
-  }
 }
 
+#carousel-container {
+  width: 640px;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
 
+  .carousel {
+    display: flex;
+    position: absolute;
+    left: 0;
+    
+    .box {
+      flex-basis: 1;
+      width: 640px;
+      padding: 40px;
 
+      .box-title {
+        font-size: 24px;
+        padding-bottom: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .next::after, .prev::after {
+    content: '>';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background-color: @lambda-red;
+    width: 1em;
+    height: 5em;
+    opacity: 0.5;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: white;
+    transform: translateY(-50%);
+    line-height: 5em;
+    text-align: center;
+    padding: 0 0.3em;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .prev::after {
+    content: '<';
+    left: 0;
+    border-radius: 0 5px 5px 0;
+    z-index: 500;
+  }
+
+  .next:hover::after, .prev:hover::after {
+    opacity: 1;
+  }
+}

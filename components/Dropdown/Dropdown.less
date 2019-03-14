@@ -15,11 +15,12 @@
   }
   .dropdown-content {
     width: 100%;
+    opacity: 0;
     position: absolute;
     background-color: @white;
     display: flex;
     flex-direction: column;
-    align-items: center;  
+    align-items: center;
     margin-top: 10px;
     border: 2.5px solid @lambda-red;
   }
@@ -36,11 +37,9 @@
     }
   }
   .dropdown-hidden {
-    display: none;
+    a {
+      padding: 0;
+      margin: 0;
+    }
   }
 }
-
-
-
-
-
