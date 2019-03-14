@@ -65,6 +65,10 @@
 }
 .tabs .tabs-item-selected {
   display: block;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
 }
 .tabs .tabs-links {
   display: flex;
@@ -89,6 +93,45 @@
 }
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.carousel .box {
+  display: none;
+  padding: 40px;
+  width: 100%;
+}
+.carousel .box .box-title {
+  font-size: 24px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.carousel .box-show {
+  display: block;
+}
+.carousel .paging {
+  padding: 200px 50px;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #931d25;
+  cursor: pointer;
+}
+.carousel .boxImg img {
+  width: 100%;
 }
 body {
   box-sizing: border-box;
@@ -115,12 +158,4 @@ body {
   box-shadow: 1px 1px 5px #931d25;
   border-radius: 10px;
   overflow: hidden;
-}
-.section .box {
-  padding: 40px;
-}
-.section .box .box-title {
-  font-size: 24px;
-  padding-bottom: 10px;
-  font-weight: bold;
 }
