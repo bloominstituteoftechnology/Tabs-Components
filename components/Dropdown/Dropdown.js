@@ -1,6 +1,6 @@
 class Dropdown {
   constructor(element) {
-    console.log(element);
+   
     // Assign this.element to the dropdown element
     this.element = element;
     
@@ -15,9 +15,10 @@ class Dropdown {
   }
 
   toggleContent() {
-    console.log("yay!")
+    
+    this.content.classList.toggle("dropdown-hidden");
     // Toggle the ".dropdown-hidden" class off and on
- 
+    console.log("I was clicked");
   }
 }
 
