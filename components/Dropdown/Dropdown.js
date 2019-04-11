@@ -1,28 +1,26 @@
+let dropActive = false;
+
 class Dropdown {
   constructor(element) {
-    
-    // Assign this.element to the dropdown element
-    this.element;
-    
-    // Get the element with the ".dropdown-button" class found in the dropdown element (look at the HTML for context)
-    this.button = this.element.querySelector();
-    
-    // assign the reference to the ".dropdown-content" class found in the dropdown element
-    this.content;
-    
-    // Add a click handler to the button reference and call the toggleContent method.
+    this.element = element;
+    this.button = this.element.querySelector('.dropdown-button');
+    this.content = this.element.querySelector('.dropdown-content');
     this.button.addEventListener('click', () => {
-
+      this.toggleContent();
     })
   }
-
   toggleContent() {
-    
-    // Toggle the ".dropdown-hidden" class off and on
-    this.content;
+    if(!dropActive){
+      // this.content.classList.toggle('dropdown-hidden');
+      dropActive = true;
+      console.log(dropActive);
+      TweenMax.to(".dropdown-content", .5, {top:55, opacity:1})
+    }else if(dropActive){
+      dropActive = false;
+      console.log(dropActive);
+      TweenMax.to(".dropdown-content", .5, {top:-170, opacity:0})
+    }
+
   }
 }
-
-
-// Nothing to do here, just study what the code is doing and move on to the Dropdown class
 let dropdowns = document.querySelectorAll('.dropdown').forEach( dropdown => new Dropdown(dropdown));

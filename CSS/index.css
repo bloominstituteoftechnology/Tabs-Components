@@ -20,6 +20,9 @@
   background-color: #be2530;
 }
 .dropdown .dropdown-content {
+  opacity: 0;
+  z-index: -1;
+  top: -170px;
   width: 100%;
   position: absolute;
   background-color: #ffffff;
@@ -40,9 +43,6 @@
 .dropdown .dropdown-link:hover {
   color: #ffffff;
   background-color: #931d25;
-}
-.dropdown .dropdown-hidden {
-  display: none;
 }
 .tabs {
   width: 100%;
@@ -89,6 +89,14 @@
 }
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
+}
+.carouselButtons {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 0;
+}
+.deselected {
+  display: none;
 }
 body {
   box-sizing: border-box;
