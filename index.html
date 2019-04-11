@@ -5,9 +5,10 @@
 		<link rel="stylesheet" href="./CSS/index.css">
 	</head>
 	<body>
+		<script  defer="defer"src="./components/TweenMax.min.js"></script>
 		<script defer="defer" src="./components/Dropdown/Dropdown.js"></script>
+		<script defer="defer" src="./components/Carousel/Carousel.js"></script>
 		<script defer="defer" src="./components/Tabs/Tabs.js"></script>
-		
 		<div class="header-container">
 			<div class="dropdown">
 				<div class="dropdown-button">Dropdown</div>
@@ -21,13 +22,16 @@
 		</div>
 
 		<div class="section">
-			<div class="box">
-				<div class="box-title">Box Title 1</div>
-				<div class="box-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
-			</div>
-			<div class="box">
-				<div class="box-title">Box Title 2</div>
-				<div class="box-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
+			<div class="carousel">
+				<div class="left"><</div>
+				<div class="carousel-images">
+					<div class="time-bar"></div>
+					<img src="https://vml-eagleriverassoci.netdna-ssl.com/wp-content/uploads/bfi_thumb/vailresorts_vcd11313_jeff_andrew_highres-6jxileusahvu9annisnj2568je41qbc8uhrfx8cmiwk.jpg" alt="" class="hidden" data-slide="1">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Pantheon_%288350771972%29.jpg/440px-Pantheon_%288350771972%29.jpg" alt="" data-slide="2" class="hidden">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Central_park_photo_D_Ramey_Logan.jpg/333px-Central_park_photo_D_Ramey_Logan.jpg" alt="" data-slide="3" class="hidden">
+					
+				</div>
+				<div class="right">></div>
 			</div>
 		</div>
 
@@ -38,6 +42,8 @@
 						<div class="tabs-link" data-tab="2">Tab 2</div>
 						<div class="tabs-link" data-tab="3">Tab 3</div>
 						<div class="tabs-link" data-tab="4">Tab 4</div>
+						<div class="tabs-link" data-tab="5">Tab 5</div>
+						<div class="tabs-link" data-tab="6">Tab 6</div>
 					</div>
 					<div class="tabs-items">
 						<div class="tabs-item tabs-item-selected" data-tab="1">
@@ -70,6 +76,18 @@
 								There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will
 								instantly disappear and be replaced by something even more bizarre and inexplicable. There is another theory which states
 								that this has already happened.
+							</div>
+						</div>
+						<div class="tabs-item" data-tab="5">
+							<div class="tabs-item-title">Quote 5</div>
+							<div class="tabs-item-description">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium.
+							</div>
+						</div>
+						<div class="tabs-item" data-tab="6">
+							<div class="tabs-item-title">Quote 6</div>
+							<div class="tabs-item-description">
+								However, not every one of them is inhabited. Therefore, there must be a finite number of inhabited worlds.
 							</div>
 						</div>
 					</div>
