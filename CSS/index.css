@@ -94,6 +94,7 @@ body {
   box-sizing: border-box;
   min-width: 300px;
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .header-container {
   width: 100%;
