@@ -4,17 +4,14 @@
 		<title>Advanced Components</title>
 		<link rel="stylesheet" href="./CSS/index.css">
 	</head>
-	<body>
-		<script defer="defer" src="./components/Dropdown/Dropdown.js"></script>
-		<script defer="defer" src="./components/Tabs/Tabs.js"></script>
-		
+	<body>	
 		<div class="header-container">
 			<div class="dropdown">
 				<div class="dropdown-button">Dropdown</div>
 				<div class="dropdown-content dropdown-hidden">
-					<a class="dropdown-link" href="https://lambdaschool.com/" target="_blank">Lambda</a>
-					<a class="dropdown-link" href="https://www.google.com/" target="_blank">Google</a>
-					<a class="dropdown-link" href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a>
+					<a class="dropdown-link dropdown-link-hidden" href="https://lambdaschool.com/" target="_blank">Lambda</a>
+					<a class="dropdown-link dropdown-link-hidden" href="https://www.google.com/" target="_blank">Google</a>
+					<a class="dropdown-link dropdown-link-hidden" href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a>
 				</div>
 			</div>
 			<img src="./lambda_logo_light_small.png" class="header" />
@@ -38,6 +35,8 @@
 						<div class="tabs-link" data-tab="2">Tab 2</div>
 						<div class="tabs-link" data-tab="3">Tab 3</div>
 						<div class="tabs-link" data-tab="4">Tab 4</div>
+						<div class="tabs-link" data-tab="5">Tab 5</div>
+						<div class="tabs-link" data-tab="6">Tab 6</div>
 					</div>
 					<div class="tabs-items">
 						<div class="tabs-item tabs-item-selected" data-tab="1">
@@ -72,9 +71,25 @@
 								that this has already happened.
 							</div>
 						</div>
+						<div class="tabs-item" data-tab="5">
+							<div class="tabs-item-title">Quote 5</div>
+							<div class="tabs-item-description">
+								I love deadlines. I love the whooshing noise they make as they go by.
+							</div>
+						</div>
+						<div class="tabs-item" data-tab="6">
+							<div class="tabs-item-title">Quote 6</div>
+							<div class="tabs-item-description">
+								For instance, on the planet Earth, man had always assumed that he was more intelligent than dolphins because he had achieved so much—the wheel, New York, wars and so on—whilst all the dolphins had ever done was muck about in the water having a good time. But conversely, the dolphins had always believed that they were far more intelligent than man—for precisely the same reasons.”
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js" async></script>
+		<script defer="defer" src="./components/Dropdown/Dropdown.js" async></script>
+		<script defer="defer" src="./components/Tabs/Tabs.js" async></script>
+		<script defer="defer" src="./components/Tablink/Tablinks.js" async></script>
 	</body>
 </html>
