@@ -36,6 +36,7 @@
   font-size: 18px;
   text-decoration: none;
   color: #931d25;
+  opacity: 0;
 }
 .dropdown .dropdown-link:hover {
   color: #ffffff;
