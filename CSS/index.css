@@ -90,6 +90,9 @@
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
 }
+html {
+  background-color: purple;
+}
 body {
   box-sizing: border-box;
   min-width: 300px;
