@@ -1,10 +1,16 @@
 class Tabs {
   constructor(tabs){
     this.tabs = tabs;
-    this.links = this.tabs.querySelectorAll('.tabs-link');
-    this.links.forEach(link => new TabLink(link));
-
+    this.links = Array.from(this.tabs.querySelectorAll('.tabs-link'));
+    this.links = this.links.map(link => new TabLink(link));
+    //console.log(this.links[0]);
     this.selectedTab = 0;
+    this.tabs.addEventListener('click', (e) => this.select(e));
+  }
+
+  select(e){
+    this.selectedTab = e.target.dataset.tab - 1;
+    this.links[this.selectedTab].select();
   }
  
 }
@@ -16,19 +22,18 @@ class TabLink {
     
     // Get the custom data attribute on the Link
     this.data = this.element.dataset.tab;
-    console.log(this.data);
     // Using the custom data attribute get the associated Item element
     this.itemElement = document.querySelector(`.tabs-item[data-tab="${this.data}"]`);;
-    console.log(this.itemElement);
     // Using the Item element, create a new instance of the TabItem class
     this.tabItem = new TabItem(this.itemElement);
     
     // Add a click event listener on this instance, calling the select method on click
-    this.element.addEventListener('click', () => this.select());
+    // this.element.addEventListener('click', () => this.select());
   };
 
   select() {
     // Get all of the elements with the tabs-link class
+    
     const links = document.querySelectorAll('.tabs-link');
     const isSelected = this.element.classList.contains('tabs-link-selected');
     // Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links
@@ -57,12 +62,12 @@ class TabItem {
     const isSelected = this.element.classList.contains('tabs-item-selected');
     items.forEach(el => el.classList.remove('tabs-item-selected'));
     // Add a class named "tabs-item-selected" to this element
-    console.log(this.element.classList);
     if (!isSelected){
       TweenMax.fromTo(this.element, 1, {
         opacity: 0,
         x: 200
-      }, {
+      }, 
+      {
         opacity: 1,
         x: 0
       });
