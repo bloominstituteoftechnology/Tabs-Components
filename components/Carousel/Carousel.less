@@ -1,15 +1,17 @@
 .carousel {
     display: flex;
-    justify-content: space-around;
     margin: 50px auto;
+    justify-content: center;
     align-items: center;
 
     .left, .right{
+        margin: 7px;
         height: 40px;
         background: black;
         color: black;
         &:hover {
             cursor: pointer;
+            .pop;
         }
     }
 
@@ -23,6 +25,11 @@
 
     .section {
         margin: 0;
+        overflow: hidden;
+    }
+
+    .hidden {
+        display: none;
     }
 
 }

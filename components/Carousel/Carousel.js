@@ -18,8 +18,8 @@ class Carousel {
         this.showing -= 1;
         console.log('showing', this.showing);
         console.log('wasShowing', wasShowing);
-        this.boxes[wasShowing].deselect();
-        this.boxes[this.showing].select();
+        this.boxes[wasShowing].deselect('left');
+        this.boxes[this.showing].select('left');
         console.log(this.boxes.length);
         if(this.showing === 0) {
             this.left.disabled = true;
@@ -38,8 +38,8 @@ class Carousel {
         this.showing += 1;
         console.log('showing', this.showing);
         console.log('wasShowing', wasShowing);
-        this.boxes[wasShowing].deselect();
-        this.boxes[this.showing].select();
+        this.boxes[wasShowing].deselect('right');
+        this.boxes[this.showing].select('right');
 
         if(this.showing === this.boxes.length - 1) {
             this.right.disabled = true;
@@ -61,7 +61,7 @@ class Box {
     }
 
     select(){
-        this.element.classList.remove('hidden')
+        this.element.classList.remove('hidden');
     }
 }
 

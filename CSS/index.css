@@ -3,6 +3,17 @@
   margin: 0;
   padding: 0;
 }
+@keyframes slide-left {
+  0% {
+    transform: translateX(400);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.slide-left {
+  animation: slide-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) linear;
+}
 .dropdown {
   z-index: 2;
   position: absolute;
@@ -92,12 +103,13 @@
 }
 .carousel {
   display: flex;
-  justify-content: space-around;
   margin: 50px auto;
+  justify-content: center;
   align-items: center;
 }
 .carousel .left,
 .carousel .right {
+  margin: 7px;
   height: 40px;
   background: black;
   color: black;
@@ -105,6 +117,9 @@
 .carousel .left:hover,
 .carousel .right:hover {
   cursor: pointer;
+  transition: all 0.3s linear;
+  transform: translateY(-2px);
+  box-shadow: 0 0 2px 0 rgba(75, 85, 92, 0.52), 0 2px 4px 0 rgba(143, 174, 194, 0.52);
 }
 .carousel .left {
   clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
@@ -114,6 +129,10 @@
 }
 .carousel .section {
   margin: 0;
+  overflow: hidden;
+}
+.carousel .hidden {
+  display: none;
 }
 body {
   box-sizing: border-box;
@@ -148,7 +167,4 @@ body {
   font-size: 24px;
   padding-bottom: 10px;
   font-weight: bold;
-}
-.hidden {
-  display: none;
 }
