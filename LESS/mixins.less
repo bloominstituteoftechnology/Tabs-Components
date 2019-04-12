@@ -5,18 +5,46 @@
 .pop(){
     transition: all .3s linear;
     transform: translateY(-2px);
-    box-shadow: 0 0 2px 0 rgba(75, 85, 92, 0.52), 0 2px 4px 0 rgba(143, 174, 194, 0.52);
 }
 
 @keyframes slide-left {
   0% {
-    transform: translateX(400);
+      opacity: 0;
+    transform: translateX(100%);
   }
   100% {
+      opacity: 1;
     transform: translateX(0px);
   }
 }
 
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
 .slide-left {
-  animation: slide-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) linear;
+  //animation: slide-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) linear;
+  animation: slide-left .7s linear;
+}
+
+.fade-in {
+    animation: fade-in .5s linear;
+}
+
+.fade-out {
+    animation: fade-out .5s linear;
 }

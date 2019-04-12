@@ -5,14 +5,38 @@
 }
 @keyframes slide-left {
   0% {
-    transform: translateX(400);
+    opacity: 0;
+    transform: translateX(100%);
   }
   100% {
+    opacity: 1;
     transform: translateX(0px);
   }
 }
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .slide-left {
-  animation: slide-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) linear;
+  animation: slide-left 0.7s linear;
+}
+.fade-in {
+  animation: fade-in 0.5s linear;
+}
+.fade-out {
+  animation: fade-out 0.5s linear;
 }
 .dropdown {
   z-index: 2;
@@ -119,7 +143,6 @@
   cursor: pointer;
   transition: all 0.3s linear;
   transform: translateY(-2px);
-  box-shadow: 0 0 2px 0 rgba(75, 85, 92, 0.52), 0 2px 4px 0 rgba(143, 174, 194, 0.52);
 }
 .carousel .left {
   clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
@@ -130,6 +153,14 @@
 .carousel .section {
   margin: 0;
   overflow: hidden;
+  background-size: cover;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  max-width: 600px;
+  background-image: url("https://picsum.photos/600/300/?random");
+}
+.carousel .section .box {
+  opacity: 1;
 }
 .carousel .hidden {
   display: none;
