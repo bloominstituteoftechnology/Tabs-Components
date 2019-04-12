@@ -43,6 +43,7 @@ class Carousel {
 
         if(this.showing === this.boxes.length - 1) {
             this.right.disabled = true;
+            this.right.classList.add('noCursor');
         }
         if(wasShowing === 0) {
             this.left.disabled = false;

@@ -144,6 +144,10 @@
   transition: all 0.3s linear;
   transform: translateY(-2px);
 }
+.carousel .left:disabled,
+.carousel .right:disabled {
+  cursor: default;
+}
 .carousel .left {
   clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
 }
