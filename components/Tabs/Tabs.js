@@ -9,8 +9,15 @@ class Tabs {
   }
 
   select(e){
+    const wasSelected = this.selectedTab;
     this.selectedTab = e.target.dataset.tab - 1;
-    this.links[this.selectedTab].select();
+
+    if(wasSelected === e.target.dataset.tab - 1){
+      return
+    }
+
+    this.links[wasSelected].deselect();
+    this.links[this.selectedTab].select();       
   }
  
 }
@@ -34,10 +41,10 @@ class TabLink {
   select() {
     // Get all of the elements with the tabs-link class
     
-    const links = document.querySelectorAll('.tabs-link');
+    // const links = document.querySelectorAll('.tabs-link');
     const isSelected = this.element.classList.contains('tabs-link-selected');
     // Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links
-    links.forEach(el => el.classList.remove('tabs-link-selected'));
+    // links.forEach(el => el.classList.remove('tabs-link-selected'));
 
     // Add a class named "tabs-link-selected" to this link
     //this.element.classList.contains('tabs-link-selected') && this.deselect()
@@ -45,6 +52,11 @@ class TabLink {
     
     // Call the select method on the item associated with this link
     this.tabItem.select();
+  }
+
+  deselect() {
+    this.element.classList.remove('tabs-link-selected');
+    this.tabItem.deselect();
   }
 }
 
@@ -73,6 +85,10 @@ class TabItem {
       });
       this.element.classList.add('tabs-item-selected');
     }
+  }
+
+  deselect() {
+    this.element.classList.remove('tabs-item-selected');
   }
 }
 
