@@ -1,0 +1,28 @@
+.carousel {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+    align-items: center;
+
+    .left, .right{
+        height: 40px;
+        background: black;
+        color: black;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .left {
+        clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+    }
+
+    .right {
+        clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+    }
+
+    .section {
+        margin: 0;
+    }
+
+}

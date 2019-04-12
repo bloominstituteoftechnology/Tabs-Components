@@ -90,6 +90,31 @@
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
 }
+.carousel {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px auto;
+  align-items: center;
+}
+.carousel .left,
+.carousel .right {
+  height: 40px;
+  background: black;
+  color: black;
+}
+.carousel .left:hover,
+.carousel .right:hover {
+  cursor: pointer;
+}
+.carousel .left {
+  clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+}
+.carousel .right {
+  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+.carousel .section {
+  margin: 0;
+}
 body {
   box-sizing: border-box;
   min-width: 300px;
@@ -123,4 +148,7 @@ body {
   font-size: 24px;
   padding-bottom: 10px;
   font-weight: bold;
+}
+.hidden {
+  display: none;
 }
