@@ -3,6 +3,41 @@
   margin: 0;
   padding: 0;
 }
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.slide-left {
+  animation: slide-left 0.7s linear;
+}
+.fade-in {
+  animation: fade-in 0.5s linear;
+}
+.fade-out {
+  animation: fade-out 0.5s linear;
+}
 .dropdown {
   z-index: 2;
   position: absolute;
@@ -89,6 +124,50 @@
 }
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
+}
+.carousel {
+  display: flex;
+  margin: 50px auto;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .left,
+.carousel .right {
+  margin: 7px;
+  height: 40px;
+  background: black;
+  color: black;
+}
+.carousel .left:hover,
+.carousel .right:hover {
+  cursor: pointer;
+  transition: all 0.3s linear;
+  transform: translateY(-2px);
+}
+.carousel .left:disabled,
+.carousel .right:disabled {
+  cursor: default;
+}
+.carousel .left {
+  clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+}
+.carousel .right {
+  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+.carousel .section {
+  margin: 0;
+  overflow: hidden;
+  background-size: cover;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  max-width: 600px;
+  background-image: url("https://picsum.photos/600/300/?random");
+}
+.carousel .section .box {
+  opacity: 1;
+}
+.carousel .hidden {
+  display: none;
 }
 body {
   box-sizing: border-box;

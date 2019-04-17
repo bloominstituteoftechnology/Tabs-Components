@@ -1,0 +1,49 @@
+.carousel {
+    display: flex;
+    margin: 50px auto;
+    justify-content: center;
+    align-items: center;
+
+    .left, .right{
+        margin: 7px;
+        height: 40px;
+        background: black;
+        color: black;
+        &:hover {
+            cursor: pointer;
+            .pop;
+        }
+
+        &:disabled {
+            cursor: default;
+        }
+
+    }
+
+    .left {
+        clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+    }
+
+    .right {
+        clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+    }
+
+    .section {
+        margin: 0;
+        overflow: hidden;
+        background-size: cover;
+        color: white;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        max-width: 600px;
+        background-image: url("https://picsum.photos/600/300/?random");
+
+        .box {
+            opacity: 1;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+
+}
