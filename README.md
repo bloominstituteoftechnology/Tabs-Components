@@ -24,7 +24,7 @@ In this project, our design team has already built an HTML/CSS web page for us, 
 * [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
 * [ ] Add your project manager as a reviewer on the pull-request
 * [ ] Your project manager will count the project as complete by merging the branch back into master.
-
+ 
 ## Description
 
 ### Part One (The Dropdown)
