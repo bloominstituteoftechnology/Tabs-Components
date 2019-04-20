@@ -2,23 +2,22 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+ 
 }
 .dropdown {
   z-index: 2;
   position: absolute;
   left: 25px;
   cursor: pointer;
+ 
 }
 .dropdown .dropdown-button {
   padding: 15px;
-  border: 3px solid #ffffff;
-  color: #ffffff;
+  border: 3px solid ;
   font-size: 20px;
   font-weight: bold;
 }
-.dropdown .dropdown-button:hover {
-  background-color: #be2530;
-}
+
 .dropdown .dropdown-content {
   width: 100%;
   position: absolute;
@@ -75,7 +74,7 @@
   font-size: 24px;
   background-color: #931d25;
   border-right: 1px solid white;
-  color: #ffffff;
+  color: whitesmoke;
   cursor: pointer;
 }
 .tabs .tabs-link:hover {
@@ -108,19 +107,21 @@ body {
   height: 50px;
 }
 .section {
-  width: 70%;
-  margin: 45px auto;
+  width: 80%;
+  margin: 55px auto;
   display: flex;
   border: 1px solid #931d25;
   box-shadow: 1px 1px 5px #931d25;
   border-radius: 10px;
   overflow: hidden;
+  background-color:#931d25;
 }
 .section .box {
   padding: 40px;
 }
 .section .box .box-title {
-  font-size: 24px;
+  font-size: 30px;
   padding-bottom: 10px;
   font-weight: bold;
+  
 }
