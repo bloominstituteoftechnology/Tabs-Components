@@ -1,16 +1,32 @@
 
+class Tabs{
+  constructor(thing){
+    this.thing = thing;
+    console.log(this.thing)
+    this.thing.addEventListener('click', () => this.deselect())
+  }
+  deselect(){
+    const links = document.querySelectorAll('.tabs-link');
+    links.forEach(item => item.classList.remove('tabs-link-selected'))
+    const content = document.querySelectorAll('.tabs-item');
+    content.forEach(item => item.classList.remove('tabs-item-selected'))
+  }
+}
+
+
+
 class TabLink {
   constructor(element) {
     this.element = element;
     this.data = this.element.dataset.tab;
     this.content = document.querySelector(`.tabs-item[data-tab="${this.data}"]`)
     this.content = new TabItem(this.content);
+    this.newElement = new Tabs(this.element);
     this.element.addEventListener('click', () => this.select())
   };
 
   select() {
-    const links = document.querySelectorAll('.tabs-link');
-    links.forEach(item => item.classList.remove('tabs-link-selected'))
+
     this.element.classList.add('tabs-link-selected')
     this.content.select()
   }
@@ -19,15 +35,12 @@ class TabLink {
 class TabItem {
   constructor(element) {
     this.element = element;
-    console.log(element)
   }
-
   select() {
-    const content = document.querySelectorAll('.tabs-item');
-    content.forEach(item => item.classList.remove('tabs-item-selected'))
     this.element.classList.add('tabs-item-selected')
   }
 }
+
 
 /* START HERE:
 
