@@ -26,11 +26,11 @@ class TabLink {
     });
 
     // Add a class named "tabs-link-selected" to this link
-    this.element = tab.classList.add('tabs-link-selected');
+    this.element.classList.add('tabs-link-selected');
     
     // Call the select method on the item associated with this link
-    this.itemElement.select(this.tabItem);
-  }// FINISH THIS SECTION//
+    this.tabItem.select(this.itemElement);
+  }
 }
 
 class TabItem {
