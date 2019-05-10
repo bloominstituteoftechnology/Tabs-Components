@@ -13,11 +13,11 @@ class TabLink {
     // console.log(this.itemElement)
 
     // Using the Item element, create a new instance of the TabItem class
-    this.tabItem = new TabItem(this.tabItem);
+    this.itemElement = new TabItem(this.itemElement);
     
     // Add a click event listener on this instance, calling the select method on click
     this.element.addEventListener('click', () => this.select());
-    
+   
   };
 
   select() {
@@ -33,24 +33,28 @@ class TabLink {
     this.element.classList.add('tabs-link-selected');
     
     // Call the select method on the item associated with this link
-
+    this.itemElement.select();
   }
 }
 
 class TabItem {
   constructor(element) {
     // Assign this.element to the passed in element
-    // this.element;
+    this.element = element;
+    // console.log(this.element)
+    // this.element.addEventListener('click', () => this.select());
   }
 
   select() {
     // Select all ".tabs-item" elements from the DOM
-    // const items;
+    const items = document.querySelectorAll('.tabs-item');
 
     // Remove the class "tabs-item-selected" from each element
-    
+    items.forEach((item) => {
+      item.classList.remove('tabs-item-selected');
+    });
     // Add a class named "tabs-item-selected" to this element
-    //this.element;
+    this.element.classList.add('tabs-item-selected');
   }
 }
 
