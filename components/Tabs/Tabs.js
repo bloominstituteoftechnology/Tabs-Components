@@ -33,25 +33,26 @@ class TabLink {
     
     // Call the select method on the item associated with this link
     this.tabItem.select();
-  }
-}
+  };
+};
 
 class TabItem {
   constructor(element) {
     // Assign this.element to the passed in element
-    // this.element;
-  }
+    this.element = element;
+  };
 
   select() {
     // Select all ".tabs-item" elements from the DOM
-    // const items;
+    const items = querySelectorAll('.tabs-item');
 
     // Remove the class "tabs-item-selected" from each element
-    
+    Array.from(items).forEach(link => {
+      link.classList.remove('.tabs-item-selected')});
     // Add a class named "tabs-item-selected" to this element
-    //this.element;
-  }
-}
+    this.element.classList.add('.tabs-item-selected');
+  };
+};
 
 /* START HERE: 
 
@@ -66,5 +67,3 @@ class TabItem {
 links = document.querySelectorAll('.tabs-link').forEach(link => {
   new TabLink (link);
 });
-
-// initial commit
