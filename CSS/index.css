@@ -8,7 +8,6 @@
   position: absolute;
   left: 25px;
   cursor: pointer;
-  transition: height 1s;
 }
 .dropdown .dropdown-button {
   padding: 15px;
