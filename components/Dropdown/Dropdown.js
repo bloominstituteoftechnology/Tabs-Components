@@ -5,7 +5,7 @@ class Dropdown {
     this.element;
     
     // Get the element with the ".dropdown-button" class found in the dropdown element (look at the HTML for context)
-    this.button = this.element.querySelector();
+    //this.button = this.element.querySelector();
     
     // assign the reference to the ".dropdown-content" class found in the dropdown element
     this.content;
@@ -25,4 +25,4 @@ class Dropdown {
 
 
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
-let dropdowns = document.querySelectorAll('.dropdown').forEach( dropdown => new Dropdown(dropdown));
+//let dropdowns = document.querySelectorAll('.dropdown').forEach( dropdown => new Dropdown(dropdown));
