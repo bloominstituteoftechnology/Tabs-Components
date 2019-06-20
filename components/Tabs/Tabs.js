@@ -19,7 +19,7 @@ class TabLink {
     this.element.addEventListener('click', () => {
       this.select();
   })
-
+  }
   select() {
     // Get all of the elements with the tabs-link class
     const links = document.querySelectorAll('.tabs-links');
@@ -35,7 +35,7 @@ class TabLink {
     this.tabItem.select(this.itemElement);
   }
 }
-}
+
 class TabItem {
   constructor(element) {
     // Assign this.element to the passed in element
@@ -51,7 +51,19 @@ class TabItem {
       item.classList.remove('tabs-item-selected')
     });
     // Add a class named "tabs-item-selected" to this element
-    this.element = classList.add('tabs-item-selected');
+    setTimeout(() => {
+      this.element.classList.add("tabs-item-selected");
+      TweenMax.fromTo(
+        this.element,
+        0.5,
+        {
+          opacity: 0
+        },
+        {
+          opacity: 1
+        }
+      );
+    }, 500);
   }
 }
 
