@@ -94,6 +94,7 @@ body {
   box-sizing: border-box;
   min-width: 300px;
   margin: 0;
+  background-color: lightgrey;
 }
 .header-container {
   width: 100%;
@@ -115,9 +116,11 @@ body {
   box-shadow: 1px 1px 5px #931d25;
   border-radius: 10px;
   overflow: hidden;
+  background-color: white;
 }
 .section .box {
   padding: 40px;
+  justify-content: space-between;
 }
 .section .box .box-title {
   font-size: 24px;
