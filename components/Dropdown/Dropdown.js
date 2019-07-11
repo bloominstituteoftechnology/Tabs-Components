@@ -20,7 +20,7 @@ class Dropdown {
       this.content.classList.toggle('dropdown-hidden')
 
     // Toggle the ".dropdown-hidden" class off and on
-    this.content;
+    // this.content;
   }
 }
 
