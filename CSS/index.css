@@ -3,6 +3,16 @@
   margin: 0;
   padding: 0;
 }
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
 .dropdown {
   z-index: 2;
   position: absolute;
@@ -65,6 +75,8 @@
 }
 .tabs .tabs-item-selected {
   display: block;
+  animation-name: text-focus-in;
+  animation-duration: 1s;
 }
 .tabs .tabs-links {
   display: flex;
