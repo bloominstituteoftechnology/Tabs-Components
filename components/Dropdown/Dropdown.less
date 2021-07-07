@@ -21,7 +21,7 @@
     flex-direction: column;
     align-items: center;  
     margin-top: 10px;
-    border: 2.5px solid @lambda-red;
+    border: 1px solid @lambda-red;
   }
   .dropdown-link {
     width: 100%;
@@ -30,14 +30,20 @@
     font-size: 18px;
     text-decoration: none;
     color: @lambda-red;
+    // overflow: hidden;
     &:hover {
       color: @white;
       background-color: @lambda-red;
     }
   }
   .dropdown-hidden {
+    height: 0;
+    overflow: hidden;
+  }
+  .dropdown-gone {
     display: none;
   }
+
 }
 
 
